@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grandom/grandom-js.git"
+    "url": "git+https://github.com/grandom-library/grandom-js.git"
   },
   "bugs": {
-    "url": "https://github.com/grandom/grandom-js/issues"
+    "url": "https://github.com/grandom-library/grandom-js/issues"
   },
-  "homepage": "https://github.com/grandom/grandom-js#readme",
+  "homepage": "https://github.com/grandom-library/grandom-js#readme",
   "engines": {
     "node": ">= 16"
   },

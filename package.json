@@ -1,5 +1,5 @@
 {
-  "name": "grandom",
+  "name": "grandom-js",
   "version": "0.0.0-development",
   "description": "Versatile and great random data generator.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
@@ -7,18 +7,18 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grandom/grandom-js.git"
+    "url": "git+https://github.com/grandom-library/grandom-js.git"
   },
   "bugs": {
-    "url": "https://github.com/grandom/grandom-js/issues"
+    "url": "https://github.com/grandom-library/grandom-js/issues"
   },
-  "homepage": "https://github.com/grandom/grandom-js#readme",
+  "homepage": "https://github.com/grandom-library/grandom-js#readme",
   "engines": {
     "node": ">= 16"
   },
   "scripts": {
-    "init": "npm i && lerna exec -- npm i",
-    "init:reinit": "npm run __purge && npm run init",
+    "init": "npm i && lerna exec -- npm i && lerna list -all",
+    "init:clean": "npm run __purge && npm run init",
     "check-updates": "lerna exec --concurrency 1 -- npx --yes npm-check-updates",
     "-----------------------------------": "-----------------------------------",
     "__clear-build-files": "bash scripts/clear-build-files.sh",
