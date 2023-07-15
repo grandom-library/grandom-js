@@ -1,0 +1,48 @@
+name: CI
+
+on: [push]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        package: [
+          boolean,
+        ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+            packages/${{ matrix.package }}/package-lock.json
+
+      - name: init
+        run: >
+          npm ci &&
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm ci
+
+      - name: test
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run test --if-present
+
+      - name: prepare
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run prep --if-present
+
+      - name: release
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npx --no-install semantic-release -e semantic-release-monorepo
+
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
