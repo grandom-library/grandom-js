@@ -4,6 +4,7 @@
   "description": "Great random boolean generator.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "MIT",
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -24,12 +25,12 @@
     ]
   },
   "scripts": {
-    "start": "npm test -- --watch",
+    "start": "npm test -- --watchAll",
     "lint": "ts-standard --verbose | snazzy",
     "test": "jest",
     "prep": "npm run __prep:init && npm run __prep:copy",
     "build": "npm run __build:src && npm run __build:types",
-    "-----------------------------------": "-----------------------------------",
+    "--------------------------------": "--------------------------------",
     "__prep:init": "rm -rf dist && mkdir dist",
     "__prep:copy": "cp ../../LICENSE* README* package.json dist",
     "__build:src": "rollup -c",
