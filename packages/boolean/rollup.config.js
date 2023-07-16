@@ -37,6 +37,11 @@ module.exports = {
     dir: 'dist',
   },
 
+  external: [
+    '@grandom/core',
+    '@grandom/engines',
+  ],
+
   plugins: [
     typescript(),
     // terser(),
