@@ -1,3 +1,10 @@
+# [@grandom/core-v1.2.1](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.2.0...@grandom/core-v1.2.1) (2023-07-16)
+
+
+### Bug Fixes
+
+* **core:** set include min/max params by default constants ([39973ed](https://github.com/grandom-library/grandom-js/commit/39973ede0b719c9c7ca22aa30faedeeb6b241fef))
+
 # [@grandom/core-v1.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.1.0...@grandom/core-v1.2.0) (2023-07-16)
 
 
