@@ -1,13 +1,52 @@
-const DEFAULT_INTEGER_MINIMUM = 0
-const DEFAULT_INTEGER_MAXIMUM = 4_294_967_296 // 2^32
-
-const DEFAULT_FLOAT_MINIMUM = 0
-const DEFAULT_FLOAT_MAXIMUM = 1
-
-const DEFAULT_BIGINT_MINIMUM = 0n
-const DEFAULT_BIGINT_MAXIMUM = 18_446_744_073_709_551_616n // 2^64
-
 export default class RandomEngine {
+  /**
+   * The default minimum for random float generation
+   * ***(inclusive by default)***.
+   *
+   * @default 0
+   */
+  static DEFAULT_FLOAT_MINIMUM = 0
+
+  /**
+   * The default maximum for random float generation
+   * ***(exclusive by default)***.
+   *
+   * @default 1
+   */
+  static DEFAULT_FLOAT_MAXIMUM = 1
+
+  /**
+   * The default minimum for random integer generation
+   * ***(inclusive by default)***.
+   *
+   * @default 0
+   */
+  static DEFAULT_INTEGER_MINIMUM = 0
+
+  /**
+   * The default maximum **(2^32)** for random integer generation
+   * ***(exclusive by default)***.
+   *
+   * @default 4294967296
+   */
+  static DEFAULT_INTEGER_MAXIMUM = 4_294_967_296 // 2^32
+
+  /**
+   * The default minimum for random bigint generation
+   * ***(inclusive by default)***.
+   *
+   * @default 0n
+   */
+  static DEFAULT_BIGINT_MINIMUM = 0n
+
+  /**
+   * The default maximum **(2^64)** for random bigint generation
+   * ***(exclusive by default)***.
+   *
+   * @default 18446744073709551616n
+   */
+  static DEFAULT_BIGINT_MAXIMUM = 18_446_744_073_709_551_616n // 2^64
+
   get isSeedSupported (): boolean {
     return false
   }
@@ -24,8 +63,8 @@ export default class RandomEngine {
   }
 
   nextInteger (
-    min = DEFAULT_INTEGER_MINIMUM,
-    max = DEFAULT_INTEGER_MAXIMUM,
+    min = RandomEngine.DEFAULT_INTEGER_MINIMUM,
+    max = RandomEngine.DEFAULT_INTEGER_MAXIMUM,
     includeMin = true,
     includeMax = false
   ): number {
@@ -59,8 +98,8 @@ export default class RandomEngine {
   }
 
   nextBigInt (
-    min = DEFAULT_BIGINT_MINIMUM,
-    max = DEFAULT_BIGINT_MAXIMUM,
+    min = RandomEngine.DEFAULT_BIGINT_MINIMUM,
+    max = RandomEngine.DEFAULT_BIGINT_MAXIMUM,
     includeMin = true,
     includeMax = false
   ): bigint {
