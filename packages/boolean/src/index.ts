@@ -1,4 +1,7 @@
-export const boolean = (): number => {
+import { BasicEngine } from '@grandom/engines'
+import RandomBoolean from './RandomBoolean'
 
-  throw new Error('Unimplemented.')
-}
+const random = new RandomBoolean(new BasicEngine())
+const boolean = random.boolean.bind(random)
+
+export default boolean
