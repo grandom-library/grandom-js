@@ -81,8 +81,8 @@ export default class RandomEngine {
   nextInteger (
     min = RandomEngine.DEFAULT_INTEGER_MINIMUM,
     max = RandomEngine.DEFAULT_INTEGER_MAXIMUM,
-    includeMin = true,
-    includeMax = false
+    includeMin = RandomEngine.DEFAULT_INCLUDE_MINIMUM,
+    includeMax = RandomEngine.DEFAULT_INCLUDE_MAXIMUM
   ): number {
     let minOffset = 0
     let maxOffset = 0
@@ -116,8 +116,8 @@ export default class RandomEngine {
   nextBigInt (
     min = RandomEngine.DEFAULT_BIGINT_MINIMUM,
     max = RandomEngine.DEFAULT_BIGINT_MAXIMUM,
-    includeMin = true,
-    includeMax = false
+    includeMin = RandomEngine.DEFAULT_INCLUDE_MINIMUM,
+    includeMax = RandomEngine.DEFAULT_INCLUDE_MAXIMUM
   ): bigint {
     let minOffset = 0n
     let maxOffset = 0n
