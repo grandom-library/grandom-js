@@ -3,6 +3,9 @@ import RandomEngine from '../../src/RandomEngine'
 describe('RandomEngine', () => {
   describe('basics', () => {
     test('constants', () => {
+      expect(RandomEngine.DEFAULT_INCLUDE_MINIMUM).toBe(true)
+      expect(RandomEngine.DEFAULT_INCLUDE_MAXIMUM).toBe(false)
+
       expect(RandomEngine.DEFAULT_FLOAT_MINIMUM).toBe(0)
       expect(RandomEngine.DEFAULT_FLOAT_MAXIMUM).toBe(1)
 

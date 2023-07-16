@@ -1,5 +1,21 @@
 export default class RandomEngine {
   /**
+   * Include minimum during random data generation
+   * ***(include by default)***.
+   *
+   * @default true
+   */
+  static DEFAULT_INCLUDE_MINIMUM = true
+
+  /**
+   * Include maximum during random data generation
+   * ***(exclude by default)***.
+   *
+   * @default false
+   */
+  static DEFAULT_INCLUDE_MAXIMUM = false
+
+  /**
    * The default minimum for random float generation
    * ***(inclusive by default)***.
    *
