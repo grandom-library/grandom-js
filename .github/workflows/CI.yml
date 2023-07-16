@@ -10,7 +10,8 @@ jobs:
       matrix:
         package: [
           boolean,
-          core
+          core,
+          engines
         ]
 
     steps:
