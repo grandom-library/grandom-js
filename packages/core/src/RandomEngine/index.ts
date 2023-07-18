@@ -149,14 +149,15 @@ export default class RandomEngine {
       + BigInt(min) + minOffset
   }
 
-  nextString (): string {
-    return ''
+  nextString (length: number, charset: string): string {
+    const arrayLength = charset.length
+
+    let result = ''
+
+    for (let i = 0; i < length; i++) {
+      result += charset.charAt(Math.floor(this._next() * arrayLength))
+    }
+
+    return result
   }
-
-  pickString () {}
-  pickArray () {}
-  pickObject () {}
-
-  shuffleString () {}
-  shuffleArray () {}
 }
