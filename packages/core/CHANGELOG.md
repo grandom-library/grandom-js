@@ -1,3 +1,10 @@
+# [@grandom/core-v1.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.2.1...@grandom/core-v1.3.0) (2023-07-18)
+
+
+### Features
+
+* **core:** add .nextString() random string generator method ([04c22ac](https://github.com/grandom-library/grandom-js/commit/04c22acb0c2476937220b7a31a7e7e915bc9f887))
+
 # [@grandom/core-v1.2.1](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.2.0...@grandom/core-v1.2.1) (2023-07-16)
 
 
