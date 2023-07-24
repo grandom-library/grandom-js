@@ -13,9 +13,12 @@ jobs:
       max-parallel: 1
       matrix:
         package: [
-          boolean,
+          # primary packages
           core,
           engines,
+
+          # seconday packages
+          boolean,
           number,
           string
         ]
