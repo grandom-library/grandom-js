@@ -160,4 +160,20 @@ export default class RandomEngine {
 
     return result
   }
+
+  pickString (string: string): string {
+    if (string.length === 0) {
+      return ''
+    }
+
+    return string[Math.floor(this._next() * string.length)]
+  }
+
+  pickArray <T> (array: ArrayLike<T>): T {
+    if (array.length === 0) {
+      return undefined as T
+    }
+
+    return array[Math.floor(this._next() * array.length)]
+  }
 }
