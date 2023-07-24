@@ -12,6 +12,7 @@ jobs:
           boolean,
           core,
           engines,
+          number,
           string
         ]
 
