@@ -180,8 +180,9 @@ export default class RandomEngine {
     // loop through the array starting from the last element, going backwards
     for (let index = array.length - 1; index > 0; index--) {
 
-      // generate a random index in range of [0, i] - (i === index + 1 (making inclusive)),
-      // the range of [0, i] will be decreased in each iteration
+      // generate a random index in range of [0, i] - (i === index + 1 (thus making inclusive)),
+      // as the result of the loop going backwards, the range of [0, i] will be decreased
+      // in each iteration
       randomIndex = Math.floor(this._next() * (index + 1))
 
       // swap elements
