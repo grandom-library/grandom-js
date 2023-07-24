@@ -5,9 +5,9 @@ on: [push]
 jobs:
   CI:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     strategy:
-      # only run 1 job at a time to prevent multiple changes during parallel runs getting an error
+      # only run 1 job at a time to prevent multiple changes during parallel runs getting errors
       # from semantic-release with the following message:
       # [remote rejected] HEAD -> main (cannot lock ref '<branch>': is at <hash> but expected <hash>)
       max-parallel: 1
