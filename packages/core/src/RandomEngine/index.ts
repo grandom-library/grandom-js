@@ -161,6 +161,41 @@ export default class RandomEngine {
     return result
   }
 
+  /**
+   * Randomly returns an element determined by the weights.
+   *
+   * @param elements The elements to choose one from.
+   * @param weights The weights of each elements.
+   * @returns The random chosen element.
+   */
+  nextWeighted <T> (elements: ArrayLike<T>, weights: number[]): T {
+    let totalWeight = 0
+
+    // calculate the total weights
+    for (let i = 0; i < weights.length; i++) {
+      totalWeight += weights[i]
+    }
+
+    const randomValue = this._next() * totalWeight
+
+    let cumulativeWeight = 0
+
+    // loop through the elements (and their corresponding weights)
+    for (let i = 0; i < elements.length; i++) {
+
+      // add the current element's weight to the cumulative weight
+      cumulativeWeight += weights[i]
+
+      // return if the cumulative weight is larger, than the previously generated random value
+      if (cumulativeWeight > randomValue) {
+        return elements[i]
+      }
+    }
+
+    // fallback (most cases should not be reached)
+    return elements[elements.length - 1]
+  }
+
   pickArray <T> (array: ArrayLike<T>): T {
     return array[Math.floor(this._next() * array.length)]
   }
