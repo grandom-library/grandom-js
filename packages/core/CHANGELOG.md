@@ -1,3 +1,10 @@
+# [@grandom/core-v1.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.3.0...@grandom/core-v1.4.0) (2023-07-24)
+
+
+### Features
+
+* **core:** add pick string and array methods ([45ed42d](https://github.com/grandom-library/grandom-js/commit/45ed42de2aa1f88b2e9fe65fdbe34d041b480f6d))
+
 # [@grandom/core-v1.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.2.1...@grandom/core-v1.3.0) (2023-07-18)
 
 
