@@ -164,4 +164,30 @@ export default class RandomEngine {
   pickArray <T> (array: ArrayLike<T>): T {
     return array[Math.floor(this._next() * array.length)]
   }
+
+  /**
+   * Shuffles the array **in place** by randomizing its elements using the
+   * modern version of the ***Fisher–Yates algorithm by Richard Durstenfeld***.
+   *
+   * @param array The array to shuffle **in place**.
+   *
+   * @link https://en.wikipedia.org/wiki/Fisher-Yates_shuffle#The_modern_algorithm
+   */
+  shuffleArray <T> (array: Array<T>) {
+    let randomIndex: number
+    let temp: T
+
+    // loop through the array starting from the last element, going backwards
+    for (let index = array.length - 1; index > 0; index--) {
+
+      // generate a random index in range of [0, i] - (i === index + 1 (making inclusive)),
+      // the range of [0, i] will be decreased in each iteration
+      randomIndex = Math.floor(this._next() * (index + 1))
+
+      // swap elements
+      temp = array[index]
+      array[index] = array[randomIndex]
+      array[randomIndex] = temp
+    }
+  }
 }
