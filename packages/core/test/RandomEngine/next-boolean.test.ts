@@ -1,6 +1,8 @@
-import { BooleanStats } from '@testyard/stats'
+import {
+  LENGTH,
+  BooleanStats
+} from '@testyard/stats'
 
-import { LENGTH } from '..'
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
@@ -18,10 +20,7 @@ describe('RandomEngine', () => {
       add(engine.nextBoolean())
     }
 
-    expect(result.true.percent).toBeGreaterThanOrEqual(.49)
-    expect(result.true.percent).toBeLessThanOrEqual(.51)
-
-    expect(result.false.percent).toBeGreaterThanOrEqual(.49)
-    expect(result.false.percent).toBeLessThanOrEqual(.51)
+    expect(result.true.percent).toBeWithin(.49, .52)
+    expect(result.false.percent).toBeWithin(.49, .52)
   })
 })

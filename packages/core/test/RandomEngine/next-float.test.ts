@@ -1,6 +1,8 @@
-import { FloatStats } from '@testyard/stats'
+import {
+  LENGTH,
+  FloatStats
+} from '@testyard/stats'
 
-import { LENGTH } from '..'
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
@@ -23,17 +25,13 @@ describe('RandomEngine', () => {
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.009)
       expect(result.highestValue).toBeLessThanOrEqual(.011)
-
-      expect(result.averageValue).toBeGreaterThanOrEqual(.009)
-      expect(result.averageValue).toBeLessThanOrEqual(.011)
+      expect(result.averageValue).toBeWithin(.009, .012)
 
       expect(result.firstEntry.value).toBe(0)
-      expect(result.firstEntry.percent).toBeGreaterThanOrEqual(.009)
-      expect(result.firstEntry.percent).toBeLessThanOrEqual(.011)
+      expect(result.firstEntry.percent).toBeWithin(.009, .012)
 
       expect(result.lastEntry.value).toBe(.99)
-      expect(result.lastEntry.percent).toBeGreaterThanOrEqual(.009)
-      expect(result.lastEntry.percent).toBeLessThanOrEqual(.011)
+      expect(result.lastEntry.percent).toBeWithin(.009, .012)
     })
   })
 })

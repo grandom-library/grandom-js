@@ -1,6 +1,8 @@
-import { BigIntStats } from '@testyard/stats'
+import {
+  LENGTH,
+  BigIntStats
+} from '@testyard/stats'
 
-import { LENGTH } from '..'
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
@@ -26,14 +28,10 @@ describe('RandomEngine', () => {
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.09)
       expect(result.highestValue).toBeLessThanOrEqual(.11)
+      expect(result.averageValue).toBeWithin(.09, .12)
 
-      expect(result.averageValue).toBeGreaterThanOrEqual(.09)
-      expect(result.averageValue).toBeLessThanOrEqual(.11)
-
-      expect(result.of(0n)).toBeGreaterThanOrEqual(.09)
-      expect(result.of(0n)).toBeLessThanOrEqual(.11)
-      expect(result.of(9n)).toBeGreaterThanOrEqual(.09)
-      expect(result.of(9n)).toBeLessThanOrEqual(.11)
+      expect(result.of(0n)).toBeWithin(.09, .12)
+      expect(result.of(9n)).toBeWithin(.09, .12)
     })
 
     test('include minimum, include maximum - range [minimum, maximum]', () => {
@@ -51,14 +49,10 @@ describe('RandomEngine', () => {
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.090)
       expect(result.highestValue).toBeLessThanOrEqual(.092)
+      expect(result.averageValue).toBeWithin(.090, .093)
 
-      expect(result.averageValue).toBeGreaterThanOrEqual(.090)
-      expect(result.averageValue).toBeLessThanOrEqual(.092)
-
-      expect(result.of(0n)).toBeGreaterThanOrEqual(.090)
-      expect(result.of(0n)).toBeLessThanOrEqual(.092)
-      expect(result.of(10n)).toBeGreaterThanOrEqual(.090)
-      expect(result.of(10n)).toBeLessThanOrEqual(.092)
+      expect(result.of(0n)).toBeWithin(.090, .093)
+      expect(result.of(10n)).toBeWithin(.090, .093)
     })
 
     test('exclude minimum, include maximum - range (minimum, maximum]', () => {
@@ -76,14 +70,10 @@ describe('RandomEngine', () => {
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.09)
       expect(result.highestValue).toBeLessThanOrEqual(.11)
+      expect(result.averageValue).toBeWithin(.09, .12)
 
-      expect(result.averageValue).toBeGreaterThanOrEqual(.09)
-      expect(result.averageValue).toBeLessThanOrEqual(.11)
-
-      expect(result.of(1n)).toBeGreaterThanOrEqual(.09)
-      expect(result.of(1n)).toBeLessThanOrEqual(.11)
-      expect(result.of(10n)).toBeGreaterThanOrEqual(.09)
-      expect(result.of(10n)).toBeLessThanOrEqual(.11)
+      expect(result.of(1n)).toBeWithin(.09, .12)
+      expect(result.of(10n)).toBeWithin(.09, .12)
     })
 
     test('exclude minimum, exclude maximum - range (minimum, maximum)', () => {
@@ -101,14 +91,10 @@ describe('RandomEngine', () => {
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.10)
       expect(result.highestValue).toBeLessThanOrEqual(.12)
+      expect(result.averageValue).toBeWithin(.10, .13)
 
-      expect(result.averageValue).toBeGreaterThanOrEqual(.10)
-      expect(result.averageValue).toBeLessThanOrEqual(.12)
-
-      expect(result.of(1n)).toBeGreaterThanOrEqual(.10)
-      expect(result.of(1n)).toBeLessThanOrEqual(.12)
-      expect(result.of(9n)).toBeGreaterThanOrEqual(.10)
-      expect(result.of(9n)).toBeLessThanOrEqual(.12)
+      expect(result.of(1n)).toBeWithin(.10, .13)
+      expect(result.of(9n)).toBeWithin(.10, .13)
     })
   })
 })

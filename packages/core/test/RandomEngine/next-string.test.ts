@@ -63,7 +63,7 @@ describe('RandomEngine', () => {
           add(engine.nextString(10, 'abc'))
         }
 
-        expect(result.numEntries).toBe(3)
+        expect(result.numCharacters).toBe(3)
         expect(result.characters).toEqual(['a', 'b', 'c',])
 
         expect(result.lowestValue).toBeGreaterThanOrEqual(0.32)
@@ -83,7 +83,7 @@ describe('RandomEngine', () => {
           add(engine.nextString(16, 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'))
         }
 
-        expect(result.numEntries).toBe(52)
+        expect(result.numCharacters).toBe(52)
         expect(result.characters).toEqual([
           'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
           'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
