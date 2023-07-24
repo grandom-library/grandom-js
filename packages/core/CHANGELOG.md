@@ -1,3 +1,10 @@
+# [@grandom/core-v1.5.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.4.0...@grandom/core-v1.5.0) (2023-07-24)
+
+
+### Features
+
+* **core:** add shuffle array ([99b59d8](https://github.com/grandom-library/grandom-js/commit/99b59d858733dd06c503ae1771328bb3952af394))
+
 # [@grandom/core-v1.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.3.0...@grandom/core-v1.4.0) (2023-07-24)
 
 
