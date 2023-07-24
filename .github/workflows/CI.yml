@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
+      # only run 1 job at a time to prevent multiple changes during parallel runs getting an error
+      # from semantic-release with the following message:
+      # [remote rejected] HEAD -> main (cannot lock ref '<branch>': is at <hash> but expected <hash>)
+      max-parallel: 1
       matrix:
         package: [
           boolean,
