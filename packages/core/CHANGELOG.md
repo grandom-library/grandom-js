@@ -1,3 +1,10 @@
+# [@grandom/core-v1.6.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.5.0...@grandom/core-v1.6.0) (2023-07-24)
+
+
+### Features
+
+* **core:** add next weighted ([467d21f](https://github.com/grandom-library/grandom-js/commit/467d21f7cd4022866508b879eb23afe6f5920f81))
+
 # [@grandom/core-v1.5.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.4.0...@grandom/core-v1.5.0) (2023-07-24)
 
 
