@@ -11,7 +11,8 @@ jobs:
         package: [
           boolean,
           core,
-          engines
+          engines,
+          string
         ]
 
     steps:
