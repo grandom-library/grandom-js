@@ -3,14 +3,11 @@ name: CI
 on: [push]
 
 jobs:
-  CI:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     strategy:
-      # only run 1 job at a time to prevent multiple changes during parallel runs getting errors
-      # from semantic-release with the following message:
-      # [remote rejected] HEAD -> main (cannot lock ref '<branch>': is at <hash> but expected <hash>)
-      max-parallel: 1
       matrix:
         package: [
           # primary packages
@@ -43,6 +40,45 @@ jobs:
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
           npm run test --if-present
+
+  release:
+    needs: test
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      # only run 1 job at a time to prevent multiple changes during parallel runs getting errors
+      # from semantic-release with the following message:
+      # [remote rejected] HEAD -> main (cannot lock ref '<branch>': is at <hash> but expected <hash>)
+      max-parallel: 1
+      matrix:
+        package: [
+          # primary packages
+          core,
+          engines,
+
+          # seconday packages
+          boolean,
+          number,
+          string
+        ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+            packages/${{ matrix.package }}/package-lock.json
+
+      - name: init
+        run: >
+          npm ci &&
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm ci
 
       - name: prepare
         run: >
