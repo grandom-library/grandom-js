@@ -15,9 +15,13 @@ jobs:
           engines,
 
           # seconday packages
+          bigint,
           boolean,
           number,
-          string
+          string,
+
+          # tertiary packages
+          pick
         ]
 
     steps:
@@ -59,9 +63,13 @@ jobs:
           engines,
 
           # seconday packages
+          bigint,
           boolean,
           number,
-          string
+          string,
+
+          # tertiary packages
+          pick
         ]
 
     steps:
