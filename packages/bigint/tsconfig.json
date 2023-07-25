@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+
+  "include": [
+    "src",
+    "test",
+    "global.d.ts"
+  ],
+
+  "exclude": [
+    "node_modules"
+  ]
+}
