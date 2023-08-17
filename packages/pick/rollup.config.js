@@ -1,6 +1,6 @@
 const dedent = require('string-dedent')
 const typescript = require('@rollup/plugin-typescript')
-const terser = require('@rollup/plugin-terser')
+// const terser = require('@rollup/plugin-terser')
 
 const pkg = require('./package.json')
 
@@ -31,19 +31,19 @@ module.exports = {
     banner,
     sourcemap: true,
 
-    format:    'cjs',
+    format: 'cjs',
     preserveModules: true,
 
-    dir: 'dist',
+    dir: 'dist'
   },
 
   external: [
     '@grandom/core',
-    '@grandom/engines',
+    '@grandom/engines'
   ],
 
   plugins: [
-    typescript(),
+    typescript()
     // terser(),
-  ],
+  ]
 }

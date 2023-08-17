@@ -1,3 +1,4 @@
+
 // TODO: include / exclude / filter function
 // TODO: implement edge cases (including infinite loops)
 
@@ -5,35 +6,35 @@ import { RandomEngine } from '@grandom/core'
 
 const DEFAULT_FALLBACK = undefined
 
-type ConfigOptions = {
-  includeMinimum?: boolean
-  includeMaximum?: boolean
+// interface ConfigOptions {
+//   includeMinimum?: boolean
+//   includeMaximum?: boolean
 
-  // include?: {
-  //   minimum?: boolean
-  //   maximum?: boolean
-  // }
+//   // include?: {
+//   //   minimum?: boolean
+//   //   maximum?: boolean
+//   // }
 
-  // unique?: boolean
-  // filter?: Filter
-  // loopLimit?: boolean | number
-}
+//   // unique?: boolean
+//   // filter?: Filter
+//   // loopLimit?: boolean | number
+// }
 
-type PickOptions<T> = {
+// type PickOptions<T> = {
+//   default?: T
+//   count?: number
+// } & ConfigOptions
+
+export interface PickStringOptions<T> {
   default?: T
   count?: number
-} & ConfigOptions
-
-type PickStringOptions<T> = {
-  default?: T
-  count?: number
 }
 
-type PickArrayOptions<T> = {
+export interface PickArrayOptions<T> {
   default?: T
 }
 
-type PickObjectOptions<T> = {
+export interface PickObjectOptions<T> {
   default?: T
 }
 
@@ -47,42 +48,42 @@ const unique = grandom.pick.unique.multiple([1, 2, 3], { count: 2, default: -1 }
 const unique = grandom.pick.multiple.unique([1, 2, 3], { count: 2, default: -1 })
 */
 
-type Pick = {
-  // strings ---------------------------------------------------------------------------------------
-  (string: string): string
-  <T = undefined> (string: string, options: PickStringOptions<T>): string | T
+// interface Pick {
+//   // strings ---------------------------------------------------------------------------------------
+//   (string: string): string
+//   <T = undefined> (string: string, options: PickStringOptions<T>): string | T
 
-  // arrays ----------------------------------------------------------------------------------------
-  <T> (array: ArrayLike<T>): T
-  <T, U = undefined> (array: ArrayLike<T>, options: PickArrayOptions<U>): T | U
+//   // arrays ----------------------------------------------------------------------------------------
+//   <T> (array: ArrayLike<T>): T
+//   <T, U = undefined> (array: ArrayLike<T>, options: PickArrayOptions<U>): T | U
 
-  multiple: {
-    // strings -------------------------------------------------------------------------------------
-    (string: string, count: number): string
-    <T = undefined> (string: string, options: PickStringOptions<T>): string | T
+//   multiple: {
+//     // strings -------------------------------------------------------------------------------------
+//     (string: string, count: number): string
+//     <T = undefined> (string: string, options: PickStringOptions<T>): string | T
 
-    // unique: {
-    //   // strings -----------------------------------------------------------------------------------
-    //   (string: string, count: number): () => string
-    //   <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
-    // }
-  }
+//     // unique: {
+//     //   // strings -----------------------------------------------------------------------------------
+//     //   (string: string, count: number): () => string
+//     //   <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
+//     // }
+//   }
 
-  unique: {
-    // strings -------------------------------------------------------------------------------------
-    (string: string): () => string
-    <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
+//   unique: {
+//     // strings -------------------------------------------------------------------------------------
+//     (string: string): () => string
+//     <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
 
-    multiple: {
-      // strings -----------------------------------------------------------------------------------
-      (string: string, count: number): () => string
-      <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
-    }
-  }
-}
+//     multiple: {
+//       // strings -----------------------------------------------------------------------------------
+//       (string: string, count: number): () => string
+//       <T = undefined> (string: string, options: PickStringOptions<T>): () => string | T
+//     }
+//   }
+// }
 
 export default class RandomPick {
-  private _engine: RandomEngine
+  private readonly _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
     this._engine = engine
@@ -117,21 +118,21 @@ export default class RandomPick {
 
         // process string options ------------------------------------------------------------------
         if (typeof arg2 !== 'undefined') {
-
           // process count option ------------------------------------------------------------------
           if ('count' in arg2) {
             if (typeof arg2.count === 'number') {
               count = arg2.count
 
               // NaN check and bound checks
+              // eslint-disable-next-line no-self-compare
               if (count !== count || count < 1 || count > Number.MAX_SAFE_INTEGER) {
                 throw new RangeError(
                   `Count must be 1 >= count <= Number.MAX_SAFE_INTEGER, got: ${count}.`
                 )
               }
-
             } else {
               throw new TypeError(
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
                 `Count must be a number, got: ${arg2.count} (typeof === '${typeof arg2.count}').`
               )
             }
@@ -162,13 +163,10 @@ export default class RandomPick {
 
       // process arrays ----------------------------------------------------------------------------
       } else if (Array.isArray(arg1)) {
-
         // return the fallback (default) if the array is empty (e.g.: [])
         if (arg1.length === 0) {
-
           // process string options ----------------------------------------------------------------
           if (typeof arg2 !== 'undefined') {
-
             // process fallback (default) option ---------------------------------------------------
             if ('default' in arg2) {
               fallback = arg2.default
@@ -186,10 +184,8 @@ export default class RandomPick {
 
         // return the fallback (default) if the array is empty (e.g.: {})
         if (keys.length === 0) {
-
           // process string options ----------------------------------------------------------------
           if (typeof arg2 !== 'undefined') {
-
             // process fallback (default) option ---------------------------------------------------
             if ('default' in arg2) {
               fallback = arg2.default
@@ -207,6 +203,7 @@ export default class RandomPick {
 
     // type guard ----------------------------------------------------------------------------------
     throw new TypeError(
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       `Must be called with a string, array, or object, got: ${arg1} (typeof === '${typeof arg1}').`
     )
   }

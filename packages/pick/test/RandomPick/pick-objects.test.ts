@@ -1,7 +1,7 @@
 import {
   LENGTH,
   CharacterStats,
-  IntegerStats,
+  IntegerStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
@@ -19,7 +19,7 @@ describe('RandomPick', () => {
         for (let i = 0; i < 10_000; i++) {
           const [key, value] = random.pick({ a: 1, b: 2, c: 3 })
 
-          expect(key + '-' + value).toBeOneOf(['a-1', 'b-2', 'c-3'])
+          expect(`${key}-${value}`).toBeOneOf(['a-1', 'b-2', 'c-3'])
         }
 
         for (let i = 0; i < LENGTH; i++) {
@@ -30,7 +30,7 @@ describe('RandomPick', () => {
         }
 
         expect(characters.result.numCharacters).toBe(3)
-        expect(characters.result.characters).toEqual(['a', 'b', 'c',])
+        expect(characters.result.characters).toEqual(['a', 'b', 'c'])
 
         expect(characters.result.lowestValue).toBeGreaterThanOrEqual(0.32)
         expect(characters.result.highestValue).toBeLessThanOrEqual(0.35)
@@ -43,13 +43,13 @@ describe('RandomPick', () => {
         expect(integers.result.numEntries).toBe(3)
         expect(integers.result.integers).toEqual([1, 2, 3])
 
-        expect(integers.result.lowestValue).toBeGreaterThanOrEqual(.32)
-        expect(integers.result.highestValue).toBeLessThanOrEqual(.35)
-        expect(integers.result.averageValue).toBeWithin(.32, .35)
+        expect(integers.result.lowestValue).toBeGreaterThanOrEqual(0.32)
+        expect(integers.result.highestValue).toBeLessThanOrEqual(0.35)
+        expect(integers.result.averageValue).toBeWithin(0.32, 0.35)
 
-        expect(integers.result.of(1)).toBeWithin(.32, .35)
-        expect(integers.result.of(2)).toBeWithin(.32, .35)
-        expect(integers.result.of(3)).toBeWithin(.32, .35)
+        expect(integers.result.of(1)).toBeWithin(0.32, 0.35)
+        expect(integers.result.of(2)).toBeWithin(0.32, 0.35)
+        expect(integers.result.of(3)).toBeWithin(0.32, 0.35)
       })
 
       describe('options', () => {

@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start": "npm test -- --watchAll",
+    "types": "tsc --noEmit && tsc -p tsconfig.types.json --outDir .temp",
     "lint": "ts-standard --verbose | snazzy",
     "test": "jest",
     "prep": "npm run __prep:init && npm run __prep:copy",

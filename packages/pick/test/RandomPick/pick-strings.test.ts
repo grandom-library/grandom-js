@@ -1,7 +1,7 @@
 import {
   LENGTH,
   CharacterStats,
-  IntegerStats,
+  IntegerStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
@@ -20,7 +20,7 @@ describe('RandomPick', () => {
         }
 
         expect(result.numCharacters).toBe(3)
-        expect(result.characters).toEqual(['a', 'b', 'c',])
+        expect(result.characters).toEqual(['a', 'b', 'c'])
 
         expect(result.lowestValue).toBeGreaterThanOrEqual(0.32)
         expect(result.highestValue).toBeLessThanOrEqual(0.35)
@@ -47,13 +47,13 @@ describe('RandomPick', () => {
               311, 312, 313, 321, 322, 323, 331, 332, 333
             ])
 
-            expect(result.lowestValue).toBeGreaterThanOrEqual(.036)
-            expect(result.highestValue).toBeLessThanOrEqual(.038)
-            expect(result.averageValue).toBeWithin(.036, .038)
+            expect(result.lowestValue).toBeGreaterThanOrEqual(0.036)
+            expect(result.highestValue).toBeLessThanOrEqual(0.038)
+            expect(result.averageValue).toBeWithin(0.036, 0.038)
 
-            expect(result.of(111)).toBeWithin(.036, .038)
-            expect(result.of(222)).toBeWithin(.036, .038)
-            expect(result.of(333)).toBeWithin(.036, .038)
+            expect(result.of(111)).toBeWithin(0.036, 0.038)
+            expect(result.of(222)).toBeWithin(0.036, 0.038)
+            expect(result.of(333)).toBeWithin(0.036, 0.038)
           })
 
           describe('errors', () => {

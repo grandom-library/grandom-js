@@ -15,7 +15,7 @@ describe('@grandom/pick', () => {
 
   test('objects', () => {
     for (let i = 0; i < 10_000; i++) {
-      const [key, value] = pick({ a: 1, b: 2, c: 3})
+      const [key, value] = pick({ a: 1, b: 2, c: 3 })
 
       expect(`${key}:${value}`).toBeOneOf(['a:1', 'b:2', 'c:3'])
     }
