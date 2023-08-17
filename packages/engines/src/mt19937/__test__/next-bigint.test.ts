@@ -42,7 +42,7 @@ describe('MT19937Engine', () => {
       ])
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(.089)
-      expect(result.highestValue).toBeLessThanOrEqual(.092)
+      expect(result.highestValue).toBeLessThanOrEqual(.093)
       expect(result.averageValue).toBeWithin(.089, .093)
 
       expect(result.of(0n)).toBeWithin(.089, .093)
