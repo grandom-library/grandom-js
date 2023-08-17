@@ -1,4 +1,3 @@
-
 // TODO: include / exclude / filter function
 // TODO: implement edge cases (including infinite loops)
 
