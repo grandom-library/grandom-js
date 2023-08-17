@@ -43,12 +43,12 @@ jobs:
       - name: types
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run types
+          npm run types --if-present
 
       - name: lint
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run lint
+          npm run lint --if-present
 
       - name: test
         run: >
