@@ -6,8 +6,8 @@ module.exports = {
     'main',
     'next',
     'next-major',
-    {name: 'beta', prerelease: true},
-    {name: 'alpha', prerelease: true},
+    { name: 'beta', prerelease: true },
+    { name: 'alpha', prerelease: true }
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
@@ -17,7 +17,7 @@ module.exports = {
     ['@semantic-release/exec', {
       // eslint-disable-next-line no-template-curly-in-string
       prepareCmd: 'export SEMANTIC_RELEASE_NEXT_RELEASE_VERSION=${nextRelease.version} && npm run build'
-    }],
+    }]
     // ['@semantic-release/git', {
     //   assets: [
     //     'CHANGELOG*',
@@ -26,5 +26,5 @@ module.exports = {
     // ['@semantic-release/npm', {
     //   pkgRoot: 'dist',
     // }],
-  ],
+  ]
 }
