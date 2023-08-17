@@ -40,10 +40,20 @@ jobs:
           npx lerna exec --scope @grandom/${{ matrix.package }} --
           npm ci
 
+      - name: types
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run types
+
+      - name: lint
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run lint
+
       - name: test
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run test --if-present
+          npm test -- --coverage
 
   release:
     needs: test
