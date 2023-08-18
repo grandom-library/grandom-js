@@ -75,7 +75,7 @@ export default class RandomEngine {
   getSeed (): any {}
 
   nextBoolean (): boolean {
-    return this._next() < .5
+    return this._next() < 0.5
   }
 
   nextInteger (
@@ -109,7 +109,7 @@ export default class RandomEngine {
     return Math.floor(this._next() * (max - min + maxOffset)) + min + minOffset
   }
 
-  nextFloat () {
+  nextFloat (): number {
     return this._next()
   }
 
@@ -142,11 +142,11 @@ export default class RandomEngine {
     }
 
     return (
-      BigInt(Math.floor(this._next() * Number.MAX_SAFE_INTEGER))
-      * (BigInt(max) - BigInt(min) + maxOffset)
-      / BigInt(Number.MAX_SAFE_INTEGER)
-      )
-      + BigInt(min) + minOffset
+      BigInt(Math.floor(this._next() * Number.MAX_SAFE_INTEGER)) *
+      (BigInt(max) - BigInt(min) + maxOffset) /
+      BigInt(Number.MAX_SAFE_INTEGER)
+    ) +
+      BigInt(min) + minOffset
   }
 
   nextString (length: number, charset: string): string {
@@ -182,7 +182,6 @@ export default class RandomEngine {
 
     // loop through the elements (and their corresponding weights)
     for (let i = 0; i < elements.length; i++) {
-
       // add the current element's weight to the cumulative weight
       cumulativeWeight += weights[i]
 
@@ -208,13 +207,12 @@ export default class RandomEngine {
    *
    * @link https://en.wikipedia.org/wiki/Fisher-Yates_shuffle#The_modern_algorithm
    */
-  shuffleArray <T> (array: Array<T>) {
+  shuffleArray <T> (array: T[]): void {
     let randomIndex: number
     let temp: T
 
     // loop through the array starting from the last element, going backwards
     for (let index = array.length - 1; index > 0; index--) {
-
       // generate a random index in range of [0, i] - (i === index + 1 (thus making inclusive)),
       // as the result of the loop going backwards, the range of [0, i] will be decreased
       // in each iteration
