@@ -74,6 +74,18 @@ jobs:
       - name: init
         run: npm ci && npx lerna exec -- npm ci && npx lerna list -all
 
+      # primary packages -----------------------------------------------------------------------------------------------
+      - name: core
+        run: >
+          npx lerna exec --scope @grandom/core -- npm run prep &&
+          npx lerna exec --scope @grandom/core -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: engines
+        run: >
+          npx lerna exec --scope @grandom/engines -- npm run prep &&
+          npx lerna exec --scope @grandom/engines -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      # secondary packages ---------------------------------------------------------------------------------------------
       - name: bigint
         run: >
           npx lerna exec --scope @grandom/bigint -- npm run prep &&
@@ -83,6 +95,22 @@ jobs:
         run: >
           npx lerna exec --scope @grandom/boolean -- npm run prep &&
           npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: number
+        run: >
+          npx lerna exec --scope @grandom/number -- npm run prep &&
+          npx lerna exec --scope @grandom/number -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: string
+        run: >
+          npx lerna exec --scope @grandom/string -- npm run prep &&
+          npx lerna exec --scope @grandom/string -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      # tertiary packages ----------------------------------------------------------------------------------------------
+      - name: pick
+        run: >
+          npx lerna exec --scope @grandom/pick -- npm run prep &&
+          npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
