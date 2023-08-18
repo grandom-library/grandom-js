@@ -18,11 +18,11 @@ module.exports = {
       // eslint-disable-next-line no-template-curly-in-string
       prepareCmd: 'export SEMANTIC_RELEASE_NEXT_RELEASE_VERSION=${nextRelease.version} && npm run build'
     }],
-    // ['@semantic-release/git', {
-    //   assets: [
-    //     'CHANGELOG*',
-    //   ],
-    // }],
+    ['@semantic-release/git', {
+      assets: [
+        'CHANGELOG*'
+      ]
+    }],
     ['@semantic-release/npm', {
       pkgRoot: 'dist'
     }]
