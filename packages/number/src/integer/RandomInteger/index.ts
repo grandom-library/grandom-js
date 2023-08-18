@@ -1,3 +1,4 @@
+
 // TODO: implement edge cases (including infinite loops)
 // TODO: implement detailed error handling
 
@@ -7,7 +8,7 @@ import IntegerFilter, { type Filter } from '../IntegerFilter'
 
 const DEFAULT_LOOP_GUARD = 1_000_000
 
-type ConfigOptions = {
+export interface ConfigOptions {
   includeMinimum?: boolean
   includeMaximum?: boolean
 
@@ -29,7 +30,7 @@ type IntegerOptions = {
 } & ConfigOptions
 
 export default class RandomInteger {
-  private _engine: RandomEngine
+  private readonly _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
     this._engine = engine
@@ -59,10 +60,9 @@ export default class RandomInteger {
 
       let hasFilter = false
       // let includeFilter: undefined | IntegerFilter
-      let excludeFilter: undefined | IntegerFilter
+      let excludeFilter: boolean | IntegerFilter = false
 
       if (typeof arg1 === 'number') {
-
         if (typeof arg2 === 'undefined') {
           max = arg1
         }
@@ -94,7 +94,7 @@ export default class RandomInteger {
       }
 
       if (hasFilter) {
-        let loopGuard = DEFAULT_LOOP_GUARD
+        const loopGuard = DEFAULT_LOOP_GUARD
         let loop = 0
 
         while (true) {
@@ -104,9 +104,11 @@ export default class RandomInteger {
 
           const int = this._engine.nextInteger(min, max, includeMin, includeMax)
 
-          if (excludeFilter?.matches(int)) {
-            loop++
-            continue
+          if (excludeFilter !== false) {
+            if (excludeFilter?.matches(int)) {
+              loop++
+              continue
+            }
           }
 
           return int

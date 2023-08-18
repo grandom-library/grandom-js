@@ -1,6 +1,6 @@
 import {
   LENGTH,
-  IntegerStats,
+  IntegerStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
