@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/grandom-library/grandom-js/issues"
   },
-  "homepage": "https://github.com/grandom-library/grandom-js#readme",
+  "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/engines#readme",
   "engines": {
     "node": ">= 16"
   },
@@ -26,11 +26,12 @@
   },
   "scripts": {
     "start": "npm test -- --watchAll",
+    "types": "tsc --noEmit && tsc -p tsconfig.types.json --outDir .temp",
     "lint": "ts-standard --verbose | snazzy",
     "test": "jest",
     "prep": "npm run __prep:init && npm run __prep:copy",
     "build": "npm run __build:src && npm run __build:types",
-    "--------------------------------": "--------------------------------",
+    "//": "-------------------------------------------------------------------",
     "__prep:init": "rm -rf dist && mkdir dist",
     "__prep:copy": "cp ../../LICENSE* README* package.json dist",
     "__build:src": "rollup -c",
@@ -61,6 +62,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@grandom/core": "^1.3.0"
+    "@grandom/core": "^2.3.0"
   }
 }
