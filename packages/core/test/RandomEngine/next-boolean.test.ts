@@ -3,13 +3,7 @@ import {
   BooleanStats
 } from '@testyard/stats'
 
-import RandomEngine from '../../src/RandomEngine'
-
-class TestEngine extends RandomEngine {
-  _next (): number {
-    return Math.random()
-  }
-}
+import { TestEngine } from '../fixtures'
 
 describe('RandomEngine', () => {
   test('.nextBoolean()', () => {

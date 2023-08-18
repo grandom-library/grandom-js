@@ -1,3 +1,7 @@
+/**
+ * Core random generator engine class to use to build
+ * custom random generator engines.
+ */
 export default class RandomEngine {
   /**
    * Include minimum during random data generation
@@ -63,13 +67,35 @@ export default class RandomEngine {
    */
   static DEFAULT_BIGINT_MAXIMUM = 18_446_744_073_709_551_616n // 2^64
 
-  get isSeedSupported (): boolean {
-    return false
+  // ---------------------------------------------------------------------------
+
+  private readonly _name: string
+
+  constructor (name: string) {
+    this._name = name
+  }
+
+  // ---------------------------------------------------------------------------
+
+  protected _isSeedSupported (): boolean {
+    throw new Error('_isSeedSupported() must be implemented.')
   }
 
   protected _next (): number {
-    return NaN
+    throw new Error('_next() must be implemented.')
   }
+
+  // ---------------------------------------------------------------------------
+
+  get name (): string {
+    return this._name
+  }
+
+  get isSeedSupported (): boolean {
+    return this._isSeedSupported()
+  }
+
+  // ---------------------------------------------------------------------------
 
   setSeed (seed?: any): void {}
   getSeed (): any {}

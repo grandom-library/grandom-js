@@ -1,5 +1,7 @@
 import RandomEngine from '../../src/RandomEngine'
 
+import { TestEngine } from '../fixtures'
+
 describe('RandomEngine', () => {
   describe('basics', () => {
     test('constants', () => {
@@ -14,6 +16,42 @@ describe('RandomEngine', () => {
 
       expect(RandomEngine.DEFAULT_BIGINT_MINIMUM).toBe(0n)
       expect(RandomEngine.DEFAULT_BIGINT_MAXIMUM).toBe(18_446_744_073_709_551_616n)
+    })
+
+    test('name', () => {
+      const engine = new TestEngine()
+
+      expect(engine.name).toBe('test-engine')
+    })
+
+    test('isSeedSupported', () => {
+      const engine = new TestEngine()
+
+      expect(engine.isSeedSupported).toBe(false)
+    })
+
+    test('._next() is implemented', () => {
+      const engine = new TestEngine()
+
+      expect(engine.nextBoolean()).toBeBoolean()
+    })
+  })
+
+  describe('errors', () => {
+    const engine = new RandomEngine('test')
+
+    test('_isSeedSupported must be implemented', () => {
+      expect(() => engine.isSeedSupported).toThrowWithMessage(
+        Error,
+        '_isSeedSupported() must be implemented.'
+      )
+    })
+
+    test('_next must be implemented', () => {
+      expect(() => engine.nextBoolean()).toThrowWithMessage(
+        Error,
+        '_next() must be implemented.'
+      )
     })
   })
 })
