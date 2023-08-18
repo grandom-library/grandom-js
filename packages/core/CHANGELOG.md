@@ -1,3 +1,10 @@
+# [@grandom/core-v2.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.3.0...@grandom/core-v2.4.0) (2023-08-18)
+
+
+### Features
+
+* **core:** add new RandomEngine ([fc70bd0](https://github.com/grandom-library/grandom-js/commit/fc70bd0e63e5405318b6e67064dd857cbed4cf2d))
+
 # [@grandom/core-v2.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.2.0...@grandom/core-v2.3.0) (2023-08-18)
 
 
