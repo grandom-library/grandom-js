@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -57,6 +57,9 @@ jobs:
 
   release:
     needs: test
+
+    # skip the job if the pull request was opened by Dependabot
+    if: ${{ github.actor != 'dependabot[bot]' }}
 
     runs-on: ubuntu-20.04
     timeout-minutes: 10
