@@ -11,18 +11,18 @@ jobs:
       matrix:
         package: [
           # primary packages
-          core,
-          engines,
+          '@grandom/core',
+          '@grandom/engines',
 
           # seconday packages
-          bigint,
-          boolean,
-          number,
-          pick,
-          string,
+          '@grandom/bigint',
+          '@grandom/boolean',
+          '@grandom/number',
+          '@grandom/pick',
+          '@grandom/string',
 
           # tertiary packages
-          grandom
+          'grandom'
         ]
 
     steps:
@@ -38,22 +38,22 @@ jobs:
       - name: init
         run: >
           npm ci &&
-          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npx lerna exec --scope ${{ matrix.package }} --
           npm ci
 
       # - name: types
       #   run: >
-      #     npx lerna exec --scope @grandom/${{ matrix.package }} --
+      #     npx lerna exec --scope ${{ matrix.package }} --
       #     npm run types
 
       # - name: lint
       #   run: >
-      #     npx lerna exec --scope @grandom/${{ matrix.package }} --
+      #     npx lerna exec --scope ${{ matrix.package }} --
       #     npm run lint
 
       - name: test
         run: >
-          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npx lerna exec --scope ${{ matrix.package }} --
           npm test -- --coverage
 
   release:
@@ -118,8 +118,8 @@ jobs:
       # tertiary packages ----------------------------------------------------------------------------------------------
       - name: grandom
         run: >
-          npx lerna exec --scope @grandom/grandom -- npm run prep &&
-          npx lerna exec --scope @grandom/grandom -- npx --no-install semantic-release -e semantic-release-monorepo
+          npx lerna exec --scope grandom -- npm run prep &&
+          npx lerna exec --scope grandom -- npx --no-install semantic-release -e semantic-release-monorepo
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
