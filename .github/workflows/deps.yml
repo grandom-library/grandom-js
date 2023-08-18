@@ -1,0 +1,56 @@
+name: Deps
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        package: [
+          # primary packages
+          core,
+          engines,
+
+          # seconday packages
+          bigint,
+          boolean,
+          number,
+          string,
+
+          # tertiary packages
+          pick
+        ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+            packages/${{ matrix.package }}/package-lock.json
+
+      - name: init
+        run: >
+          npm ci &&
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm ci
+
+      - name: check:types
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run check:types --if-present
+
+      - name: check:lint
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm run check:lint --if-present
+
+      - name: test
+        run: >
+          npx lerna exec --scope @grandom/${{ matrix.package }} --
+          npm test -- --coverage
