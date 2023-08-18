@@ -40,15 +40,15 @@ jobs:
           npx lerna exec --scope @grandom/${{ matrix.package }} --
           npm ci
 
-      - name: check:types
+      - name: types
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run check:types --if-present
+          npm run types
 
-      - name: check:lint
+      - name: lint
         run: >
           npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run check:lint --if-present
+          npm run lint
 
       - name: test
         run: >
@@ -58,11 +58,11 @@ jobs:
   release:
     needs: test
 
-    # skip the job if the pull request was opened by Dependabot
-    if: ${{ github.actor != 'dependabot[bot]' }}
-
     runs-on: ubuntu-20.04
     timeout-minutes: 10
+
+    # skip the job if the pull request was opened by Dependabot
+    if: ${{ github.actor != 'dependabot[bot]' }}
 
     steps:
       - uses: actions/checkout@v3
