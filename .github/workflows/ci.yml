@@ -18,10 +18,11 @@ jobs:
           bigint,
           boolean,
           number,
+          pick,
           string,
 
           # tertiary packages
-          pick
+          grandom
         ]
 
     steps:
@@ -104,16 +105,21 @@ jobs:
           npx lerna exec --scope @grandom/number -- npm run prep &&
           npx lerna exec --scope @grandom/number -- npx --no-install semantic-release -e semantic-release-monorepo
 
+      - name: pick
+        run: >
+          npx lerna exec --scope @grandom/pick -- npm run prep &&
+          npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
+
       - name: string
         run: >
           npx lerna exec --scope @grandom/string -- npm run prep &&
           npx lerna exec --scope @grandom/string -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # tertiary packages ----------------------------------------------------------------------------------------------
-      - name: pick
+      - name: grandom
         run: >
-          npx lerna exec --scope @grandom/pick -- npm run prep &&
-          npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
+          npx lerna exec --scope @grandom/grandom -- npm run prep &&
+          npx lerna exec --scope @grandom/grandom -- npx --no-install semantic-release -e semantic-release-monorepo
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
