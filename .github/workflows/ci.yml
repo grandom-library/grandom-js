@@ -72,7 +72,7 @@ jobs:
             packages/*/package-lock.json
 
       - name: init
-        run: npm ci && npx lerna exec -- npm ci && npx lerna list -all
+        run: npm ci && npx lerna exec -- npm ci
 
       # primary packages -----------------------------------------------------------------------------------------------
       - name: core
