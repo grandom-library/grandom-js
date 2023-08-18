@@ -26,6 +26,6 @@
     "__purge": "npm run __clear-build-files && npm run __purge-dependency-caches"
   },
   "devDependencies": {
-    "lerna": "^6.6.2"
+    "lerna": "^7.1.5"
   }
 }
