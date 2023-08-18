@@ -33,7 +33,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: |
             package-lock.json
-            packages/${{ matrix.package }}/package-lock.json
+            packages/*/package-lock.json
 
       - name: init
         run: >
