@@ -22,9 +22,9 @@ module.exports = {
       assets: [
         'CHANGELOG*'
       ]
+    }],
+    ['@semantic-release/npm', {
+      pkgRoot: 'dist'
     }]
-    // ['@semantic-release/npm', {
-    //   pkgRoot: 'dist'
-    // }]
   ]
 }
