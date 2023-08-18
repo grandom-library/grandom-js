@@ -114,7 +114,7 @@ describe('RandomString', () => {
         const { add, result } = new StringStats()
 
         for (let i = 0; i < 100_000; i++) {
-          add(random.string(32, {  }))
+          add(random.string(32, { }))
         }
 
         expect(result.characters).toBe(

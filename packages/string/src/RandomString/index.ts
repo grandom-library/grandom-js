@@ -1,10 +1,11 @@
+
 // TODO: implement edge cases (including infinite loops)
 // TODO: implement detailed error handling
 
 import { RandomEngine } from '@grandom/core'
-import StringFilter, { type Filter } from '../StringFilter'
+import { type Filter } from '../StringFilter'
 
-type ConfigOptions = {
+export interface ConfigOptions {
   filter?: {
     include?: Filter
     exclude?: Filter
@@ -14,11 +15,11 @@ type ConfigOptions = {
 
 type RandomStringOptions = {
   length?: number
-    | [number, number]
-    | {
-      minimum?: number
-      maximum?: number
-    }
+  | [number, number]
+  | {
+    minimum?: number
+    maximum?: number
+  }
 } & ConfigOptions
 
 export default class RandomString {
@@ -52,7 +53,7 @@ export default class RandomString {
 
   // ---------------------------------------------------------------------------
 
-  private _engine: RandomEngine
+  private readonly _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
     this._engine = engine
@@ -108,24 +109,23 @@ export default class RandomString {
 
       if (typeof arg1 === 'number') {
         length = arg1
-
       } else if (typeof arg1 === 'object' && arg1 !== null) {
         if (typeof arg1.length === 'number') {
           length = arg1.length
         }
-
       } else {
         if (typeof arg1 !== 'number') {
           throw new TypeError(
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             `length must be a number, got: ${arg1} (typeof === "${typeof arg1}").`
           )
         }
       }
 
       // NaN check
+      // eslint-disable-next-line no-self-compare
       if (length !== length) {
         throw new RangeError(`length must be a non-NaN number, got: ${length}.`)
-
       } else if (length < 0 || length > Number.MAX_SAFE_INTEGER) {
         throw new RangeError(
           `length must be >= 0 <= 2^53-1 (9,007,199,254,740,991), got ${length}.`
@@ -148,4 +148,3 @@ export default class RandomString {
     )
   }
 }
-

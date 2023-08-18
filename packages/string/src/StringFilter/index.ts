@@ -23,34 +23,34 @@ const str = random.string({
 })
 */
 
-type FilterOptions = {
+interface FilterOptions {
   numbers?: boolean
   letters?: boolean
-  characters?: string | string[],
-  strings?: string | string[],
+  characters?: string | string[]
+  strings?: string | string[]
 }
 
 export type Filter =
     string
-  | string[]
-  | FilterOptions
-  | FilterOptions[]
-  // | RegExp
-  // | RegExp[]
+    | string[]
+    | FilterOptions
+    | FilterOptions[]
+// | RegExp
+// | RegExp[]
 
 // export type Filter = string
 
-type FilterEntry = {
+interface FilterEntry {
 
   regexp?: RegExp
 }
 
 export default class StringFilter {
-  private _filterEntries: FilterEntry[] = []
+  private readonly _filterEntries: FilterEntry[] = []
 
-  constructor (filter?: Filter) {
+  // constructor (filter?: Filter) {
 
-  }
+  // }
 
   get numFilters (): number {
     return this._filterEntries.length
@@ -60,4 +60,3 @@ export default class StringFilter {
     return false
   }
 }
-

@@ -1,6 +1,6 @@
 import {
   StringStats,
-  CharacterStats,
+  CharacterStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'

@@ -8,4 +8,3 @@ describe('StringFilter', () => {
     expect(filter.matches('a')).toBe(false)
   })
 })
-
