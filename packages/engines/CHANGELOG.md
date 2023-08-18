@@ -1,3 +1,15 @@
+# [@grandom/engines-v2.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v1.0.2...@grandom/engines-v2.0.0) (2023-08-18)
+
+
+### Features
+
+* **engines:** add new engine architecture ([1f8c17b](https://github.com/grandom-library/grandom-js/commit/1f8c17b03cd70a2dbd380d3d6c86eafc1414e255))
+
+
+### BREAKING CHANGES
+
+* **engines:** architectural changes
+
 # [@grandom/engines-v1.0.2](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v1.0.1...@grandom/engines-v1.0.2) (2023-07-18)
 
 
