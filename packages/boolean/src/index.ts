@@ -1,5 +1,4 @@
-
-import { BasicEngine } from '@grandom/engines'
+import BasicEngine from '@grandom/engines/basic'
 import RandomBoolean from './RandomBoolean'
 
 const random = new RandomBoolean(new BasicEngine())

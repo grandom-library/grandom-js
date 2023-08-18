@@ -1,4 +1,3 @@
-
 import { RandomEngine } from '@grandom/core'
 
 export default class RandomBoolean {
