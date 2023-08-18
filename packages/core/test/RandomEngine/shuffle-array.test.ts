@@ -6,7 +6,7 @@ import {
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
-  _next() {
+  _next (): number {
     return Math.random()
   }
 }
@@ -47,15 +47,15 @@ describe('RandomEngine', () => {
       70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
       80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
       90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
-      100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+      100, 101, 102, 103, 104, 105, 106, 107, 108, 109
     ])
 
-    expect(result.lowestValue).toBeGreaterThanOrEqual(.008)
-    expect(result.highestValue).toBeLessThanOrEqual(.011)
-    expect(result.averageValue).toBeWithin(.008, .012)
+    expect(result.lowestValue).toBeGreaterThanOrEqual(0.008)
+    expect(result.highestValue).toBeLessThanOrEqual(0.011)
+    expect(result.averageValue).toBeWithin(0.008, 0.012)
 
-    expect(result.of(10)).toBeWithin(.008, .012)
-    expect(result.of(50)).toBeWithin(.008, .012)
-    expect(result.of(109)).toBeWithin(.008, .012)
+    expect(result.of(10)).toBeWithin(0.008, 0.012)
+    expect(result.of(50)).toBeWithin(0.008, 0.012)
+    expect(result.of(109)).toBeWithin(0.008, 0.012)
   })
 })

@@ -1,12 +1,12 @@
 import {
   LENGTH,
-  CharacterStats,
+  CharacterStats
 } from '@testyard/stats'
 
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
-  _next() {
+  _next (): number {
     return Math.random()
   }
 }
@@ -64,7 +64,7 @@ describe('RandomEngine', () => {
         }
 
         expect(result.numCharacters).toBe(3)
-        expect(result.characters).toEqual(['a', 'b', 'c',])
+        expect(result.characters).toEqual(['a', 'b', 'c'])
 
         expect(result.lowestValue).toBeGreaterThanOrEqual(0.32)
         expect(result.highestValue).toBeLessThanOrEqual(0.35)

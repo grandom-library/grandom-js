@@ -1,15 +1,16 @@
 import {
   LENGTH,
-  CharacterStats,
+  CharacterStats
 } from '@testyard/stats'
 
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
-  _next() {
+  _next (): number {
     return Math.random()
   }
 }
+
 describe('RandomEngine', () => {
   test('.nextWeighted()', () => {
     const { add, result } = new CharacterStats()

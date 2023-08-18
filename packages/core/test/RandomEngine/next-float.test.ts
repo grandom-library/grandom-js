@@ -6,7 +6,7 @@ import {
 import RandomEngine from '../../src/RandomEngine'
 
 class TestEngine extends RandomEngine {
-  _next() {
+  _next (): number {
     return Math.random()
   }
 }
@@ -23,15 +23,15 @@ describe('RandomEngine', () => {
 
       expect(result.numEntries).toBe(100)
 
-      expect(result.lowestValue).toBeGreaterThanOrEqual(.009)
-      expect(result.highestValue).toBeLessThanOrEqual(.011)
-      expect(result.averageValue).toBeWithin(.009, .012)
+      expect(result.lowestValue).toBeGreaterThanOrEqual(0.009)
+      expect(result.highestValue).toBeLessThanOrEqual(0.011)
+      expect(result.averageValue).toBeWithin(0.009, 0.012)
 
       expect(result.firstEntry.value).toBe(0)
-      expect(result.firstEntry.percent).toBeWithin(.009, .012)
+      expect(result.firstEntry.percent).toBeWithin(0.009, 0.012)
 
-      expect(result.lastEntry.value).toBe(.99)
-      expect(result.lastEntry.percent).toBeWithin(.009, .012)
+      expect(result.lastEntry.value).toBe(0.99)
+      expect(result.lastEntry.percent).toBeWithin(0.009, 0.012)
     })
   })
 })

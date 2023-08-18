@@ -1,6 +1,6 @@
 const dedent = require('string-dedent')
 const typescript = require('@rollup/plugin-typescript')
-const terser = require('@rollup/plugin-terser')
+// const terser = require('@rollup/plugin-terser')
 
 const pkg = require('./package.json')
 
@@ -34,11 +34,11 @@ module.exports = {
     format: 'cjs',
     preserveModules: true,
 
-    dir: 'dist',
+    dir: 'dist'
   },
 
   plugins: [
-    typescript(),
+    typescript()
     // terser(),
-  ],
+  ]
 }
