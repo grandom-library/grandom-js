@@ -14,7 +14,7 @@ describe('IntegerFilter', () => {
     })
 
     test('2 ranges', () => {
-      const filter = new IntegerFilter(['1n-2n', '4n-5n'])
+      const filter = new IntegerFilter(['1n-2n', '5n-4n'])
 
       expect(filter.numFilters).toBe(2)
 

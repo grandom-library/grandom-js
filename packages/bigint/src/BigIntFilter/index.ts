@@ -3,7 +3,7 @@
 
 export type Filter = number | bigint | string | Array<number | bigint | string>
 
-type FilterEntry = {
+interface FilterEntry {
   bigint?: bigint
   range?: [bigint, bigint]
 }
@@ -11,7 +11,7 @@ type FilterEntry = {
 const _bigintRangePattern = /^\s*((?:[-+]?)\d+)n?\s*-\s*((?:[-+]?)\d+)n?\s*$/
 
 export default class BigIntFilter {
-  private _filterEntries: FilterEntry[] = []
+  private readonly _filterEntries: FilterEntry[] = []
 
   constructor (filter?: Filter) {
     if (Array.isArray(filter)) {
@@ -22,7 +22,6 @@ export default class BigIntFilter {
           this._parseString(f)
         }
       }
-
     } else if (typeof filter === 'number' || typeof filter === 'bigint') {
       this._parseNumber(filter)
     } else if (typeof filter === 'string') {
@@ -39,7 +38,7 @@ export default class BigIntFilter {
       if (entry.bigint === value) {
         return true
       } else if ('range' in entry) {
-        // @ts-ignore
+        // @ts-expect-error
         if (value >= entry.range[0] && value <= entry.range[1]) {
           return true
         }
@@ -49,7 +48,7 @@ export default class BigIntFilter {
     return false
   }
 
-  private _parseNumber (value: number | bigint) {
+  private _parseNumber (value: number | bigint): void {
     // let num = Math.floor(value)
 
     // // NaN check
@@ -68,7 +67,7 @@ export default class BigIntFilter {
     this._filterEntries.push({ bigint: BigInt(value) })
   }
 
-  private _parseString (value: string) {
+  private _parseString (value: string): void {
     if (_bigintRangePattern.test(value)) {
       this._parseRange(value)
     } else {
@@ -80,20 +79,24 @@ export default class BigIntFilter {
     }
   }
 
-  private _parseRange (value: string) {
-    const [, start, stop, ] = _bigintRangePattern.exec(value)!
+  private _parseRange (value: string): void {
+    const result = _bigintRangePattern.exec(value)
 
-    let startNum = this._parseBigIntInString(start)
-    let stopNum = this._parseBigIntInString(stop)
+    if (result !== null) {
+      const [, start, stop] = result
 
-    if (startNum > stopNum) {
-      const temp = stopNum
+      let startNum = this._parseBigIntInString(start)
+      let stopNum = this._parseBigIntInString(stop)
 
-      stopNum = startNum
-      startNum = temp
+      if (startNum > stopNum) {
+        const temp = stopNum
+
+        stopNum = startNum
+        startNum = temp
+      }
+
+      this._filterEntries.push({ range: [startNum, stopNum] })
     }
-
-    this._filterEntries.push({ range: [startNum, stopNum] })
   }
 
   private _parseBigIntInString (value: string): bigint {

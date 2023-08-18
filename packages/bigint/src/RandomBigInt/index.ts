@@ -7,7 +7,7 @@ import BigIntFilter, { type Filter } from '../BigIntFilter'
 
 const DEFAULT_LOOP_GUARD = 1_000_000
 
-type ConfigOptions = {
+export interface ConfigOptions {
   includeMinimum?: boolean
   includeMaximum?: boolean
 
@@ -29,7 +29,7 @@ type BigIntOptions = {
 } & ConfigOptions
 
 export default class RandomBigInt {
-  private _engine: RandomEngine
+  private readonly _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
     this._engine = engine
@@ -59,10 +59,9 @@ export default class RandomBigInt {
 
       let hasFilter = false
       // let includeFilter: undefined | IntegerFilter
-      let excludeFilter: undefined | BigIntFilter
+      let excludeFilter: boolean | BigIntFilter = false
 
       if (typeof arg1 === 'bigint') {
-
         if (typeof arg2 === 'undefined') {
           max = arg1
         }
@@ -94,7 +93,7 @@ export default class RandomBigInt {
       }
 
       if (hasFilter) {
-        let loopGuard = DEFAULT_LOOP_GUARD
+        const loopGuard = DEFAULT_LOOP_GUARD
         let loop = 0
 
         while (true) {
@@ -104,9 +103,11 @@ export default class RandomBigInt {
 
           const bigint = this._engine.nextBigInt(min, max, includeMin, includeMax)
 
-          if (excludeFilter?.matches(bigint)) {
-            loop++
-            continue
+          if (excludeFilter !== false) {
+            if (excludeFilter.matches(bigint)) {
+              loop++
+              continue
+            }
           }
 
           return bigint

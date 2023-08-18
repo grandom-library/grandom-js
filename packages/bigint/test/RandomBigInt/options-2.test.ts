@@ -1,6 +1,6 @@
 import {
   LENGTH,
-  BigIntStats,
+  BigIntStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
