@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/grandom-library/grandom-js/issues"
   },
-  "homepage": "https://github.com/grandom-library/grandom-js#readme",
+  "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/pick#readme",
   "engines": {
     "node": ">= 16"
   },
