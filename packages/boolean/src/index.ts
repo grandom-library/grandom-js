@@ -1,3 +1,4 @@
+
 import { BasicEngine } from '@grandom/engines'
 import RandomBoolean from './RandomBoolean'
 
