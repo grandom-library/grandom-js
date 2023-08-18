@@ -61,23 +61,6 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 10
 
-    strategy:
-      matrix:
-        package: [
-          # primary packages
-          core,
-          engines,
-
-          # seconday packages
-          bigint,
-          boolean,
-          number,
-          string,
-
-          # tertiary packages
-          pick
-        ]
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -86,24 +69,81 @@ jobs:
           cache: 'npm'
           cache-dependency-path: |
             package-lock.json
-            packages/${{ matrix.package }}/package-lock.json
+            packages/*/package-lock.json
 
       - name: init
-        run: >
-          npm ci &&
-          npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm ci
+        run: npm ci && npx lerna exec -- npm ci
 
-      - name: prepare
-        run: >
-          npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npm run prep --if-present
+      - name: bigint:prepare
+        run: npx lerna exec --scope @grandom/bigint -- npm run prep
 
-      - name: release
-        run: >
-          npx lerna exec --scope @grandom/${{ matrix.package }} --
-          npx --no-install semantic-release -e semantic-release-monorepo
+      - name: bigint:release
+        run: npx lerna exec --scope @grandom/bigint -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: boolean:prepare
+        run: npx lerna exec --scope @grandom/boolean -- npm run prep
+
+      - name: boolean:release
+        run: npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+  # release:
+  #   needs: test
+
+  #   runs-on: ubuntu-20.04
+  #   timeout-minutes: 10
+
+  #   strategy:
+  #     # only run 1 job at a time to prevent multiple changes during parallel runs getting errors
+  #     # from semantic-release with the following message:
+  #     # [remote rejected] HEAD -> main (cannot lock ref '<branch>': is at <hash> but expected <hash>)
+  #     max-parallel: 1
+  #     matrix:
+  #       package: [
+  #         # primary packages
+  #         core,
+  #         engines,
+
+  #         # seconday packages
+  #         bigint,
+  #         boolean,
+  #         number,
+  #         string,
+
+  #         # tertiary packages
+  #         pick
+  #       ]
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '16'
+  #         cache: 'npm'
+  #         cache-dependency-path: |
+  #           package-lock.json
+  #           packages/${{ matrix.package }}/package-lock.json
+
+  #     - name: init
+  #       run: >
+  #         npm ci &&
+  #         npx lerna exec --scope @grandom/${{ matrix.package }} --
+  #         npm ci
+
+  #     - name: prepare
+  #       run: >
+  #         npx lerna exec --scope @grandom/${{ matrix.package }} --
+  #         npm run prep --if-present
+
+  #     - name: release
+  #       run: >
+  #         npx lerna exec --scope @grandom/${{ matrix.package }} --
+  #         npx --no-install semantic-release -e semantic-release-monorepo
+
+  #   env:
+  #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
