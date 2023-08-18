@@ -72,19 +72,17 @@ jobs:
             packages/*/package-lock.json
 
       - name: init
-        run: npm ci && npx lerna exec -- npm ci
+        run: npm ci && npx lerna exec -- npm ci && lerna list -all
 
-      - name: bigint:prepare
-        run: npx lerna exec --scope @grandom/bigint -- npm run prep
+      - name: bigint
+        run: >
+          npx lerna exec --scope @grandom/bigint -- npm run prep &&
+          npx lerna exec --scope @grandom/bigint -- npx --no-install semantic-release -e semantic-release-monorepo
 
-      - name: bigint:release
-        run: npx lerna exec --scope @grandom/bigint -- npx --no-install semantic-release -e semantic-release-monorepo
-
-      - name: boolean:prepare
-        run: npx lerna exec --scope @grandom/boolean -- npm run prep
-
-      - name: boolean:release
-        run: npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
+      - name: boolean
+        run: >
+          npx lerna exec --scope @grandom/boolean -- npm run prep &&
+          npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
