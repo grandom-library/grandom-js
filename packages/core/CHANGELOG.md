@@ -1,3 +1,10 @@
+# [@grandom/core-v2.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.2.0...@grandom/core-v2.3.0) (2023-08-18)
+
+
+### Features
+
+* **core:** trigger release ([bcd270c](https://github.com/grandom-library/grandom-js/commit/bcd270c3f91e570dece4dd5b4618c48b7a10b053))
+
 # [@grandom/core-v2.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.1.0...@grandom/core-v2.2.0) (2023-08-18)
 
 
