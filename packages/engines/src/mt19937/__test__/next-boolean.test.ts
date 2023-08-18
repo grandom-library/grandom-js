@@ -15,7 +15,7 @@ describe('MT19937Engine', () => {
       add(engine.nextBoolean())
     }
 
-    expect(result.true.percent).toBeWithin(.49, .52)
-    expect(result.false.percent).toBeWithin(.49, .52)
+    expect(result.true.percent).toBeWithin(0.49, 0.52)
+    expect(result.false.percent).toBeWithin(0.49, 0.52)
   })
 })
