@@ -1,3 +1,15 @@
+# [@grandom/core-v2.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.6.0...@grandom/core-v2.0.0) (2023-08-18)
+
+
+### Features
+
+* **core:** trigger release ([c3e3698](https://github.com/grandom-library/grandom-js/commit/c3e369881b805addc15c058685eff9e77281149e))
+
+
+### BREAKING CHANGES
+
+* **core:** breaking
+
 # [@grandom/core-v1.6.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v1.5.0...@grandom/core-v1.6.0) (2023-07-24)
 
 
