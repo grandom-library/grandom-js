@@ -1,19 +1,26 @@
 import { RandomEngine } from '@grandom/core'
 
 export default class RandomBoolean {
-  private _engine: RandomEngine
+  private readonly _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
     this._engine = engine
   }
 
   /**
-   * A1
+   * Generates a random boolean value.
    */
   boolean (): boolean
 
   /**
-   * B1
+   * Generates a random, **biased** boolean value.
+   *
+   * If the bias <= 0, then it will always return false.
+   * If the bias >= 1, then it will always return true.
+   *
+   * A bias of **0.5** means it will return true / false ***roughly 50%*** of the time.
+   *
+   * @param bias The bias to generate the random value **within the range [0,1]**.
    */
   boolean (bias: number): boolean
 
@@ -24,6 +31,7 @@ export default class RandomBoolean {
       }
 
       // NaN guard
+      // eslint-disable-next-line no-self-compare
       if (arg1 === arg1) {
         if (arg1 < 0) {
           arg1 = 0
@@ -31,7 +39,6 @@ export default class RandomBoolean {
           arg1 = 1
         }
 
-        // return this._engine.nextDouble() < arg1
         return this._engine.nextFloat() < arg1
       }
     }

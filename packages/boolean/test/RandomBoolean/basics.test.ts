@@ -1,6 +1,6 @@
 import {
   LENGTH,
-  BooleanStats,
+  BooleanStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
@@ -16,16 +16,16 @@ describe('RandomBoolean', () => {
       add(random.boolean())
     }
 
-    expect(result.true.percent).toBeWithin(.49, .52)
-    expect(result.false.percent).toBeWithin(.49, .52)
+    expect(result.true.percent).toBeWithin(0.49, 0.52)
+    expect(result.false.percent).toBeWithin(0.49, 0.52)
   })
 
   describe('errors', () => {
     test('wrong type', () => {
-      // @ts-ignore
+      // @ts-expect-error
       expect(() => random.boolean(false)).toThrow(TypeError)
 
-      // @ts-ignore
+      // @ts-expect-error
       expect(() => random.boolean(false)).toThrow('bias must be a number, got: boolean.')
     })
   })

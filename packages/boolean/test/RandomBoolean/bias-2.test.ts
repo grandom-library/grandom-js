@@ -1,6 +1,6 @@
 import {
   LENGTH,
-  BooleanStats,
+  BooleanStats
 } from '@testyard/stats'
 
 import { BasicEngine } from '@grandom/engines'
@@ -73,8 +73,8 @@ describe('RandomBoolean', () => {
           add(random.boolean(NaN))
         }
 
-        expect(result.true.percent).toBeWithin(.49, .52)
-        expect(result.false.percent).toBeWithin(.49, .52)
+        expect(result.true.percent).toBeWithin(0.49, 0.52)
+        expect(result.false.percent).toBeWithin(0.49, 0.52)
       })
     })
   })
