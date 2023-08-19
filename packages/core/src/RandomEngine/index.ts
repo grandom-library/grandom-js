@@ -81,6 +81,14 @@ export default class RandomEngine {
     throw new Error('_isSeedSupported() must be implemented.')
   }
 
+  protected _setSeed (seed: number): void {
+    throw new Error('_setSeed() must be implemented.')
+  }
+
+  protected _getSeed (): number {
+    throw new Error('_getSeed() must be implemented.')
+  }
+
   protected _next (): number {
     throw new Error('_next() must be implemented.')
   }
@@ -97,8 +105,13 @@ export default class RandomEngine {
 
   // ---------------------------------------------------------------------------
 
-  setSeed (seed?: any): void {}
-  getSeed (): any {}
+  setSeed (seed: number): void {
+    this._setSeed(seed)
+  }
+
+  getSeed (): number {
+    return this._getSeed()
+  }
 
   nextBoolean (): boolean {
     return this._next() < 0.5
