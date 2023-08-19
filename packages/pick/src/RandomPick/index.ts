@@ -1,8 +1,7 @@
-
 // TODO: include / exclude / filter function
 // TODO: implement edge cases (including infinite loops)
 
-import { RandomEngine } from '@grandom/core'
+import { RandomGenerator } from '@grandom/core'
 
 const DEFAULT_FALLBACK = undefined
 
@@ -82,20 +81,20 @@ const unique = grandom.pick.multiple.unique([1, 2, 3], { count: 2, default: -1 }
 //   }
 // }
 
-export default class RandomPick {
-  private readonly _engine: RandomEngine
+export default class RandomPick extends RandomGenerator {
+  // private readonly _engine: RandomEngine
 
-  constructor (engine: RandomEngine) {
-    this._engine = engine
+  // constructor (engine: RandomEngine) {
+  //   this._engine = engine
 
-    // const pick: Pick = (arg1: any, arg2?: any): any => {}
-    // pick.multiple = (arg1: any, arg2: any): any => {}
-    // // pick.multiple.unique = (arg1: any, arg2?: any): any => { return () => null }
-    // pick.unique = (arg1: any, arg2?: any) => { return (): any => null }
-    // pick.unique.multiple = (arg1: any, arg2: any) => { return (): any => null }
+  //   // const pick: Pick = (arg1: any, arg2?: any): any => {}
+  //   // pick.multiple = (arg1: any, arg2: any): any => {}
+  //   // // pick.multiple.unique = (arg1: any, arg2?: any): any => { return () => null }
+  //   // pick.unique = (arg1: any, arg2?: any) => { return (): any => null }
+  //   // pick.unique.multiple = (arg1: any, arg2: any) => { return (): any => null }
 
-    // this.pick = pick
-  }
+  //   // this.pick = pick
+  // }
 
   // pick: Pick
 
