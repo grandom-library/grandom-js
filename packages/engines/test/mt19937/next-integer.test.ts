@@ -3,11 +3,11 @@ import {
   IntegerStats
 } from '@testyard/stats'
 
-import BasicEngine from '..'
+import MT19937Engine from '../../src/mt19937'
 
-const engine = new BasicEngine()
+const engine = new MT19937Engine()
 
-describe('BasicEngine', () => {
+describe('MT19937Engine', () => {
   describe('.nextInteger()', () => {
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new IntegerStats()

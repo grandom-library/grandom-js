@@ -3,11 +3,11 @@ import {
   BigIntStats
 } from '@testyard/stats'
 
-import MT19937Engine from '..'
+import BasicEngine from '../../src/basic'
 
-const engine = new MT19937Engine()
+const engine = new BasicEngine()
 
-describe('MT19937Engine', () => {
+describe('BasicEngine', () => {
   describe('.nextBigInt()', () => {
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new BigIntStats()

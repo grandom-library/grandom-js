@@ -1,5 +1,5 @@
 import { RandomEngine } from '@grandom/core'
-import { MT19937 } from './utils'
+import MT19937 from '@grandom/mt19937'
 
 export default class MT19937Engine extends RandomEngine {
   private readonly _engine: MT19937
@@ -7,8 +7,7 @@ export default class MT19937Engine extends RandomEngine {
   constructor () {
     super('mt19937')
 
-    this._engine = new MT19937()
-    this._engine.init(Math.floor(Math.random() * Math.pow(10, 13)))
+    this._engine = new MT19937(Math.floor(Math.random() * new Date().getTime()))
   }
 
   _isSeedSupported (): boolean {
@@ -16,6 +15,6 @@ export default class MT19937Engine extends RandomEngine {
   }
 
   _next (): number {
-    return this._engine.genRandReal2()
+    return this._engine.randomFloat2()
   }
 }
