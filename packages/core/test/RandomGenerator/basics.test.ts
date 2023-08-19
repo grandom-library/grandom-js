@@ -3,7 +3,7 @@ import { TestEngine, StrangeTestEngine } from '../fixtures'
 
 describe('RandomGenerator', () => {
   test('basics', () => {
-    class CustomGenerator extends RandomGenerator<TestEngine> {}
+    class CustomGenerator extends RandomGenerator {}
     const generator = new CustomGenerator(new TestEngine())
 
     expect(generator.getEngine().name).toBe('test-engine')

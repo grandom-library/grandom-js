@@ -4,18 +4,18 @@ import RandomEngine from '../RandomEngine'
  * Core random generator class to use to build
  * custom random value/data generators.
  */
-export default class RandomGenerator<T extends RandomEngine> {
-  protected _engine: T
+export default class RandomGenerator {
+  protected _engine: RandomEngine
 
-  constructor (engine: T) {
+  constructor (engine: RandomEngine) {
     this._engine = engine
   }
 
-  getEngine (): T {
+  getEngine (): RandomEngine {
     return this._engine
   }
 
-  setEngine <U extends RandomEngine> (engine: U): void {
-    this._engine = engine as unknown as T
+  setEngine (engine: RandomEngine): void {
+    this._engine = engine
   }
 }
