@@ -27,6 +27,7 @@ module.exports = {
   input: [
     'src/bigint/index.ts',
     'src/boolean/index.ts',
+    // 'src/Grandom/index.ts',
     'src/number/index.ts',
     'src/pick/index.ts',
     'src/string/index.ts',
@@ -36,6 +37,7 @@ module.exports = {
   output: {
     banner,
     sourcemap: true,
+    exports: 'named',
 
     format: 'cjs',
     preserveModules: true,
