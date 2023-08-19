@@ -1,3 +1,10 @@
+# [@grandom/number-v1.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.1.0...@grandom/number-v1.2.0) (2023-08-19)
+
+
+### Features
+
+* **number:** use RandomGenerator as the base class ([67b0099](https://github.com/grandom-library/grandom-js/commit/67b00997da1bcc25067ff366e58825d80a43b54d))
+
 # [@grandom/number-v1.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.0.1...@grandom/number-v1.1.0) (2023-08-18)
 
 
