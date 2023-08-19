@@ -22,10 +22,16 @@ const banner = dedent`
    * Date: ${new Date().toISOString()}
    */
 `
-
 /** @type {import('rollup').RollupOptions} */
 module.exports = {
-  input: 'src/index.ts',
+  input: [
+    'src/bigint/index.ts',
+    'src/boolean/index.ts',
+    'src/number/index.ts',
+    'src/pick/index.ts',
+    'src/string/index.ts',
+    'src/index.ts'
+  ],
 
   output: {
     banner,
