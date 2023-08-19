@@ -1,3 +1,10 @@
+# [@grandom/string-v1.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.1.0...@grandom/string-v1.2.0) (2023-08-19)
+
+
+### Features
+
+* **string:** use RandomGenerator as the base class ([91a1c0d](https://github.com/grandom-library/grandom-js/commit/91a1c0da3959a1ab2062f85fa8b19337756af832))
+
 # [@grandom/string-v1.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.0.0...@grandom/string-v1.1.0) (2023-08-18)
 
 
