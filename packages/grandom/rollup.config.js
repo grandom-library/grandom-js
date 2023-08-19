@@ -30,7 +30,6 @@ module.exports = {
   output: {
     banner,
     sourcemap: true,
-    exports: 'named',
 
     format: 'cjs',
     preserveModules: true,
