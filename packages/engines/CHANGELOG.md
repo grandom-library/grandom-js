@@ -1,3 +1,10 @@
+# [@grandom/engines-v2.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.0.0...@grandom/engines-v2.1.0) (2023-08-19)
+
+
+### Features
+
+* **engines:** add grandom's MT19937 implementation ([0456bdc](https://github.com/grandom-library/grandom-js/commit/0456bdc78d8612a19229b3d4c8c4f263839d7a32))
+
 # [@grandom/engines-v2.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v1.0.2...@grandom/engines-v2.0.0) (2023-08-18)
 
 
