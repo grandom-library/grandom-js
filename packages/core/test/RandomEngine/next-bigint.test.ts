@@ -3,10 +3,23 @@ import {
   BigIntStats
 } from '@testyard/stats'
 
+import { RandomEngine } from '../../src'
 import { TestEngine } from '../fixtures'
 
 describe('RandomEngine', () => {
   describe('.nextBigInt()', () => {
+    test('default usage', () => {
+      const engine = new TestEngine()
+
+      for (let i = 0; i < 5_000; i++) {
+        const result = engine.nextBigInt()
+
+        expect(typeof result).toBe('bigint')
+        expect(result >= RandomEngine.DEFAULT_BIGINT_MINIMUM).toBeTrue()
+        expect(result < RandomEngine.DEFAULT_BIGINT_MAXIMUM).toBeTrue()
+      }
+    })
+
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new BigIntStats()
       const engine = new TestEngine()

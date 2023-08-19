@@ -47,6 +47,20 @@ describe('RandomEngine', () => {
       )
     })
 
+    test('_setSeed must be implemented', () => {
+      expect(() => engine.setSeed(123)).toThrowWithMessage(
+        Error,
+        '_setSeed() must be implemented.'
+      )
+    })
+
+    test('_getSeed must be implemented', () => {
+      expect(() => engine.getSeed()).toThrowWithMessage(
+        Error,
+        '_getSeed() must be implemented.'
+      )
+    })
+
     test('_next must be implemented', () => {
       expect(() => engine.nextBoolean()).toThrowWithMessage(
         Error,

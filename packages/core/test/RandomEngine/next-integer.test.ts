@@ -3,10 +3,25 @@ import {
   IntegerStats
 } from '@testyard/stats'
 
+import { RandomEngine } from '../../src'
 import { TestEngine } from '../fixtures'
 
 describe('RandomEngine', () => {
   describe('.nextInteger()', () => {
+    test('default usage', () => {
+      const engine = new TestEngine()
+
+      for (let i = 0; i < 5_000; i++) {
+        const result = engine.nextInteger()
+
+        expect(result).toBeInteger()
+        expect(result).toBeWithin(
+          RandomEngine.DEFAULT_INTEGER_MINIMUM,
+          RandomEngine.DEFAULT_INTEGER_MAXIMUM
+        )
+      }
+    })
+
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new IntegerStats()
       const engine = new TestEngine()

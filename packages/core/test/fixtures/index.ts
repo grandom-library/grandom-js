@@ -13,3 +13,13 @@ export class TestEngine extends RandomEngine {
     return Math.random()
   }
 }
+
+export class StrangeTestEngine extends RandomEngine {
+  constructor () {
+    super('strange-test-engine')
+  }
+
+  _next (): number {
+    return 100
+  }
+}
