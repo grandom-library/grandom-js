@@ -25,3 +25,4 @@
 import Grandom from './Grandom'
 
 export default new Grandom()
+export { Grandom }
