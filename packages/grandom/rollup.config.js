@@ -1,3 +1,4 @@
+const glob = require('glob')
 const dedent = require('string-dedent')
 const typescript = require('@rollup/plugin-typescript')
 // const terser = require('@rollup/plugin-terser')
@@ -24,20 +25,11 @@ const banner = dedent`
 `
 /** @type {import('rollup').RollupOptions} */
 module.exports = {
-  input: [
-    'src/bigint/index.ts',
-    'src/boolean/index.ts',
-    // 'src/Grandom/index.ts',
-    'src/number/index.ts',
-    'src/pick/index.ts',
-    'src/string/index.ts',
-    'src/index.ts'
-  ],
+  input: glob.sync('src/**/index.ts'),
 
   output: {
     banner,
     sourcemap: true,
-    exports: 'named',
 
     format: 'cjs',
     preserveModules: true,
