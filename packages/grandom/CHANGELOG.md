@@ -1,3 +1,15 @@
+# [grandom-v1.2.0](https://github.com/grandom-library/grandom-js/compare/grandom-v1.1.1...grandom-v1.2.0) (2023-08-19)
+
+
+### Bug Fixes
+
+* **grandom:** remove unused seed function ([39b0553](https://github.com/grandom-library/grandom-js/commit/39b0553c509ebcdeb704c0a16901e536504e9e2d))
+
+
+### Features
+
+* **grandom:** add bigint, boolean, pick, and string generators ([4ac2504](https://github.com/grandom-library/grandom-js/commit/4ac25042b1018351934a21ad8899a009137a30f3))
+
 # [grandom-v1.1.1](https://github.com/grandom-library/grandom-js/compare/grandom-v1.1.0...grandom-v1.1.1) (2023-08-18)
 
 
