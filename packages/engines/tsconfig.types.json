@@ -13,7 +13,7 @@
 
   "exclude": [
     "node_modules",
-    "src/**/*.test.ts",
+    "test",
     "global.d.ts"
   ]
 }
