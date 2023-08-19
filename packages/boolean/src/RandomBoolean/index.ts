@@ -1,12 +1,6 @@
-import { RandomEngine } from '@grandom/core'
+import { RandomGenerator } from '@grandom/core'
 
-export default class RandomBoolean {
-  private readonly _engine: RandomEngine
-
-  constructor (engine: RandomEngine) {
-    this._engine = engine
-  }
-
+export default class RandomBoolean extends RandomGenerator {
   /**
    * Generates a random boolean value.
    */
