@@ -1,35 +1,63 @@
 import { RandomEngine } from '@grandom/core'
+import BasicEngine from '@grandom/engines/basic'
 
-// import bigint from '@grandom/bigint'
+import RandomBigInt from '@grandom/bigint/RandomBigInt'
 import RandomBoolean from '@grandom/boolean/RandomBoolean'
 // import number from '@grandom/number'
-// import string from '@grandom/string'
-// import pick from '@grandom/pick'
+import RandomPick from '@grandom/pick/RandomPick'
+import RandomString from '@grandom/string/RandomString'
 
 export default class Grandom {
-  private readonly _engine: RandomEngine
+  private _randomEngine: RandomEngine
+
+  private readonly _randomBigInt: RandomBigInt
   private readonly _randomBoolean: RandomBoolean
+  private readonly _randomPick: RandomPick
+  private readonly _randomString: RandomString
 
   constructor ()
-  constructor (engine: any)
-  constructor (engine: any, seed: any)
-  constructor (options: any)
+  // constructor (engine: RandomEngine)
 
-  constructor (arg1?: any) {
-    // @ts-expect-error
-    this._engine = new RandomEngine()
-    // @ts-expect-error
-    this._randomBoolean = new RandomBoolean(this._engine)
+  // constructor (engine: any, seed: any)
+  // constructor (options: any)
 
+  constructor () {
+    this._randomEngine = new BasicEngine()
+
+    this._randomBigInt = new RandomBigInt(this._randomEngine)
+    this._randomBoolean = new RandomBoolean(this._randomEngine)
+    this._randomPick = new RandomPick(this._randomEngine)
+    this._randomString = new RandomString(this._randomEngine)
+
+    this.bigint = this._randomBigInt.bigint.bind(this._randomBigInt)
     this.boolean = this._randomBoolean.boolean.bind(this._randomBoolean)
+    this.pick = this._randomPick.pick.bind(this._randomPick)
+    this.string = this._randomString.string.bind(this._randomString)
   }
 
-  engine (): RandomEngine {
-    return this._engine
+  get engine (): RandomEngine {
+    return this._randomEngine
   }
 
-  // setSeed
+  set engine (engine: RandomEngine) {
+    this._setEngine(engine)
+  }
+
   seed (): void {}
 
+  bigint: InstanceType<typeof RandomBigInt>['bigint']
   boolean: InstanceType<typeof RandomBoolean>['boolean']
+  pick: InstanceType<typeof RandomPick>['pick']
+  string: InstanceType<typeof RandomString>['string']
+
+  // ---------------------------------------------------------------------------
+
+  private _setEngine (engine: RandomEngine): void {
+    this._randomEngine = engine
+
+    this._randomBigInt.setEngine(this._randomEngine)
+    this._randomBoolean.setEngine(this._randomEngine)
+    this._randomPick.setEngine(this._randomEngine)
+    this._randomString.setEngine(this._randomEngine)
+  }
 }
