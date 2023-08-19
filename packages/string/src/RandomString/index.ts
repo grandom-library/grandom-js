@@ -1,8 +1,7 @@
-
 // TODO: implement edge cases (including infinite loops)
 // TODO: implement detailed error handling
 
-import { RandomEngine } from '@grandom/core'
+import { RandomGenerator } from '@grandom/core'
 import { type Filter } from '../StringFilter'
 
 export interface ConfigOptions {
@@ -22,7 +21,7 @@ type RandomStringOptions = {
   }
 } & ConfigOptions
 
-export default class RandomString {
+export default class RandomString extends RandomGenerator {
   /**
    * The default length of a random string.
    *
@@ -53,11 +52,11 @@ export default class RandomString {
 
   // ---------------------------------------------------------------------------
 
-  private readonly _engine: RandomEngine
+  // private readonly _engine: RandomEngine
 
-  constructor (engine: RandomEngine) {
-    this._engine = engine
-  }
+  // constructor (engine: RandomEngine) {
+  //   this._engine = engine
+  // }
 
   // ---------------------------------------------------------------------------
 
