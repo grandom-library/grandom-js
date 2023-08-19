@@ -25,9 +25,11 @@ describe('Grandom', () => {
     const grandom = new Grandom()
 
     expect(grandom.engine.name).toBe('basic')
+    expect(grandom.engine.isSeedSupported).toBe(false)
 
     grandom.engine = new SeedableEngine()
 
     expect(grandom.engine.name).toBe('mt19937')
+    expect(grandom.engine.isSeedSupported).toBe(true)
   })
 })
