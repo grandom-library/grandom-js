@@ -1,3 +1,10 @@
+# [grandom-v1.2.2](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.1...grandom-v1.2.2) (2023-08-19)
+
+
+### Bug Fixes
+
+* **grandom:** trigger release ([848cd2c](https://github.com/grandom-library/grandom-js/commit/848cd2c5661ab636bf149e1d60482607bc3016af))
+
 # [grandom-v1.2.1](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.0...grandom-v1.2.1) (2023-08-19)
 
 
