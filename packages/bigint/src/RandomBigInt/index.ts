@@ -1,7 +1,7 @@
 // TODO: implement edge cases (including infinite loops)
 // TODO: implement detailed error handling
 
-import { RandomEngine } from '@grandom/core'
+import { RandomEngine, RandomGenerator } from '@grandom/core'
 
 import BigIntFilter, { type Filter } from '../BigIntFilter'
 
@@ -28,13 +28,7 @@ type BigIntOptions = {
   maximum?: number | bigint
 } & ConfigOptions
 
-export default class RandomBigInt {
-  private readonly _engine: RandomEngine
-
-  constructor (engine: RandomEngine) {
-    this._engine = engine
-  }
-
+export default class RandomBigInt extends RandomGenerator {
   bigint (): bigint
 
   bigint (maximum: number | bigint): bigint
