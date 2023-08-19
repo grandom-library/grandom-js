@@ -1,3 +1,16 @@
+# [@grandom/core-v2.5.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.4.0...@grandom/core-v2.5.0) (2023-08-19)
+
+
+### Bug Fixes
+
+* **core:** remove unneeded generics in RandomGenerator ([1b6eb51](https://github.com/grandom-library/grandom-js/commit/1b6eb514a70e6c61db431a1f7d4f8ad7a23f35eb))
+
+
+### Features
+
+* **core:** add generics to RandomGenerator ([85af198](https://github.com/grandom-library/grandom-js/commit/85af19856839fddd086b84942f758d365cfc2d4f))
+* **core:** add seeding functions to RandomEngine ([802e8a0](https://github.com/grandom-library/grandom-js/commit/802e8a09a58dc9eb8479738a3873f3879d74c3a1))
+
 # [@grandom/core-v2.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.3.0...@grandom/core-v2.4.0) (2023-08-18)
 
 
