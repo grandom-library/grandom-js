@@ -43,7 +43,7 @@ export default class Grandom {
     this._setEngine(engine)
   }
 
-  seed (): void {}
+  // seed (): void {}
 
   bigint: InstanceType<typeof RandomBigInt>['bigint']
   boolean: InstanceType<typeof RandomBoolean>['boolean']
