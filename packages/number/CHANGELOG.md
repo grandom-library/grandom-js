@@ -1,3 +1,10 @@
+# [@grandom/number-v1.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.2.0...@grandom/number-v1.3.0) (2023-08-20)
+
+
+### Features
+
+* **number:** add RandomFloat generator ([a296da5](https://github.com/grandom-library/grandom-js/commit/a296da536ffbd4fb632e54aa5a38ad05cb05be53))
+
 # [@grandom/number-v1.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.1.0...@grandom/number-v1.2.0) (2023-08-19)
 
 
