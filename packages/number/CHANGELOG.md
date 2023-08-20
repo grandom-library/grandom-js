@@ -1,3 +1,10 @@
+# [@grandom/number-v1.3.1](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.3.0...@grandom/number-v1.3.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* **number:** use RandomNumber wrapper class ([dfd3093](https://github.com/grandom-library/grandom-js/commit/dfd3093c589f88d015c668eed6a958ab67baf87d))
+
 # [@grandom/number-v1.3.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.2.0...@grandom/number-v1.3.0) (2023-08-20)
 
 
