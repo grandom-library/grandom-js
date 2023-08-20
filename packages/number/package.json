@@ -62,7 +62,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@grandom/core": "^2.4.0",
+    "@grandom/core": "^2.6.0",
     "@grandom/engines": "^2.1.0"
   }
 }
