@@ -1,3 +1,10 @@
+# [@grandom/core-v2.6.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.5.0...@grandom/core-v2.6.0) (2023-08-20)
+
+
+### Features
+
+* **core:** add nextFloat method ([b70fc6b](https://github.com/grandom-library/grandom-js/commit/b70fc6b0d261a7e7cfb6b79666566405948938d4))
+
 # [@grandom/core-v2.5.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.4.0...@grandom/core-v2.5.0) (2023-08-19)
 
 
