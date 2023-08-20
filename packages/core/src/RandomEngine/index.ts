@@ -148,8 +148,49 @@ export default class RandomEngine {
     return Math.floor(this._next() * (max - min + maxOffset)) + min + minOffset
   }
 
-  nextFloat (): number {
-    return this._next()
+  nextFloat (
+    min = RandomEngine.DEFAULT_FLOAT_MINIMUM,
+    max = RandomEngine.DEFAULT_FLOAT_MAXIMUM,
+    includeMin = RandomEngine.DEFAULT_INCLUDE_MINIMUM,
+    includeMax = RandomEngine.DEFAULT_INCLUDE_MAXIMUM
+  ): number {
+    const initialResult = this._next() * (max - min) + min
+
+    // default (most common) - range [minimum, maximum)
+    if (includeMin && !includeMax) {
+      return initialResult
+
+    } else {
+      const adjustedResult = initialResult + (Number.EPSILON * initialResult)
+
+      // second most common - range [minimum, maximum]
+      if (includeMin && includeMax) {
+        /* istanbul ignore next */
+        return adjustedResult < max
+          ? adjustedResult
+          : max
+
+      // generally uncommon - range [minimum, maximum)
+      } else if (!includeMin && includeMax) {
+        /* istanbul ignore next */
+        return adjustedResult > min
+          ? adjustedResult
+          : min + Number.EPSILON
+
+      // uncommon - range (minimum, maximum)
+      } else {
+        /* istanbul ignore next */
+        if (adjustedResult <= min) {
+          return min + Number.EPSILON
+
+        /* istanbul ignore next */
+        } else if (adjustedResult >= max) {
+          return max - Number.EPSILON
+        }
+
+        return adjustedResult
+      }
+    }
   }
 
   nextBigInt (
