@@ -1,17 +1,17 @@
-import number from '../src'
+import grandomNumber from '../src'
 
 describe('@grandom/number', () => {
   test('default usage', () => {
-    expect(number).toBeFunction()
-    expect(number()).toBeNumber()
-    expect(number()).toBeWithin(0, 1)
+    expect(grandomNumber).toBeFunction()
+    expect(grandomNumber()).toBeNumber()
+    expect(grandomNumber()).toBeWithin(0, 1)
 
-    expect(number.float).toBeFunction()
-    expect(number.float()).not.toBeInteger()
-    expect(number.float()).toBeWithin(0, 1)
+    expect(grandomNumber.float).toBeFunction()
+    expect(grandomNumber.float()).not.toBeInteger()
+    expect(grandomNumber.float()).toBeWithin(0, 1)
 
-    expect(number.integer).toBeFunction()
-    expect(number.integer()).toBeInteger()
-    expect(number.integer()).toBeWithin(0, 4_294_967_296)
+    expect(grandomNumber.integer).toBeFunction()
+    expect(grandomNumber.integer()).toBeInteger()
+    expect(grandomNumber.integer()).toBeWithin(0, 4_294_967_296)
   })
 })
