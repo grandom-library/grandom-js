@@ -159,7 +159,6 @@ export default class RandomEngine {
     // default (most common) - range [minimum, maximum)
     if (includeMin && !includeMax) {
       return initialResult
-
     } else {
       const adjustedResult = initialResult + (Number.EPSILON * initialResult)
 
