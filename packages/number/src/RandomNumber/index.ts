@@ -3,20 +3,30 @@ import { RandomGenerator, RandomEngine } from '@grandom/core'
 import RandomFloat from '../float/RandomFloat'
 import RandomInteger from '../integer/RandomInteger'
 
-export default class RandomNumber extends RandomGenerator {
-  private readonly _randomFloat: RandomFloat
-  private readonly _randomInteger: RandomInteger
+type RandomNumberType = InstanceType<typeof RandomFloat>['float'] & {
+  float: InstanceType<typeof RandomFloat>['float']
+  integer: InstanceType<typeof RandomInteger>['integer']
+}
 
+export default class RandomNumber extends RandomGenerator {
   constructor (engine: RandomEngine) {
     super(engine)
 
-    this._randomFloat = new RandomFloat(engine)
-    this._randomInteger = new RandomInteger(engine)
+    const randomFloat = new RandomFloat(engine)
+    const randomInteger = new RandomInteger(engine)
 
-    this.float = this._randomFloat.float.bind(this._randomFloat)
-    this.integer = this._randomInteger.integer.bind(this._randomInteger)
+    const float = randomFloat.float.bind(randomFloat)
+    const integer = randomInteger.integer.bind(randomInteger)
+
+    const number: RandomNumberType = (arg1?: any, arg2?: any, arg3?: any): number => {
+      return float(arg1, arg2, arg3)
+    }
+
+    number.float = float
+    number.integer = integer
+
+    this.number = number
   }
 
-  float: InstanceType<typeof RandomFloat>['float']
-  integer: InstanceType<typeof RandomInteger>['integer']
+  number: RandomNumberType
 }
