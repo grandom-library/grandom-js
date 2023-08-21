@@ -1,3 +1,10 @@
+# [@grandom/number-v1.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.3.1...@grandom/number-v1.4.0) (2023-08-21)
+
+
+### Features
+
+* **number:** concentrate random number methods under .number() ([7dbb83b](https://github.com/grandom-library/grandom-js/commit/7dbb83b706e17550892e1bdc8a1045b41f7ed6b3))
+
 # [@grandom/number-v1.3.1](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.3.0...@grandom/number-v1.3.1) (2023-08-20)
 
 
