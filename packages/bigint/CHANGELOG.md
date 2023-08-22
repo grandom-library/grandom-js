@@ -1,3 +1,10 @@
+# [@grandom/bigint-v1.2.1](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.0...@grandom/bigint-v1.2.1) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump @tsconfig/node16 from 16.1.0 to 16.1.1 ([1186b41](https://github.com/grandom-library/grandom-js/commit/1186b418ac99f5333eb25f5b50164b2c863061bc))
+
 # [@grandom/bigint-v1.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.1.2...@grandom/bigint-v1.2.0) (2023-08-19)
 
 
