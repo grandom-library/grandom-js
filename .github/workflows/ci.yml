@@ -19,6 +19,7 @@ jobs:
           '@grandom/boolean',
           '@grandom/number',
           '@grandom/pick',
+          '@grandom/shuffle',
           '@grandom/string',
 
           # tertiary packages
@@ -109,6 +110,11 @@ jobs:
         run: >
           npx lerna exec --scope @grandom/pick -- npm run prep &&
           npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: shuffle
+        run: >
+          npx lerna exec --scope @grandom/shuffle -- npm run prep &&
+          npx lerna exec --scope @grandom/shuffle -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: string
         run: >
