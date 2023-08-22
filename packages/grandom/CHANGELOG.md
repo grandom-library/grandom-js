@@ -1,3 +1,10 @@
+# [grandom-v1.3.0](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.6...grandom-v1.3.0) (2023-08-22)
+
+
+### Features
+
+* **grandom:** add initial task-specific Grandom comp classes ([4ea3b58](https://github.com/grandom-library/grandom-js/commit/4ea3b582e9f202e25e92157edf58302fcd895685))
+
 # [grandom-v1.2.6](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.5...grandom-v1.2.6) (2023-08-22)
 
 
