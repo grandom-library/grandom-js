@@ -1,3 +1,10 @@
+# [@grandom/pick-v1.3.2](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.1...@grandom/pick-v1.3.2) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump rollup from 3.28.0 to 3.28.1 ([44621c4](https://github.com/grandom-library/grandom-js/commit/44621c4c01d07beeffe44dcfb7984b4c0ff0599c))
+
 # [@grandom/pick-v1.3.1](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.0...@grandom/pick-v1.3.1) (2023-08-22)
 
 
