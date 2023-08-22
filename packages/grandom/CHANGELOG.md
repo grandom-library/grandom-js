@@ -1,3 +1,10 @@
+# [grandom-v1.2.6](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.5...grandom-v1.2.6) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump rollup from 3.28.0 to 3.28.1 ([44621c4](https://github.com/grandom-library/grandom-js/commit/44621c4c01d07beeffe44dcfb7984b4c0ff0599c))
+
 # [grandom-v1.2.5](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.4...grandom-v1.2.5) (2023-08-22)
 
 
