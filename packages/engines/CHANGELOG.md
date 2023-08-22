@@ -1,3 +1,10 @@
+# [@grandom/engines-v2.1.1](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.0...@grandom/engines-v2.1.1) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump @tsconfig/node16 from 16.1.0 to 16.1.1 ([1186b41](https://github.com/grandom-library/grandom-js/commit/1186b418ac99f5333eb25f5b50164b2c863061bc))
+
 # [@grandom/engines-v2.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.0.0...@grandom/engines-v2.1.0) (2023-08-19)
 
 
