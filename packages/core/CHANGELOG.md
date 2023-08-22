@@ -1,3 +1,10 @@
+# [@grandom/core-v2.6.2](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.6.1...@grandom/core-v2.6.2) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump rollup from 3.28.0 to 3.28.1 ([44621c4](https://github.com/grandom-library/grandom-js/commit/44621c4c01d07beeffe44dcfb7984b4c0ff0599c))
+
 # [@grandom/core-v2.6.1](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.6.0...@grandom/core-v2.6.1) (2023-08-22)
 
 
