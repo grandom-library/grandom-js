@@ -1,3 +1,10 @@
+# [grandom-v1.2.5](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.4...grandom-v1.2.5) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump @tsconfig/node16 from 16.1.0 to 16.1.1 ([1186b41](https://github.com/grandom-library/grandom-js/commit/1186b418ac99f5333eb25f5b50164b2c863061bc))
+
 # [grandom-v1.2.4](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.3...grandom-v1.2.4) (2023-08-19)
 
 
