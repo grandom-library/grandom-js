@@ -1,3 +1,10 @@
+# [@grandom/engines-v2.1.2](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.1...@grandom/engines-v2.1.2) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump rollup from 3.28.0 to 3.28.1 ([44621c4](https://github.com/grandom-library/grandom-js/commit/44621c4c01d07beeffe44dcfb7984b4c0ff0599c))
+
 # [@grandom/engines-v2.1.1](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.0...@grandom/engines-v2.1.1) (2023-08-22)
 
 
