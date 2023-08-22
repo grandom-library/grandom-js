@@ -1,3 +1,10 @@
+# [@grandom/core-v2.6.1](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.6.0...@grandom/core-v2.6.1) (2023-08-22)
+
+
+### Performance Improvements
+
+* **deps:** bump @tsconfig/node16 from 16.1.0 to 16.1.1 ([1186b41](https://github.com/grandom-library/grandom-js/commit/1186b418ac99f5333eb25f5b50164b2c863061bc))
+
 # [@grandom/core-v2.6.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.5.0...@grandom/core-v2.6.0) (2023-08-20)
 
 
