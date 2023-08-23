@@ -1,3 +1,10 @@
+# [grandom-v1.4.0](https://github.com/grandom-library/grandom-js/compare/grandom-v1.3.0...grandom-v1.4.0) (2023-08-23)
+
+
+### Features
+
+* **grandom:** add shuffle and weighted packages to grandom ([522ed02](https://github.com/grandom-library/grandom-js/commit/522ed02027462c0800c2d881ee3ca906db7d9135))
+
 # [grandom-v1.3.0](https://github.com/grandom-library/grandom-js/compare/grandom-v1.2.6...grandom-v1.3.0) (2023-08-22)
 
 
