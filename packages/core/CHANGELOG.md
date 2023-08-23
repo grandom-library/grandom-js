@@ -1,3 +1,17 @@
+# [@grandom/core-v3.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.6.2...@grandom/core-v3.0.0) (2023-08-23)
+
+
+### Features
+
+* **core:** remove setEngine and getEngine from RandomGenerator ([fcb289d](https://github.com/grandom-library/grandom-js/commit/fcb289dbe0b765be837fed17802d94567b508d6e))
+* **core:** remove unneded seed-related props and methods from RandomEngine ([7b08085](https://github.com/grandom-library/grandom-js/commit/7b08085fbbcc0c1cfd0d78941f4ee5c99cf91af4))
+
+
+### BREAKING CHANGES
+
+* **core:** remove setting the engine capability
+* **core:** seed-related removals
+
 # [@grandom/core-v2.6.2](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v2.6.1...@grandom/core-v2.6.2) (2023-08-22)
 
 
