@@ -5,10 +5,6 @@ export class TestEngine extends RandomEngine {
     super('test-engine')
   }
 
-  _isSeedSupported (): boolean {
-    return false
-  }
-
   _next (): number {
     return Math.random()
   }

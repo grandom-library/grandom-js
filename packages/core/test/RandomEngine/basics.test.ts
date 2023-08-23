@@ -24,12 +24,6 @@ describe('RandomEngine', () => {
       expect(engine.name).toBe('test-engine')
     })
 
-    test('isSeedSupported', () => {
-      const engine = new TestEngine()
-
-      expect(engine.isSeedSupported).toBe(false)
-    })
-
     test('._next() is implemented', () => {
       const engine = new TestEngine()
 
@@ -39,27 +33,6 @@ describe('RandomEngine', () => {
 
   describe('errors', () => {
     const engine = new RandomEngine('test')
-
-    test('_isSeedSupported must be implemented', () => {
-      expect(() => engine.isSeedSupported).toThrowWithMessage(
-        Error,
-        '_isSeedSupported() must be implemented.'
-      )
-    })
-
-    test('_setSeed must be implemented', () => {
-      expect(() => engine.setSeed(123)).toThrowWithMessage(
-        Error,
-        '_setSeed() must be implemented.'
-      )
-    })
-
-    test('_getSeed must be implemented', () => {
-      expect(() => engine.getSeed()).toThrowWithMessage(
-        Error,
-        '_getSeed() must be implemented.'
-      )
-    })
 
     test('_next must be implemented', () => {
       expect(() => engine.nextBoolean()).toThrowWithMessage(
