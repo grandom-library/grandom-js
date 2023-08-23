@@ -8,7 +8,6 @@ export default class CryptoEngine extends RandomEngine {
     // @ts-expect-error
     // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     if (typeof window !== 'undefined' && window.crypto && window.crypto.getRandomValues) {
-
       // use a buffer of 4 bytes (32 bits), then fill the buffer with random bytes,
       // then normalize to range [0.0, 1.0)
       this._next = () => {
