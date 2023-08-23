@@ -1,3 +1,10 @@
+# [@grandom/boolean-v1.4.3](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.2...@grandom/boolean-v1.4.3) (2023-08-23)
+
+
+### Performance Improvements
+
+* **deps:** update grandom dependencies ([0229f84](https://github.com/grandom-library/grandom-js/commit/0229f84ff7cf0a7d05b77f33767c108e4b1b4d4f))
+
 # [@grandom/boolean-v1.4.2](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.1...@grandom/boolean-v1.4.2) (2023-08-22)
 
 
