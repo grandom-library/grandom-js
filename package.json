@@ -19,8 +19,9 @@
   "scripts": {
     "init": "npm i && lerna exec -- npm i && lerna list -all",
     "init:clean": "npm run __purge && npm run init",
-    "check-updates": "lerna exec --concurrency 1 -- npx --yes npm-check-updates",
-    "-----------------------------------": "-----------------------------------",
+    "check:deps": "lerna exec --concurrency 1 -- npx --yes npm-check-updates",
+    "check:deps:grandom": "lerna exec --concurrency 1 -- npx --yes npm-check-updates \"/^@grandom.*$/\"",
+    "//": "-------------------------------------------------------------------",
     "__clear-build-files": "bash scripts/clear-build-files.sh",
     "__purge-dependency-caches": "bash scripts/purge-dependency-caches.sh",
     "__purge": "npm run __clear-build-files && npm run __purge-dependency-caches"
