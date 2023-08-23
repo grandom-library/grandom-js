@@ -21,6 +21,7 @@ jobs:
           '@grandom/pick',
           '@grandom/shuffle',
           '@grandom/string',
+          '@grandom/weighted',
 
           # tertiary packages
           'grandom'
@@ -120,6 +121,11 @@ jobs:
         run: >
           npx lerna exec --scope @grandom/string -- npm run prep &&
           npx lerna exec --scope @grandom/string -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      - name: weighted
+        run: >
+          npx lerna exec --scope @grandom/weighted -- npm run prep &&
+          npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # tertiary packages ----------------------------------------------------------------------------------------------
       - name: grandom
