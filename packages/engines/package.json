@@ -28,6 +28,7 @@
     "start": "npm test -- --watchAll",
     "types": "tsc --noEmit && tsc -p tsconfig.types.json --outDir .temp",
     "lint": "ts-standard --verbose | snazzy",
+    "lint:fix": "ts-standard --verbose --fix | snazzy",
     "test": "jest",
     "prep": "npm run __prep:init && npm run __prep:copy",
     "build": "npm run __build:src && npm run __build:types",
