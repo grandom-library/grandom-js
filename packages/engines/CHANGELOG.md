@@ -1,3 +1,15 @@
+# [@grandom/engines-v3.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.2.0...@grandom/engines-v3.0.0) (2023-08-23)
+
+
+### Features
+
+* **engines:** trim down engines according the v3 RandomEngine ([508a0d3](https://github.com/grandom-library/grandom-js/commit/508a0d3e05e401c6d84c0eecae24e9325d06827c))
+
+
+### BREAKING CHANGES
+
+* **engines:** trim down engines and remove v2 RandomEngine code
+
 # [@grandom/engines-v2.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.2...@grandom/engines-v2.2.0) (2023-08-23)
 
 
