@@ -6,6 +6,7 @@ import RandomNumber from '@grandom/number/RandomNumber'
 import RandomPick from '@grandom/pick/RandomPick'
 import RandomShuffle from '@grandom/shuffle/RandomShuffle'
 import RandomString from '@grandom/string/RandomString'
+import RandomWeighted from '@grandom/weighted/RandomWeighted'
 
 export default class SeedableGrandom {
   private readonly _engine: MT19937Engine
@@ -20,6 +21,7 @@ export default class SeedableGrandom {
     const randomPick = new RandomPick(this._engine)
     const randomShuffle = new RandomShuffle(this._engine)
     const randomString = new RandomString(this._engine)
+    const randomWeighted = new RandomWeighted(this._engine)
 
     this.bigint = randomBigInt.bigint.bind(randomBigInt)
     this.boolean = randomBoolean.boolean.bind(randomBoolean)
@@ -27,6 +29,7 @@ export default class SeedableGrandom {
     this.pick = randomPick.pick.bind(randomPick)
     this.shuffle = randomShuffle.shuffle.bind(randomShuffle)
     this.string = randomString.string.bind(randomString)
+    this.weighted = randomWeighted.weighted.bind(randomWeighted)
   }
 
   get seed (): any {
@@ -43,4 +46,5 @@ export default class SeedableGrandom {
   pick: InstanceType<typeof RandomPick>['pick']
   shuffle: InstanceType<typeof RandomShuffle>['shuffle']
   string: InstanceType<typeof RandomString>['string']
+  weighted: InstanceType<typeof RandomWeighted>['weighted']
 }

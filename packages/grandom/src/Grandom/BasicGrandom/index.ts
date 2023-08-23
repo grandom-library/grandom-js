@@ -6,6 +6,7 @@ import RandomNumber from '@grandom/number/RandomNumber'
 import RandomPick from '@grandom/pick/RandomPick'
 import RandomShuffle from '@grandom/shuffle/RandomShuffle'
 import RandomString from '@grandom/string/RandomString'
+import RandomWeighted from '@grandom/weighted/RandomWeighted'
 
 export default class BasicGrandom {
   constructor () {
@@ -17,6 +18,7 @@ export default class BasicGrandom {
     const randomPick = new RandomPick(randomEngine)
     const randomShuffle = new RandomShuffle(randomEngine)
     const randomString = new RandomString(randomEngine)
+    const randomWeighted = new RandomWeighted(randomEngine)
 
     this.bigint = randomBigInt.bigint.bind(randomBigInt)
     this.boolean = randomBoolean.boolean.bind(randomBoolean)
@@ -24,6 +26,7 @@ export default class BasicGrandom {
     this.pick = randomPick.pick.bind(randomPick)
     this.shuffle = randomShuffle.shuffle.bind(randomShuffle)
     this.string = randomString.string.bind(randomString)
+    this.weighted = randomWeighted.weighted.bind(randomWeighted)
   }
 
   bigint: InstanceType<typeof RandomBigInt>['bigint']
@@ -32,4 +35,5 @@ export default class BasicGrandom {
   pick: InstanceType<typeof RandomPick>['pick']
   shuffle: InstanceType<typeof RandomShuffle>['shuffle']
   string: InstanceType<typeof RandomString>['string']
+  weighted: InstanceType<typeof RandomWeighted>['weighted']
 }
