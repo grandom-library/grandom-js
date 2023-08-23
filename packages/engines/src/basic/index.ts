@@ -5,10 +5,6 @@ export default class BasicEngine extends RandomEngine {
     super('basic')
   }
 
-  _isSeedSupported (): boolean {
-    return false
-  }
-
   _next (): number {
     return Math.random()
   }

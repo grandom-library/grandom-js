@@ -10,10 +10,6 @@ export default class MT19937Engine extends RandomEngine {
     this._engine = new MT19937(Math.floor(Math.random() * new Date().getTime()))
   }
 
-  _isSeedSupported (): boolean {
-    return true
-  }
-
   _next (): number {
     return this._engine.randomFloat2()
   }

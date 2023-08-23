@@ -37,8 +37,4 @@ export default class CryptoEngine extends RandomEngine {
       throw new Error('Secure random number generation is not supported in this environment.')
     }
   }
-
-  _isSeedSupported (): boolean {
-    return false
-  }
 }
