@@ -1,3 +1,10 @@
+# [@grandom/engines-v2.2.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.2...@grandom/engines-v2.2.0) (2023-08-23)
+
+
+### Features
+
+* **engines:** add CryptoEngine ([9541cb5](https://github.com/grandom-library/grandom-js/commit/9541cb54d9e9d921957432b989551bc0293acc20))
+
 # [@grandom/engines-v2.1.2](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.1.1...@grandom/engines-v2.1.2) (2023-08-22)
 
 
