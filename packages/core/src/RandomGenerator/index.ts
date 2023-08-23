@@ -11,11 +11,7 @@ export default class RandomGenerator {
     this._engine = engine
   }
 
-  getEngine (): RandomEngine {
+  get engine (): RandomEngine {
     return this._engine
-  }
-
-  setEngine (engine: RandomEngine): void {
-    this._engine = engine
   }
 }

@@ -1,15 +1,11 @@
 import { RandomGenerator } from '../../src'
-import { TestEngine, StrangeTestEngine } from '../fixtures'
+import { TestEngine } from '../fixtures'
 
 describe('RandomGenerator', () => {
   test('basics', () => {
     class CustomGenerator extends RandomGenerator {}
     const generator = new CustomGenerator(new TestEngine())
 
-    expect(generator.getEngine().name).toBe('test-engine')
-
-    generator.setEngine(new StrangeTestEngine())
-
-    expect(generator.getEngine().name).toBe('strange-test-engine')
+    expect(generator.engine.name).toBe('test-engine')
   })
 })
