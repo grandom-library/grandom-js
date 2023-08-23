@@ -1,3 +1,10 @@
+# [@grandom/bigint-v1.2.3](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.2...@grandom/bigint-v1.2.3) (2023-08-23)
+
+
+### Performance Improvements
+
+* **deps:** update [@grandom](https://github.com/grandom) deps ([b48d0c9](https://github.com/grandom-library/grandom-js/commit/b48d0c9d06eddc8b253e6bca32d429baabca1e7d))
+
 # [@grandom/bigint-v1.2.2](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.1...@grandom/bigint-v1.2.2) (2023-08-22)
 
 
