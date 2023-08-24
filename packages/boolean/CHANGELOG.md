@@ -1,3 +1,10 @@
+# [@grandom/boolean-v1.4.4](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.3...@grandom/boolean-v1.4.4) (2023-08-24)
+
+
+### Performance Improvements
+
+* **deps:** bump jest and @types/jest ([cbd2ba7](https://github.com/grandom-library/grandom-js/commit/cbd2ba75068f3f485b735e4fbc4bb9cd6fd3b098))
+
 # [@grandom/boolean-v1.4.3](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.2...@grandom/boolean-v1.4.3) (2023-08-23)
 
 
