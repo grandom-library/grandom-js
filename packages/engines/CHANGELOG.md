@@ -1,3 +1,10 @@
+# [@grandom/engines-v3.1.2](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.1.1...@grandom/engines-v3.1.2) (2023-08-24)
+
+
+### Performance Improvements
+
+* **deps:** bump @grandom/mt19937 from 1.0.0 to 1.0.1 ([85b08be](https://github.com/grandom-library/grandom-js/commit/85b08be9906d840345eeaa3513c373df8ccab581))
+
 # [@grandom/engines-v3.1.1](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.1.0...@grandom/engines-v3.1.1) (2023-08-24)
 
 
