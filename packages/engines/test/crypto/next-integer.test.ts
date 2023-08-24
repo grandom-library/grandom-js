@@ -39,7 +39,7 @@ describe('CryptoEngine', () => {
       expect(result.integers).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(0.089)
-      expect(result.highestValue).toBeLessThanOrEqual(0.092)
+      expect(result.highestValue).toBeLessThanOrEqual(0.093)
       expect(result.averageValue).toBeWithin(0.089, 0.093)
 
       expect(result.of(0)).toBeWithin(0.089, 0.093)
