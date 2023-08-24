@@ -1,3 +1,10 @@
+# [@grandom/engines-v3.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.0.0...@grandom/engines-v3.1.0) (2023-08-24)
+
+
+### Features
+
+* **engines:** add seed capability to MT19937Engine ([336e6a6](https://github.com/grandom-library/grandom-js/commit/336e6a6273d4fe933bde7a0585dd38995f06b00c))
+
 # [@grandom/engines-v3.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v2.2.0...@grandom/engines-v3.0.0) (2023-08-23)
 
 
