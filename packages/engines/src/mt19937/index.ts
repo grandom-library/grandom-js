@@ -26,6 +26,7 @@ export default class MT19937Engine extends RandomEngine {
       this._seed = seed
     } else {
       throw new TypeError(
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         `Seed must be a number, or a string, got: ${seed} (typeof === '${typeof seed}').`
       )
     }

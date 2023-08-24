@@ -44,7 +44,7 @@ describe('MT19937Engine', () => {
       test('set seed - unsupported type', () => {
         const engine = new MT19937Engine()
 
-        expect(() => engine.seed = false).toThrowWithMessage(
+        expect(() => { engine.seed = false }).toThrowWithMessage(
           TypeError,
           'Seed must be a number, or a string, got: false (typeof === \'boolean\').'
         )
@@ -52,4 +52,3 @@ describe('MT19937Engine', () => {
     })
   })
 })
-
