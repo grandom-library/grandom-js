@@ -1,3 +1,10 @@
+# [@grandom/engines-v3.1.1](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.1.0...@grandom/engines-v3.1.1) (2023-08-24)
+
+
+### Performance Improvements
+
+* **deps:** bump jest and @types/jest ([cbd2ba7](https://github.com/grandom-library/grandom-js/commit/cbd2ba75068f3f485b735e4fbc4bb9cd6fd3b098))
+
 # [@grandom/engines-v3.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.0.0...@grandom/engines-v3.1.0) (2023-08-24)
 
 
