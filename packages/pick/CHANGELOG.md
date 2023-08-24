@@ -1,3 +1,10 @@
+# [@grandom/pick-v1.3.4](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.3...@grandom/pick-v1.3.4) (2023-08-24)
+
+
+### Performance Improvements
+
+* **deps:** bump jest and @types/jest ([cbd2ba7](https://github.com/grandom-library/grandom-js/commit/cbd2ba75068f3f485b735e4fbc4bb9cd6fd3b098))
+
 # [@grandom/pick-v1.3.3](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.2...@grandom/pick-v1.3.3) (2023-08-23)
 
 
