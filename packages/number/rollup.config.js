@@ -34,7 +34,7 @@ module.exports = [
 
     output: {
       format: 'umd',
-      name: 'grandomBoolean',
+      name: 'grandomNumber',
       sourcemap: true,
       file: 'dist/dist/umd.min.js',
 
