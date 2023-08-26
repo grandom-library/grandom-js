@@ -67,15 +67,15 @@ jobs:
           npm test -- --coverage
 
       - name: prepare coverage flag
-        id: flag
+        id: coverage_flag
         run: |
-          flag=$(echo "${{ matrix.package }}" | sed 's/@//;s/\//-/g')
-          echo "::set-output name=flag::$flag"
+          coverage_flag=$(echo "${{ matrix.package }}" | sed 's/@//;s/\//-/g')
+          echo "coverage_flag=$coverage_flag" >> $GITHUB_ENV
 
       - name: upload coverage
         uses: codecov/codecov-action@v3
         with:
-          flags: ${{ steps.flag.outputs.flag }}
+          flags: ${{ env.coverage_flag }}
 
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
