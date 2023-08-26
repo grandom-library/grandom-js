@@ -96,6 +96,7 @@ typings/
 # temporary files & directories
 ._*
 .temp/
+.temp-*/
 
 # imported files & directories
 imported
