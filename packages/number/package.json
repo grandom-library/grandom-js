@@ -1,7 +1,7 @@
 {
   "name": "@grandom/number",
   "version": "0.0.0-development",
-  "description": "Great random number generator.",
+  "description": "A great random number generator.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "MIT",
   "main": "index.js",
@@ -16,6 +16,24 @@
     "url": "https://github.com/grandom-library/grandom-js/issues"
   },
   "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/number#readme",
+  "keywords": [
+    "random",
+    "seedable",
+    "generator",
+    "number",
+    "biased",
+    "seed",
+    "rng",
+    "prng",
+    "srng",
+    "sprng",
+    "crypto",
+    "randomness",
+    "rand",
+    "seedrand",
+    "seedrandom",
+    "grandom"
+  ],
   "engines": {
     "node": ">= 16"
   },
@@ -44,6 +62,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.2",
     "@semantic-release/changelog": "^6.0.3",
