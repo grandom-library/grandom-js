@@ -1,3 +1,10 @@
+# [@grandom/core-v3.0.2](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.1...@grandom/core-v3.0.2) (2023-08-26)
+
+
+### Bug Fixes
+
+* **core:** trigger release ([328497f](https://github.com/grandom-library/grandom-js/commit/328497f9191640b4cf415e2fdeddd314b93138b0))
+
 # [@grandom/core-v3.0.1](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.0...@grandom/core-v3.0.1) (2023-08-24)
 
 
