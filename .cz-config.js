@@ -44,6 +44,7 @@ module.exports = {
     }
   ],
   scopes: [
+    { name: 'root' },
     { name: 'bigint' },
     { name: 'boolean' },
     { name: 'core' },
