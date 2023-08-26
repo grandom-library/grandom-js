@@ -66,6 +66,11 @@ jobs:
           npx lerna exec --scope ${{ matrix.package }} --
           npm test -- --coverage
 
+      - name: upload coverage
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
   release:
     needs: test
 
