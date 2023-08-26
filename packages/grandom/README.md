@@ -11,7 +11,7 @@
   <!-- CI badge -->
   <a href="https://github.com/grandom-library/grandom-js/actions?query=workflow%3ACI"><img src="https://github.com/grandom-library/grandom-js/workflows/CI/badge.svg" alt="ci-badge"></a>
   <!-- Coverage badge -->
-  <a href="https://codecov.io/gh/intradoc/intradoc"><img src="https://img.shields.io/codecov/c/github/intradoc/intradoc?logo=codecov&logoColor=white" alt="coverage-badge"></a>
+  <a href="https://app.codecov.io/gh/grandom-library/grandom-js"><img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom&logo=codecov&logoColor=white" alt="coverage-badge"></a>
   <!-- Dependency badge -->
   <a href="https://github.com/grandom-library/grandom-js/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies"><img src="https://img.shields.io/badge/Dependencies-✔-brightgreen.svg?logo=dependabot" alt="dependency-badge"></a>
   <!-- Security badge -->
