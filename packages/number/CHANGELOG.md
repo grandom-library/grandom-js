@@ -1,3 +1,10 @@
+# [@grandom/number-v1.4.5](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.4...@grandom/number-v1.4.5) (2023-08-26)
+
+
+### Bug Fixes
+
+* **number:** make RandomNumber accessible in UMD ([0b7bc4a](https://github.com/grandom-library/grandom-js/commit/0b7bc4a96833b4b79f5e6ffba795d00ffe60a0af))
+
 # [@grandom/number-v1.4.4](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.3...@grandom/number-v1.4.4) (2023-08-24)
 
 
