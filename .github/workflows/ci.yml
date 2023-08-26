@@ -66,9 +66,16 @@ jobs:
           npx lerna exec --scope ${{ matrix.package }} --
           npm test -- --coverage
 
-      - uses: codecov/codecov-action@v3
+      - name: prepare coverage flag
+        id: flag
+        run: |
+          flag=$(echo "${{ matrix.package }}" | sed 's/@//;s/\//-/g')
+          echo "::set-output name=flag::$flag"
+
+      - name: upload coverage
+        uses: codecov/codecov-action@v3
         with:
-          flags: ${{ matrix.package }}
+          flags: ${{ steps.flag.outputs.flag }}
 
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
