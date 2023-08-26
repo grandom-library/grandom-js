@@ -1,3 +1,10 @@
+# [@grandom/bigint-v1.2.5](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.4...@grandom/bigint-v1.2.5) (2023-08-26)
+
+
+### Bug Fixes
+
+* **bigint:** make RandomBigInt accessible in UMD ([c261a4b](https://github.com/grandom-library/grandom-js/commit/c261a4b8b0440e617a2396f3dd43b9fab44cc2a3))
+
 # [@grandom/bigint-v1.2.4](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.3...@grandom/bigint-v1.2.4) (2023-08-24)
 
 
