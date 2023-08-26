@@ -43,15 +43,23 @@ jobs:
           npx lerna exec --scope ${{ matrix.package }} --
           npm ci
 
-      - name: types
+      - name: check commits
         run: >
           npx lerna exec --scope ${{ matrix.package }} --
-          npm run types
+          npx commitlint
+            --from ${{ github.event.pull_request.base.sha }}
+            --to ${{ github.event.pull_request.head.sha }}
+            --verbose
 
-      - name: lint
+      - name: check lint
         run: >
           npx lerna exec --scope ${{ matrix.package }} --
-          npm run lint
+          npm run check:lint
+
+      - name: check types
+        run: >
+          npx lerna exec --scope ${{ matrix.package }} --
+          npm run check:types
 
       - name: test
         run: >
