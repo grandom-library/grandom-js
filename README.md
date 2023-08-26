@@ -17,7 +17,7 @@
 <!-- Badges - 2nd row -->
 <p align="center">
   <!-- Dependency badge -->
-  <a href="https://github.com/grandom-library/grandom-js/pulls?q=is%3Apr+is%3Aopen+label%3Asecurity"><img src="https://img.shields.io/badge/Dependencies-✔-brightgreen.svg?logo=dependabot" alt="dependency-badge"></a>
+  <a href="https://github.com/grandom-library/grandom-js/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies"><img src="https://img.shields.io/badge/Dependencies-✔-brightgreen.svg?logo=dependabot" alt="dependency-badge"></a>
   <!-- Security badge -->
   <a href="https://socket.dev/dashboard/org/gh/grandom-library/repo/grandom-js"><img src="https://img.shields.io/badge/Security-✔-brightgreen.svg?logo=auth0&logoColor=white" alt="release-workflow-badge"></a>
   <!-- License badge -->
@@ -63,7 +63,7 @@
 
 | Monorepo Package | NPM Package | Stats |
 | ---------------- | ----------- | ----- |
-| [grandom][url-gh-grandom] | [@grandom/grandom][url-npm-grandom] | ![NPM][url-b-grandom-ver] ![Coverage][url-b-grandom-cov]
+| [grandom][url-gh-grandom] | [grandom][url-npm-grandom] | ![NPM][url-b-grandom-ver] ![Coverage][url-b-grandom-cov]
 
 ## ⭐ Related
 
