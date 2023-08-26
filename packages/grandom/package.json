@@ -1,7 +1,7 @@
 {
   "name": "grandom",
   "version": "0.0.0-development",
-  "description": "Great random generator.",
+  "description": "A great random number and data generator.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "MIT",
   "main": "index.js",
@@ -13,6 +13,31 @@
     "url": "https://github.com/grandom-library/grandom-js/issues"
   },
   "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/grandom#readme",
+  "keywords": [
+    "random",
+    "seedable",
+    "generator",
+    "bigint",
+    "boolean",
+    "data",
+    "number",
+    "pick",
+    "shuffle",
+    "string",
+    "weighted",
+    "biased",
+    "seed",
+    "rng",
+    "prng",
+    "srng",
+    "sprng",
+    "crypto",
+    "randomness",
+    "rand",
+    "seedrand",
+    "seedrandom",
+    "grandom"
+  ],
   "engines": {
     "node": ">= 16"
   },
