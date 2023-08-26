@@ -1,3 +1,10 @@
+# [@grandom/boolean-v1.4.5](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.4...@grandom/boolean-v1.4.5) (2023-08-26)
+
+
+### Bug Fixes
+
+* **boolean:** fix unaccessible RandomBoolean class in UMD ([a3af43f](https://github.com/grandom-library/grandom-js/commit/a3af43fd4b85bc9857f5ecf21f66dc2afba3ae12))
+
 # [@grandom/boolean-v1.4.4](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.3...@grandom/boolean-v1.4.4) (2023-08-24)
 
 
