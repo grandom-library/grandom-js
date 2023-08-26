@@ -33,7 +33,7 @@
 </h3>
 
 <p align="center">
-  A <b>monorepo of TypeScripts packages</b> of<br/> the grandom library and its components.
+  A <b>monorepo of TypeScripts packages</b><br/> of the grandom library and its components.
 </p>
 
 ---
