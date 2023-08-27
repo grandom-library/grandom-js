@@ -8,14 +8,12 @@
 <p align="center">
   <!-- CI badge -->
   <a href="https://github.com/grandom-library/grandom-js/actions?query=workflow%3ACI"><img src="https://github.com/grandom-library/grandom-js/workflows/CI/badge.svg" alt="ci-badge"></a>
-  <!-- Coverage badge -->
-  <a href="https://app.codecov.io/gh/grandom-library/grandom-js"><img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?label=Cov&logo=codecov&logoColor=white" alt="coverage-badge"></a>  
   <!-- Code quality badge -->
   <a href="https://www.codefactor.io/repository/github/grandom-library/grandom-js"><img src="https://img.shields.io/codefactor/grade/github/grandom-library/grandom-js?label=Quality&logo=codefactor&logoColor=white" alt="coverage-badge"></a>
   <!-- Code maintainability badge -->
   <a href="https://codeclimate.com/github/grandom-library/grandom-js"><img src="https://img.shields.io/codeclimate/maintainability/grandom-library/grandom-js?label=Maintainability&logo=codeclimate&logoColor=white" alt="coverage-badge"></a>
   <!-- Dependency badge -->
-  <a href="https://github.com/grandom-library/grandom-js/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies"><img src="https://img.shields.io/badge/Deps-✔-brightgreen.svg?logo=dependabot" alt="dependency-badge"></a>
+  <a href="https://github.com/grandom-library/grandom-js/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies"><img src="https://img.shields.io/badge/Dependencies-✔-brightgreen.svg?logo=dependabot" alt="dependency-badge"></a>
   <!-- Security badge -->
   <a href="https://socket.dev/dashboard/org/gh/grandom-library/repo/grandom-js"><img src="https://img.shields.io/badge/Security-✔-brightgreen.svg?logo=auth0&logoColor=white" alt="release-workflow-badge"></a>
 </p>
@@ -54,10 +52,55 @@
 
 ## Primary Packages
 
-| Monorepo Package | NPM Package | Stats |
-| ---------------- | ----------- | ----- |
-| [core][url-gh-core] | [@grandom/core][url-npm-core] | ![NPM][url-b-core-ver] ![Coverage][url-b-core-cov]
-| [engines][url-gh-engines] | [@grandom/engines][url-npm-engines] | ![NPM][url-b-engines-ver] ![Coverage][url-b-engines-cov]
+<table>
+  <thead>
+    <tr>
+      <th>Monorepo Package</th>
+      <th>NPM Package</th>
+      <th>Stats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/grandom-library/grandom-js/tree/main/packages/core">core</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/@grandom/core">@grandom/core</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/@grandom/core">
+          <img src="https://img.shields.io/npm/v/%40grandom/core?color=brightgreen&logo=npm" alt="NPM version">
+        </a>
+        <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
+          <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-core&logo=codecov&logoColor=white" alt="Coverage">
+        </a>
+        <a href="https://bundlephobia.com/package/@grandom/core">
+          <img src="https://img.shields.io/bundlephobia/minzip/%40grandom/core?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/grandom-library/grandom-js/tree/main/packages/engines">engines</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/@grandom/engines">@grandom/engines</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/@grandom/engines">
+          <img src="https://img.shields.io/npm/v/%40grandom/engines?color=brightgreen&logo=npm" alt="NPM version">
+        </a>
+        <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
+          <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-engines&logo=codecov&logoColor=white" alt="Coverage">
+        </a>
+        <a href="https://bundlephobia.com/package/@grandom/engines">
+          <img src="https://img.shields.io/bundlephobia/minzip/%40grandom/engines?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Secondary Packages
 
