@@ -72,7 +72,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-core&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/core"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/core?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/core"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/core?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -87,7 +87,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-engines&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/engines"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/engines?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/engines"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/engines?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -116,7 +116,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-bigint&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/bigint"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/bigint?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/bigint"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/bigint?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -131,7 +131,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-boolean&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/boolean"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/boolean?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/boolean"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/boolean?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -146,7 +146,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-number&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/number"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/number?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/number"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/number?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -161,7 +161,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-pick&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/pick"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/pick?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/pick"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/pick?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -176,7 +176,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-shuffle&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/shuffle"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/shuffle?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/shuffle"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/shuffle?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -191,7 +191,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-string&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/string"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/string?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/string"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/string?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -206,7 +206,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom-weighted&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/@grandom/weighted"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/weighted?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/@grandom/weighted"><img src="https://img.shields.io/bundlephobia/minzip/%40grandom/weighted?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>
@@ -234,7 +234,7 @@
         <a href="https://app.codecov.io/gh/grandom-library/grandom-js/tree/main/packages">
           <img src="https://img.shields.io/codecov/c/github/grandom-library/grandom-js?flag=grandom&logo=codecov&logoColor=white" alt="Coverage"></a>
         <!-- Size -->
-        <a href="https://bundlephobia.com/package/grandom"><img src="https://img.shields.io/bundlephobia/minzip/grandom?label=min%2Bgzipped&color=green&logo=semanticweb&logoColor=white" alt="Size">
+        <a href="https://bundlephobia.com/package/grandom"><img src="https://img.shields.io/bundlephobia/minzip/grandom?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="Size">
         </a>
       </td>
     </tr>    
