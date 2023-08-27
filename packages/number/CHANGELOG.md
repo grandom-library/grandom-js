@@ -1,3 +1,10 @@
+# [@grandom/number-v1.4.7](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.6...@grandom/number-v1.4.7) (2023-08-27)
+
+
+### Performance Improvements
+
+* **deps:** update dependencies ([40f0b6c](https://github.com/grandom-library/grandom-js/commit/40f0b6c138a5c2741b11190ef2d79c6960d395f4))
+
 # [@grandom/number-v1.4.6](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.5...@grandom/number-v1.4.6) (2023-08-27)
 
 
