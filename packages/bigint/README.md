@@ -1,6 +1,9 @@
-<h1 align="center">
-  @grandom/bigint
-</h1>
+<p align="center">
+  <picture>
+	  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/bigint/media/logo-dark.svg">
+  	<img src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/bigint/media/logo-light.svg" alt="@grandom/bigint logo">
+  </picture>
+</p>
 
 <br />
 
@@ -30,6 +33,8 @@
 
 <!-- Badges - 3rd row -->
 <p align="center">
+  <!-- Size badge -->
+  <a href="https://bundlephobia.com/package/@grandom/bigint"><img src="https://img.shields.io/bundlephobia/minzip/@grandom/bigint?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="size-badge">
   <!-- License badge -->
   <a href="https://github.com/grandom-library/grandom-js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?logo=github" alt="license-badge"></a>
   <!-- Contribution badge -->
