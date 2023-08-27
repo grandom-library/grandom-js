@@ -14,7 +14,7 @@ The media assets for this project is licensed under the [Creative Commons Attrib
 - License: [CC BY 4.0][url-cc-license]
 - Original Media Repository: [grandom-js][url-repo]
 
-When using of the media assets, make sure to include the above attribution information.
+When using the media assets, make sure to include the above attribution information.
 
 ## 📁 Media Files
 
