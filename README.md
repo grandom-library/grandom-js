@@ -1,6 +1,9 @@
-<h1 align="center">
-  <img src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo.svg" alt="grandom logo">
-</h1>
+<p align="center">
+  <picture>
+	  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-dark.svg">
+  	<img src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-light.svg" alt="grandom TS monorepo logo">
+  </picture>
+</p>
 
 <br />
 
