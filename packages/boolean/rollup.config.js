@@ -1,7 +1,9 @@
+const strip = require('rollup-plugin-strip-code')
 const typescript = require('@rollup/plugin-typescript')
 const terser = require('@rollup/plugin-terser')
 const commonjs = require('@rollup/plugin-commonjs')
 const nodeResolve = require('@rollup/plugin-node-resolve')
+const filesize = require('rollup-plugin-filesize')
 const dedent = require('string-dedent')
 
 const pkg = require('./package.json')
@@ -26,6 +28,10 @@ module.exports = [
     external: /@grandom\/.*/,
 
     plugins: [
+      strip({
+        start_comment: '<umd-only>',
+        end_comment: '</umd-only>'
+      }),
       typescript()
     ]
   },
@@ -56,7 +62,8 @@ module.exports = [
       terser(),
       typescript(),
       commonjs(),
-      nodeResolve()
+      nodeResolve(),
+      filesize()
     ]
   }
 ]
