@@ -1,3 +1,10 @@
+# [@grandom/pick-v1.3.5](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.4...@grandom/pick-v1.3.5) (2023-08-27)
+
+
+### Bug Fixes
+
+* **pick:** make RandomPick accessible in UMD build ([c6c7f0a](https://github.com/grandom-library/grandom-js/commit/c6c7f0ac07a8355c51b082fc919246bdf0c89146))
+
 # [@grandom/pick-v1.3.4](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.3...@grandom/pick-v1.3.4) (2023-08-24)
 
 
