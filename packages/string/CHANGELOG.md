@@ -1,3 +1,10 @@
+# [@grandom/string-v1.2.5](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.4...@grandom/string-v1.2.5) (2023-08-27)
+
+
+### Bug Fixes
+
+* **string:** make RandomString accessible in UMD ([36ccd6d](https://github.com/grandom-library/grandom-js/commit/36ccd6da62eac7f379be482685934d6617d00a2f))
+
 # [@grandom/string-v1.2.4](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.3...@grandom/string-v1.2.4) (2023-08-24)
 
 
