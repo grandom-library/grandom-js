@@ -5,6 +5,8 @@
   </picture>
 </p>
 
+---
+
 <br />
 
 <!-- Badges - 1st row -->
