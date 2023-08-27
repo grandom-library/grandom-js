@@ -1,3 +1,10 @@
+# [@grandom/string-v1.2.6](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.5...@grandom/string-v1.2.6) (2023-08-27)
+
+
+### Performance Improvements
+
+* **deps:** update dependencies ([40f0b6c](https://github.com/grandom-library/grandom-js/commit/40f0b6c138a5c2741b11190ef2d79c6960d395f4))
+
 # [@grandom/string-v1.2.5](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.4...@grandom/string-v1.2.5) (2023-08-27)
 
 
