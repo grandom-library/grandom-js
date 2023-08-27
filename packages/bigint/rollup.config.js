@@ -36,7 +36,7 @@ module.exports = [
       format: 'umd',
       name: 'grandomBigInt',
       sourcemap: true,
-      file: 'dist/dist/umd.min.js',
+      file: 'dist/umd.min.js',
 
       banner: dedent`
         /*!
