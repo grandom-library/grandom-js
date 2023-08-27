@@ -1,3 +1,4 @@
+const strip = require('rollup-plugin-strip-code')
 const typescript = require('@rollup/plugin-typescript')
 const terser = require('@rollup/plugin-terser')
 const commonjs = require('@rollup/plugin-commonjs')
@@ -27,6 +28,10 @@ module.exports = [
     external: /@grandom\/.*/,
 
     plugins: [
+      strip({
+        start_comment: '<umd-only>',
+        end_comment: '</umd-only>'
+      }),
       typescript()
     ]
   },

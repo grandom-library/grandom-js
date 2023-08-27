@@ -77,6 +77,7 @@
     "jest-extended": "^4.0.1",
     "rollup": "^3.28.1",
     "rollup-plugin-filesize": "^10.0.0",
+    "rollup-plugin-strip-code": "^0.2.7",
     "semantic-release": "^19.0.5",
     "semantic-release-monorepo": "^7.0.5",
     "snazzy": "^9.0.0",
