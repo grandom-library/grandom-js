@@ -1,3 +1,10 @@
+# [@grandom/bigint-v1.2.7](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.6...@grandom/bigint-v1.2.7) (2023-08-27)
+
+
+### Bug Fixes
+
+* **bigint:** trigger release ([067594d](https://github.com/grandom-library/grandom-js/commit/067594df7acd7af698e8d3b88f3417603416b3d4))
+
 # [@grandom/bigint-v1.2.6](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.5...@grandom/bigint-v1.2.6) (2023-08-27)
 
 
