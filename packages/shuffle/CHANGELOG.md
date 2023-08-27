@@ -1,3 +1,10 @@
+# [@grandom/shuffle-v1.0.4](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.3...@grandom/shuffle-v1.0.4) (2023-08-27)
+
+
+### Performance Improvements
+
+* **deps:** update dependencies ([40f0b6c](https://github.com/grandom-library/grandom-js/commit/40f0b6c138a5c2741b11190ef2d79c6960d395f4))
+
 # [@grandom/shuffle-v1.0.3](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.2...@grandom/shuffle-v1.0.3) (2023-08-27)
 
 
