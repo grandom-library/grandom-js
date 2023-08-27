@@ -1,6 +1,12 @@
-<h1 align="center">
-  @grandom/boolean
-</h1>
+<!-- Logo -->
+<p align="center">
+  <a href="https://github.com/grandom-library/grandom-js/tree/main/packages/boolean#readme">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/boolean/media/logo-dark.svg">
+      <img alt="@grandom/boolean logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/boolean/media/logo-light.svg" width="800">
+    </picture>
+  </a>
+</p>
 
 <br />
 
@@ -39,12 +45,12 @@
 ---
 
 <h3 align="center">
-  The necessary boolean randomness for your work.
+  The necessary random booleans for your work.
 </h3>
 
 <p align="center">
-  A configurable, flexible, and overall great<br/> <b>random 
-  boolean generator</b> with an optional bias capability.
+  A configurable, flexible, seedable, and overall great<br/>
+  <b>random boolean generator</b>.
 </p>
 
 ---
