@@ -1,3 +1,10 @@
+# [@grandom/number-v1.4.6](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.5...@grandom/number-v1.4.6) (2023-08-27)
+
+
+### Bug Fixes
+
+* **number:** fix build config typo ([00877e1](https://github.com/grandom-library/grandom-js/commit/00877e18be1fa1d739c0f34ac8eefc8cab50636e))
+
 # [@grandom/number-v1.4.5](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.4...@grandom/number-v1.4.5) (2023-08-26)
 
 
