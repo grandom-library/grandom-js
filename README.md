@@ -1,5 +1,5 @@
 <h1 align="center">
-  grandom-js Monorepo
+  <img src="media/logo.svg" alt="grandom logo">
 </h1>
 
 <br />
