@@ -1,3 +1,10 @@
+# [@grandom/weighted-v1.0.3](https://github.com/grandom-library/grandom-js/compare/@grandom/weighted-v1.0.2...@grandom/weighted-v1.0.3) (2023-08-27)
+
+
+### Bug Fixes
+
+* **weighted:** make RandomWeighted accessible in UMD ([7394a20](https://github.com/grandom-library/grandom-js/commit/7394a204c2208f99baeca937bcc4d94baa0c69a7))
+
 # [@grandom/weighted-v1.0.2](https://github.com/grandom-library/grandom-js/compare/@grandom/weighted-v1.0.1...@grandom/weighted-v1.0.2) (2023-08-24)
 
 
