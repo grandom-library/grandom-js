@@ -36,6 +36,8 @@
 
 <!-- Badges - 3rd row -->
 <p align="center">
+  <!-- Size badge -->
+  <a href="https://bundlephobia.com/package/@grandom/boolean"><img src="https://img.shields.io/bundlephobia/minzip/@grandom/boolean?label=min%2Bgzipped&color=brightgreen&logo=semanticweb&logoColor=white" alt="size-badge">
   <!-- License badge -->
   <a href="https://github.com/grandom-library/grandom-js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?logo=github" alt="license-badge"></a>
   <!-- Contribution badge -->
