@@ -6,7 +6,6 @@
 </p>
 
 <br />
-<br />
 
 <!-- Badges - 1st row -->
 <p align="center">
