@@ -20,9 +20,9 @@ When using of the media assets, make sure to include the above attribution infor
 
 In the root [`media`][url-folder] folder of this repository, you will find the following asset files:
 
-- `logo.ai`: Adobe Illustrator file for the both the light and dark versions of the logo.
 - `logo-dark.svg`: SVG of the dark version of the logo.
 - `logo-light.svg`: SVG of the light version of the logo.
+- `logo.ai`: Adobe Illustrator source file for the light and dark versions of the logo.
 
 Feel free to use these files in accordance with the license terms.
 
