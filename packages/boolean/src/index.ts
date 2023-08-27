@@ -13,5 +13,4 @@ boolean.RandomBoolean = RandomBoolean
 // -----------------------------------------------------------------------------
 /* </umd-only> */
 
-
 export default boolean
