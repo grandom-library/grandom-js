@@ -1,3 +1,10 @@
+# [@grandom/shuffle-v1.0.3](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.2...@grandom/shuffle-v1.0.3) (2023-08-27)
+
+
+### Bug Fixes
+
+* **shuffle:** make RandomShuffle accessible in UMD ([a0aa894](https://github.com/grandom-library/grandom-js/commit/a0aa8943abde7c673253e55d827ceb5389356206))
+
 # [@grandom/shuffle-v1.0.2](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.1...@grandom/shuffle-v1.0.2) (2023-08-24)
 
 
