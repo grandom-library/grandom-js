@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="media/logo.svg" alt="grandom logo">
+  <img src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo.svg" alt="grandom logo">
 </h1>
 
 <br />
