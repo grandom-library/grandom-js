@@ -1,3 +1,4 @@
+<!-- Logo -->
 <p align="center">
   <a href="https://github.com/grandom-library/grandom-js/tree/main/packages/bigint#readme">
     <picture>
@@ -46,12 +47,12 @@
 ---
 
 <h3 align="center">
-  The necessary bigint randomness for your work.
+  The necessary random bigints for your work.
 </h3>
 
 <p align="center">
-  A configurable, flexible, and overall great<br/> <b>random 
-  bigint generator</b> with an optional bias capability.
+  A configurable, flexible, seedable, and overall great<br/>
+  <b>random bigint generator</b>.
 </p>
 
 ---
@@ -80,5 +81,5 @@ npm i @grandom/bigint
 <!--- References =============================================================================== -->
 
 <!--- URLs -->
-[url-license-doc]: https://github.com/grandom-library/grandom-js/blob/main/LICENSE
 [url-contrib-doc]: https://github.com/grandom-library/grandom-js/blob/main/.github/CONTRIBUTING.md
+[url-license-doc]: https://github.com/grandom-library/grandom-js/blob/main/LICENSE
