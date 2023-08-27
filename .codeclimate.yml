@@ -53,5 +53,6 @@ checks:
       threshold: 25
 
 exclude_patterns:
-  - "**/*.md"
   - "**/*.config.js"
+  - "**/*.test.ts"
+  - "**/*.md"
