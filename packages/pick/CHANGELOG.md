@@ -1,3 +1,10 @@
+# [@grandom/pick-v1.3.6](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.5...@grandom/pick-v1.3.6) (2023-08-27)
+
+
+### Performance Improvements
+
+* **deps:** update dependencies ([40f0b6c](https://github.com/grandom-library/grandom-js/commit/40f0b6c138a5c2741b11190ef2d79c6960d395f4))
+
 # [@grandom/pick-v1.3.5](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.4...@grandom/pick-v1.3.5) (2023-08-27)
 
 
