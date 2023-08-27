@@ -1,3 +1,10 @@
+# [@grandom/core-v3.0.3](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.2...@grandom/core-v3.0.3) (2023-08-27)
+
+
+### Performance Improvements
+
+* **deps:** update dependencies ([40f0b6c](https://github.com/grandom-library/grandom-js/commit/40f0b6c138a5c2741b11190ef2d79c6960d395f4))
+
 # [@grandom/core-v3.0.2](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.1...@grandom/core-v3.0.2) (2023-08-26)
 
 
