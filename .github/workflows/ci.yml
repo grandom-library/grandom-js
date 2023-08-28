@@ -10,11 +10,14 @@ jobs:
     strategy:
       matrix:
         package: [
-          # primary packages
+          # internal package
+          'utils',
+
+          # core packages
           '@grandom/core',
           '@grandom/engines',
 
-          # seconday packages
+          # individual packages
           '@grandom/bigint',
           '@grandom/boolean',
           '@grandom/number',
@@ -22,9 +25,6 @@ jobs:
           '@grandom/shuffle',
           '@grandom/string',
           '@grandom/weighted',
-
-          # tertiary packages
-          'utils',
 
           # main library package
           'grandom'
@@ -105,7 +105,13 @@ jobs:
       - name: init
         run: npm ci && npx lerna exec -- npm ci
 
-      # primary packages -----------------------------------------------------------------------------------------------
+      # internal package -----------------------------------------------------------------------------------------------
+      - name: utils
+        run: >
+          npx lerna exec --scope utils -- npm run prep &&
+          npx lerna exec --scope utils -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      # core packages --------------------------------------------------------------------------------------------------
       - name: core
         run: >
           npx lerna exec --scope @grandom/core -- npm run prep &&
@@ -116,7 +122,7 @@ jobs:
           npx lerna exec --scope @grandom/engines -- npm run prep &&
           npx lerna exec --scope @grandom/engines -- npx --no-install semantic-release -e semantic-release-monorepo
 
-      # secondary packages ---------------------------------------------------------------------------------------------
+      # individual packages --------------------------------------------------------------------------------------------
       - name: bigint
         run: >
           npx lerna exec --scope @grandom/bigint -- npm run prep &&
@@ -151,12 +157,6 @@ jobs:
         run: >
           npx lerna exec --scope @grandom/weighted -- npm run prep &&
           npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
-
-      # tertiary packages ----------------------------------------------------------------------------------------------
-      - name: utils
-        run: >
-          npx lerna exec --scope utils -- npm run prep &&
-          npx lerna exec --scope utils -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # main library package -------------------------------------------------------------------------------------------
       - name: grandom
