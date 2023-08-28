@@ -1,3 +1,10 @@
+# [@grandom/bigint-v1.2.10](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.9...@grandom/bigint-v1.2.10) (2023-08-28)
+
+
+### Bug Fixes
+
+* **bigint:** remove unneeded UMD-related code ([591a25f](https://github.com/grandom-library/grandom-js/commit/591a25fe86e740fa4ff0540335a0dd091043c30e))
+
 # [@grandom/bigint-v1.2.9](https://github.com/grandom-library/grandom-js/compare/@grandom/bigint-v1.2.8...@grandom/bigint-v1.2.9) (2023-08-27)
 
 
