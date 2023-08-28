@@ -1,17 +1,5 @@
 # @grandom/bigint-umd
 
-<!-- Logo -->
-<p align="center">
-  <a href="https://github.com/grandom-library/grandom-js/tree/main/packages/bigint#readme">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/bigint/media/logo-dark.svg">
-      <img alt="@grandom/bigint logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/bigint/media/logo-light.svg" width="800">
-    </picture>
-  </a>
-</p>
-
-<br />
-
 <!-- Badges - 1st row -->
 <p align="center">
   <!-- NPM badge -->
