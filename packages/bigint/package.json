@@ -38,25 +38,32 @@
   },
   "ts-standard": {
     "ignore": [
-      "dist"
+      "dist*",
+      "*.config.js"
     ]
   },
   "scripts": {
     "start": "npm test -- --watchAll",
     "fix:lint": "ts-standard --verbose --fix | snazzy",
-    "check": "npm run check:commits && npm run check:lint && npm run check:types && npm test",
+    "check": "npm run check:commits && npm run check:lint && npm run check:types && npm run check:test",
     "//": "-------------------------------------------------------------------",
     "check:commits": "commitlint --from $(git rev-parse --short HEAD^1) --to $(git rev-parse --short HEAD^2) --verbose",
     "check:lint": "ts-standard --verbose | snazzy",
     "check:types": "tsc --noEmit && tsc -p tsconfig.types.json --outDir .temp-types && rm -rf .temp-types",
-    "test": "jest",
-    "prep": "npm run __prep:init && npm run __prep:copy",
-    "build": "npm run __build:src && npm run __build:types",
+    "check:test": "npm test -- --coverage && rm -rf coverage",
     "///": "------------------------------------------------------------------",
-    "__prep:init": "rm -rf dist && mkdir dist",
-    "__prep:copy": "cp ../../LICENSE* README* package.json dist",
-    "__build:src": "rollup -c",
-    "__build:types": "tsc -p tsconfig.types.json"
+    "test": "jest",
+    "prep": "npm run _prep:dist && npm run _prep:dist-umd",
+    "build": "npm run _build:src && npm run _build:types",
+    "////": "-----------------------------------------------------------------",
+    "_prep:dist": "npm run _prep:dist:init && npm run _prep:dist:copy",
+    "_prep:dist-umd": "npm run _prep:dist-umd:init && npm run _prep:dist-umd:copy",
+    "_prep:dist:init": "rm -rf dist && mkdir dist",
+    "_prep:dist:copy": "cp ../../LICENSE* README* package.json dist",
+    "_prep:dist-umd:init": "rm -rf dist-umd && mkdir dist-umd",
+    "_prep:dist-umd:copy": "cp ../../LICENSE* umd/README* umd/package.json dist-umd",
+    "_build:src": "rollup -c",
+    "_build:types": "tsc -p tsconfig.types.json"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -77,16 +84,15 @@
     "jest-extended": "^4.0.1",
     "rollup": "^3.28.1",
     "rollup-plugin-filesize": "^10.0.0",
-    "rollup-plugin-strip-code": "^0.2.7",
     "semantic-release": "^19.0.5",
     "semantic-release-monorepo": "^7.0.5",
     "snazzy": "^9.0.0",
-    "string-dedent": "^3.0.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "ts-standard": "^12.0.2",
     "tslib": "^2.6.2",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "utils": "file:../utils/src"
   },
   "dependencies": {
     "@grandom/core": "^3.0.2",

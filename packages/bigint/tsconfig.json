@@ -4,6 +4,7 @@
   "include": [
     "src",
     "test",
+    "umd",
     "global.d.ts"
   ],
 

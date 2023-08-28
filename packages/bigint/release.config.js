@@ -15,7 +15,6 @@ module.exports = {
     '@semantic-release/changelog',
     '@semantic-release/github',
     ['@semantic-release/exec', {
-      // eslint-disable-next-line no-template-curly-in-string
       prepareCmd: 'export SEMANTIC_RELEASE_NEXT_RELEASE_VERSION=${nextRelease.version} && npm run build'
     }],
     ['@semantic-release/git', {
@@ -25,6 +24,9 @@ module.exports = {
     }],
     ['@semantic-release/npm', {
       pkgRoot: 'dist'
+    }],
+    ['@semantic-release/npm', {
+      pkgRoot: 'dist-umd'
     }]
   ]
 }

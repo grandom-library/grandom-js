@@ -1,0 +1,35 @@
+{
+  "name": "@grandom/bigint-umd",
+  "version": "0.0.0-development",
+  "description": "Various UMD builds of a great random bigint generator.",
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grandom-library/grandom-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grandom-library/grandom-js/issues"
+  },
+  "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/bigint#readme",
+  "keywords": [
+    "random",
+    "seedable",
+    "generator",
+    "bigint",
+    "seed",
+    "rng",
+    "prng",
+    "srng",
+    "sprng",
+    "crypto",
+    "randomness",
+    "rand",
+    "seedrand",
+    "seedrandom",
+    "grandom"
+  ]
+}

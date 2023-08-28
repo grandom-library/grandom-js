@@ -1,20 +1,32 @@
-const strip = require('rollup-plugin-strip-code')
 const typescript = require('@rollup/plugin-typescript')
 const terser = require('@rollup/plugin-terser')
 const commonjs = require('@rollup/plugin-commonjs')
-const nodeResolve = require('@rollup/plugin-node-resolve')
-const filesize = require('rollup-plugin-filesize')
-const dedent = require('string-dedent')
+const resolve = require('@rollup/plugin-node-resolve')
+const size = require('rollup-plugin-filesize')
 
+const banner = require('utils/build/banner')
 const pkg = require('./package.json')
-const version = process.env.SEMANTIC_RELEASE_NEXT_RELEASE_VERSION
 
-if (!version) {
-  throw new Error(`Invalid version, got: "${version}".`)
+const baseUMDConfig = {
+  output: {
+    format: 'umd',
+    sourcemap: true,
+    ...banner(pkg)
+  },
+  plugins: {
+    plugins: [
+      terser(),
+      typescript(),
+      commonjs(),
+      resolve(),
+      size()
+    ]
+  }
 }
 
 /** @type {import('rollup').RollupOptions} */
 module.exports = [
+  // CommonJS build ------------------------------------------------------------
   {
     input: 'src/index.ts',
 
@@ -28,42 +40,67 @@ module.exports = [
     external: /@grandom\/.*/,
 
     plugins: [
-      strip({
-        start_comment: '<umd-only>',
-        end_comment: '</umd-only>'
-      }),
       typescript()
     ]
   },
+  // UMD - full (default) build - minimized ------------------------------------
   {
-    input: 'src/index.ts',
+    input: 'umd/index.ts',
 
     output: {
-      format: 'umd',
-      name: 'grandomBigInt',
-      sourcemap: true,
-      file: 'dist/umd.min.js',
-
-      banner: dedent`
-        /*!
-        * ${pkg.name} v${version}
-        * ${pkg.homepage}
-        *
-        * Copyright (c) ${new Date().getFullYear()} ${pkg.author}
-        * Released under the ${pkg.license} License
-        * ${pkg.homepage}/blob/main/LICENSE
-        *
-        * Date: ${new Date().toISOString()}
-        */
-      `
+      ...baseUMDConfig.output,
+      file: 'dist-umd/min.js',
+      name: 'grandomBigInt'
     },
 
-    plugins: [
-      terser(),
-      typescript(),
-      commonjs(),
-      nodeResolve(),
-      filesize()
-    ]
+    ...baseUMDConfig.plugins
+  },
+  // UMD - basic build - minimized ---------------------------------------------
+  {
+    input: 'umd/index.basic.ts',
+
+    output: {
+      ...baseUMDConfig.output,
+      file: 'dist-umd/basic.min.js',
+      name: 'grandomBigIntBasic'
+    },
+
+    ...baseUMDConfig.plugins
+  },
+  // UMD - seedable build - minimized ------------------------------------------
+  {
+    input: 'umd/index.seedable.ts',
+
+    output: {
+      ...baseUMDConfig.output,
+      file: 'dist-umd/seedable.min.js',
+      name: 'grandomBigIntSeedable'
+    },
+
+    ...baseUMDConfig.plugins
+  },
+  // UMD - crypto build - minimized --------------------------------------------
+  {
+    input: 'umd/index.crypto.ts',
+
+    output: {
+      ...baseUMDConfig.output,
+      file: 'dist-umd/crypto.min.js',
+      name: 'grandomBigIntCrypto'
+    },
+
+    ...baseUMDConfig.plugins
+  },
+  // UMD - core build - minimized ----------------------------------------------
+  {
+    input: 'umd/index.core.ts',
+
+    output: {
+      ...baseUMDConfig.output,
+      file: 'dist-umd/core.min.js',
+      name: 'grandomBigIntCore'
+    },
+
+    ...baseUMDConfig.plugins
   }
 ]
