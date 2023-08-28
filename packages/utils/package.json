@@ -1,0 +1,39 @@
+{
+  "name": "utils",
+  "version": "0.0.0-development",
+  "description": "Internal utils.",
+  "private": true,
+  "engines": {
+    "node": ">= 16"
+  },
+  "standard": {
+    "ignore": [
+      "*.config.js"
+    ]
+  },
+  "scripts": {
+    "start": "npm test -- --watchAll",
+    "fix:lint": "standard --verbose --fix | snazzy",
+    "check": "npm run check:commits && npm run check:lint",
+    "//": "-------------------------------------------------------------------",
+    "check:commits": "commitlint --from $(git rev-parse --short HEAD^1) --to $(git rev-parse --short HEAD^2) --verbose",
+    "check:lint": "standard --verbose | snazzy",
+    "check:types": "echo \"skip\"",
+    "check:test": "echo \"skip\"",
+    "test": "echo \"skip\"",
+    "prep": "echo \"skip\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/semantic-release": "^20.0.1",
+    "semantic-release": "^19.0.5",
+    "semantic-release-monorepo": "^7.0.5",
+    "snazzy": "^9.0.0",
+    "standard": "^17.1.0",
+    "string-dedent": "^3.0.1"
+  }
+}

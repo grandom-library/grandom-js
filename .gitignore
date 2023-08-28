@@ -111,3 +111,6 @@ imported
 build/
 deploy/
 dist/
+build-*/
+deploy-*/
+dist-*/

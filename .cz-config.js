@@ -55,7 +55,8 @@ module.exports = {
     { name: 'pick' },
     { name: 'shuffle' },
     { name: 'string' },
-    { name: 'weighted' }
+    { name: 'weighted' },
+    { name: 'utils' }
   ],
   messages: {
     type: "Select the type of change that you're committing",
