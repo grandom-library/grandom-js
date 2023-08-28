@@ -24,6 +24,9 @@ jobs:
           '@grandom/weighted',
 
           # tertiary packages
+          'utils',
+
+          # main library package
           'grandom'
         ]
 
@@ -150,6 +153,12 @@ jobs:
           npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # tertiary packages ----------------------------------------------------------------------------------------------
+      - name: utils
+        run: >
+          npx lerna exec --scope utils -- npm run prep &&
+          npx lerna exec --scope utils -- npx --no-install semantic-release -e semantic-release-monorepo
+
+      # main library package -------------------------------------------------------------------------------------------
       - name: grandom
         run: >
           npx lerna exec --scope grandom -- npm run prep &&
