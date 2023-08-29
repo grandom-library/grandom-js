@@ -3,6 +3,9 @@
   "npmClient": "npm",
   "useWorkspaces": false,
   "packages": [
-    "packages/*"
+    "packages/common/*",
+    "packages/grandom",
+    "packages/individual/*",
+    "packages/internal/*"
   ]
 }
