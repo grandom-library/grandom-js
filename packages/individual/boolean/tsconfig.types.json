@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+
+    "outDir": "dist"
+  },
+
+  "exclude": [
+    "node_modules",
+    "test",
+    "umd",
+    "global.d.ts"
+  ]
+}
