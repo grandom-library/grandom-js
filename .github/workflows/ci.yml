@@ -10,10 +10,10 @@ jobs:
     strategy:
       matrix:
         package: [
-          # internal package
+          # internal packages
           'utils',
 
-          # core packages
+          # common packages
           '@grandom/core',
           '@grandom/engines',
 
@@ -26,7 +26,7 @@ jobs:
           '@grandom/string',
           '@grandom/weighted',
 
-          # main library package
+          # library package
           'grandom'
         ]
 
@@ -105,13 +105,13 @@ jobs:
       - name: init
         run: npm ci && npx lerna exec -- npm ci
 
-      # internal package -----------------------------------------------------------------------------------------------
+      # internal packages ----------------------------------------------------------------------------------------------
       - name: utils
         run: >
           npx lerna exec --scope utils -- npm run prep &&
           npx lerna exec --scope utils -- npx --no-install semantic-release -e semantic-release-monorepo
 
-      # core packages --------------------------------------------------------------------------------------------------
+      # common packages ------------------------------------------------------------------------------------------------
       - name: core
         run: >
           npx lerna exec --scope @grandom/core -- npm run prep &&
@@ -158,7 +158,7 @@ jobs:
           npx lerna exec --scope @grandom/weighted -- npm run prep &&
           npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
 
-      # main library package -------------------------------------------------------------------------------------------
+      # library package ------------------------------------------------------------------------------------------------
       - name: grandom
         run: >
           npx lerna exec --scope grandom -- npm run prep &&
