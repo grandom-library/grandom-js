@@ -64,7 +64,7 @@
     "_prep:dist-umd:copy": "cp ../../LICENSE* umd/README* umd/package.json dist-umd",
     "_build:src": "rollup -c",
     "_build:types": "tsc -p tsconfig.types.json",
-    "_gen": "npm run --prefix ../utils",
+    "_gen": "npm run --prefix ../../internal/utils",
     "generate:tsconfig": "npm run _gen -- generate:tsconfig"
   },
   "devDependencies": {
