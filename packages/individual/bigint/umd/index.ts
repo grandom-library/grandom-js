@@ -1,6 +1,6 @@
 import {
   BasicEngine,
-  SeedableEngine,
+  SeedableEngine as SeededEngine,
   CryptoEngine
 } from '@grandom/engines'
 
@@ -14,8 +14,8 @@ Object.defineProperties(bigint, {
   BasicEngine: {
     value: BasicEngine
   },
-  SeedableEngine: {
-    value: SeedableEngine
+  SeededEngine: {
+    value: SeededEngine
   },
   CryptoEngine: {
     value: CryptoEngine

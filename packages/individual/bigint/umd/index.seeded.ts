@@ -1,14 +1,14 @@
-import SeedableEngine from '@grandom/engines/mt19937'
+import SeededEngine from '@grandom/engines/mt19937'
 import RandomBigInt from '../src/RandomBigInt'
 
-const engine = new SeedableEngine()
+const engine = new SeededEngine()
 const random = new RandomBigInt(engine)
 const bigint = random.bigint.bind(random)
 
 // make internals accessible in UMD
 Object.defineProperties(bigint, {
-  SeedableEngine: {
-    value: SeedableEngine
+  SeededEngine: {
+    value: SeededEngine
   },
   RandomBigInt: {
     value: RandomBigInt
