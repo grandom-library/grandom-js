@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       value: 'chore',
-      name: "Other changes that don't modify src or test files"
+      name: 'Other changes that don\'t modify src or test files'
     }
   ],
   scopes: [
@@ -55,11 +55,10 @@ module.exports = {
     { name: 'pick' },
     { name: 'shuffle' },
     { name: 'string' },
-    { name: 'weighted' },
-    { name: 'utils' }
+    { name: 'weighted' }
   ],
   messages: {
-    type: "Select the type of change that you're committing",
+    type: 'Select the type of change that you\'re committing',
     customScope: 'Denote the SCOPE of this change',
     customScopeEntry: 'Custom scope...',
     scope: 'Denote the SCOPE of this change (optional)',
