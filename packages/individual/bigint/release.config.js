@@ -1,4 +1,4 @@
-const config = require('../../shared/configs/release.config')
+const config = require('../../../shared/release.config')
 
 module.exports = {
   ...config

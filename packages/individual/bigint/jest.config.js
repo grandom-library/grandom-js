@@ -1,4 +1,4 @@
-const config = require('../../shared/configs/jest.config')
+const config = require('../../../shared/jest.config')
 
 module.exports = {
   ...config

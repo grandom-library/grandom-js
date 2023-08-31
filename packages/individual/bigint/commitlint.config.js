@@ -1,4 +1,4 @@
-const config = require('../../shared/configs/commitlint.config')
+const config = require('../../../shared/commitlint.config')
 
 module.exports = {
   ...config
