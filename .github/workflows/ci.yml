@@ -10,9 +10,6 @@ jobs:
     strategy:
       matrix:
         package: [
-          # internal packages
-          'utils',
-
           # common packages
           '@grandom/core',
           '@grandom/engines',
@@ -104,12 +101,6 @@ jobs:
 
       - name: init
         run: npm ci && npx lerna exec -- npm ci
-
-      # internal packages ----------------------------------------------------------------------------------------------
-      - name: utils
-        run: >
-          npx lerna exec --scope utils -- npm run prep &&
-          npx lerna exec --scope utils -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # common packages ------------------------------------------------------------------------------------------------
       - name: core
