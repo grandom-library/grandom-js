@@ -2,10 +2,7 @@
   "extends": "@tsconfig/node16/tsconfig.json",
 
   "include": [
-    "src",
-    "test",
-    "umd",
-    "global.d.ts"
+    "**/*.ts"
   ],
 
   "exclude": [
