@@ -1,7 +1,7 @@
 {
   "name": "@grandom/bigint",
   "version": "0.0.0-development",
-  "description": "A great random bigint generator.",
+  "description": "A configurable, flexible, seedable, and overall great random bigint generator.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "license": "MIT",
   "main": "index.js",
