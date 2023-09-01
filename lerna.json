@@ -4,8 +4,7 @@
   "useWorkspaces": false,
   "packages": [
     "packages/common/*",
-    "packages/grandom",
     "packages/individual/*",
-    "packages/internal/*"
+    "packages/library"
   ]
 }
