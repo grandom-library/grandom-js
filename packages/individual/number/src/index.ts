@@ -42,8 +42,4 @@ import RandomNumber from './RandomNumber'
 
 const random = new RandomNumber(new BasicEngine())
 
-// @ts-expect-error
-// make RandomNumber accessible in UMD
-random.RandomNumber = RandomNumber
-
 export default random.number
