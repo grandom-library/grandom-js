@@ -1,9 +1,6 @@
-import {
-  BasicEngine,
-  SeedableEngine,
-  CryptoEngine
-} from '@grandom/engines'
-
+import BasicEngine from '@grandom/engines/basic'
+import SeededEngine from '@grandom/engines/mt19937'
+import CryptoEngine from '@grandom/engines/crypto'
 import RandomBoolean from '../src/RandomBoolean'
 
 const random = new RandomBoolean(new BasicEngine())
@@ -14,8 +11,8 @@ Object.defineProperties(boolean, {
   BasicEngine: {
     value: BasicEngine
   },
-  SeedableEngine: {
-    value: SeedableEngine
+  SeededEngine: {
+    value: SeededEngine
   },
   CryptoEngine: {
     value: CryptoEngine
@@ -24,16 +21,5 @@ Object.defineProperties(boolean, {
     value: RandomBoolean
   }
 })
-
-import wrap from '@grandom/utils/umd/wrap/default'
-
-wrap(
-  boolean,
-  RandomBoolean, [
-    BasicEngine,
-    SeedableEngine,
-    CryptoEngine
-  ]
-)
 
 export default boolean

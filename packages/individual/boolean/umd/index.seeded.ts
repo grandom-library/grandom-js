@@ -1,14 +1,14 @@
-import SeedableEngine from '@grandom/engines/mt19937'
+import SeededEngine from '@grandom/engines/mt19937'
 import RandomBoolean from '../src/RandomBoolean'
 
-const engine = new SeedableEngine()
+const engine = new SeededEngine()
 const random = new RandomBoolean(engine)
 const boolean = random.boolean.bind(random)
 
 // make internals accessible in UMD
 Object.defineProperties(boolean, {
-  SeedableEngine: {
-    value: SeedableEngine
+  SeededEngine: {
+    value: SeededEngine
   },
   RandomBoolean: {
     value: RandomBoolean

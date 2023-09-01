@@ -1,2 +1,1 @@
-import RandomBoolean from '../src/RandomBoolean'
-export default RandomBoolean
+export { default } from '../src/RandomBoolean'
