@@ -39,12 +39,12 @@
 ---
 
 <h3 align="center">
-  The necessary weighted random for your work.
+  The necessary weighted randoms for your work.
 </h3>
 
 <p align="center">
-  A configurable, flexible, and overall great<br/>
-  <b>weighted random</b> with an optional bias capability.
+  Configurable, flexible, and overall great<br/>
+  <b>weighted randoms</b> with an optional bias capability.
 </p>
 
 ---
