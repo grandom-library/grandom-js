@@ -1,4 +1,6 @@
 const config = require('../../../shared/rollup.config')
 const pkg = require('./package.json')
 
-module.exports = config(pkg, 'grandomBigInt')
+module.exports = [
+  ...config.getDefaultConfig(pkg, 'grandomBigInt')
+]
