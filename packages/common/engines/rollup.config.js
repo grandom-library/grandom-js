@@ -1,62 +1,38 @@
-const typescript = require('@rollup/plugin-typescript')
-const terser = require('@rollup/plugin-terser')
-const commonjs = require('@rollup/plugin-commonjs')
-const nodeResolve = require('@rollup/plugin-node-resolve')
-const dedent = require('string-dedent')
-
+const config = require('../../../shared/rollup.config')
 const pkg = require('./package.json')
-const version = process.env.SEMANTIC_RELEASE_NEXT_RELEASE_VERSION
 
-if (!version) {
-  throw new Error(`Invalid version, got: "${version}".`)
-}
-
-/** @type {import('rollup').RollupOptions} */
 module.exports = [
-  {
-    input: 'src/index.ts',
+  config.getCommonJSConfig(),
 
-    output: {
-      format: 'cjs',
-      sourcemap: true,
-      preserveModules: true,
-      dir: 'dist'
-    },
+  // UMD full build with every engine in it ------------------------------------
+  config.getUMDConfig(
+    pkg,
+    'grandomEngines',
+    'umd/index.ts',
+    'dist-umd/min.js'
+  ),
 
-    external: /@grandom\/.*/,
+  // UMD build with BasicEngine only -------------------------------------------
+  config.getUMDConfig(
+    pkg,
+    'grandomEnginesBasic',
+    'umd/index.basic.ts',
+    'dist-umd/min.basic.js'
+  ),
 
-    plugins: [
-      typescript()
-    ]
-  },
-  {
-    input: 'src/index.ts',
+  // UMD build with SeededEngine only ------------------------------------------
+  config.getUMDConfig(
+    pkg,
+    'grandomEnginesSeeded',
+    'umd/index.seeded.ts',
+    'dist-umd/min.seeded.js'
+  ),
 
-    output: {
-      format: 'umd',
-      name: 'grandomEngines',
-      sourcemap: true,
-      file: 'dist/umd.min.js',
-
-      banner: dedent`
-        /*!
-        * ${pkg.name} v${version}
-        * ${pkg.homepage}
-        *
-        * Copyright (c) ${new Date().getFullYear()} ${pkg.author}
-        * Released under the ${pkg.license} License
-        * ${pkg.homepage}/blob/main/LICENSE
-        *
-        * Date: ${new Date().toISOString()}
-        */
-      `
-    },
-
-    plugins: [
-      terser(),
-      typescript(),
-      commonjs(),
-      nodeResolve()
-    ]
-  }
+  // UMD build with CryptoEngine only ------------------------------------------
+  config.getUMDConfig(
+    pkg,
+    'grandomEnginesCrypto',
+    'umd/index.crypto.ts',
+    'dist-umd/min.crypto.js'
+  )
 ]
