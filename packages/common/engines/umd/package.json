@@ -1,0 +1,31 @@
+{
+  "name": "@grandom/engines-umd",
+  "version": "0.0.0-development",
+  "description": "Various UMD builds of random number generator engines for the grandom library.",
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grandom-library/grandom-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grandom-library/grandom-js/issues"
+  },
+  "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/engines#readme",
+  "keywords": [
+    "random",
+    "seedable",
+    "generator",
+    "seed",
+    "rng",
+    "prng",
+    "srng",
+    "sprng",
+    "crypto",
+    "randomness",
+    "rand",
+    "seedrand",
+    "seedrandom",
+    "grandom"
+  ]
+}
+
