@@ -1,9 +1,6 @@
-import {
-  BasicEngine,
-  SeedableEngine as SeededEngine,
-  CryptoEngine
-} from '@grandom/engines'
-
+import BasicEngine from '@grandom/engines/basic'
+import SeededEngine from '@grandom/engines/mt19937'
+import CryptoEngine from '@grandom/engines/crypto'
 import RandomBigInt from '../src/RandomBigInt'
 
 const random = new RandomBigInt(new BasicEngine())

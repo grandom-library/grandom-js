@@ -1,2 +1,1 @@
-import RandomBigInt from '../src/RandomBigInt'
-export default RandomBigInt
+export { default } from '../src/RandomBigInt'
