@@ -22,6 +22,7 @@ In the root [`media`][url-folder] folder of this repository, you will find the f
 
 - `logo-dark.svg`: SVG of the dark version of the logo.
 - `logo-light.svg`: SVG of the light version of the logo.
+- `logo-package.ai`: Adobe Illustrator source file of the light and dark versions of the logo for packages.
 - `logo.ai`: Adobe Illustrator source file of the light and dark versions of the logo.
 
 Feel free to use these files in accordance with the license terms.
