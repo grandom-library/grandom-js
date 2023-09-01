@@ -1,3 +1,3 @@
 export { default as BasicEngine } from './basic'
 export { default as CryptoEngine } from './crypto'
-export { default as SeedableEngine } from './mt19937'
+export { default as SeededEngine } from './mt19937'
