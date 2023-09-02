@@ -1,2 +1,1 @@
-import boolean from '@grandom/boolean'
-export default boolean
+export { default } from '@grandom/boolean'

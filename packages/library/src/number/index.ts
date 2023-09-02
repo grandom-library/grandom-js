@@ -1,2 +1,1 @@
-import number from '@grandom/number'
-export default number
+export { default } from '@grandom/number'

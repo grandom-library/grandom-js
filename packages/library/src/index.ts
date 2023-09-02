@@ -1,3 +1,3 @@
-import BasicGrandom from './Grandom/BasicGrandom'
+import SeededGrandom from './Grandom/SeededGrandom'
 
-export default new BasicGrandom()
+export default new SeededGrandom()

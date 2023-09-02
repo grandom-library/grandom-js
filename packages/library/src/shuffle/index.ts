@@ -1,2 +1,1 @@
-import shuffle from '@grandom/shuffle'
-export default shuffle
+export { default } from '@grandom/shuffle'

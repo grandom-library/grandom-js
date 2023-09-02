@@ -1,2 +1,1 @@
-import string from '@grandom/string'
-export default string
+export { default } from '@grandom/string'
