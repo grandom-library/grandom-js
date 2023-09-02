@@ -6,41 +6,39 @@ module.exports = {
     },
     {
       value: 'fix',
-      name: 'A bug fix'
+      name: 'A bugfix'
     },
     {
       value: 'perf',
-      name: 'A code change that improves performance'
+      name: 'Performance and other improvement changes (including dependency updates)'
     },
     {
       value: 'refactor',
-      name: 'A code change that neither fixes a bug nor adds a feature'
+      name: 'Rename, restructure, reorganize code or files'
     },
     {
       value: 'test',
-      name: 'Adding of missing tests or fixing existing tests'
+      name: 'Adding or fixing tests'
     },
     {
       value: 'style',
-      name: 'Changes that do not affect the meaning of the code (e.g.: linting issues, white-space, formatting, ...)'
+      name: 'Code style changes (e.g.: linting issues, white-space, formatting, ...)'
     },
     {
       value: 'docs',
-      name: 'Documentation only changes'
+      name: 'Documentation changes'
     },
     {
       value: 'build',
-      name:
-        'Changes that affect the build system or external dependencies (e.g.: npm, webpack, gulp, ...)'
+      name: 'Build system or external dependency changes (e.g.: npm, webpack, gulp, ...)'
     },
     {
       value: 'ci',
-      name:
-        'Changes to CI/CD configuration files and scripts (e.g.: GitHub Actions, BrowserStack, SauceLabs, ...)'
+      name: 'CI/CD changes (e.g.: GitHub Actions, BrowserStack, SauceLabs, ...)'
     },
     {
       value: 'chore',
-      name: 'Other changes that don\'t modify src or test files'
+      name: 'Other types of changes'
     }
   ],
   scopes: [
@@ -50,7 +48,7 @@ module.exports = {
     { name: 'core' },
     { name: 'data' },
     { name: 'engines' },
-    { name: 'grandom' },
+    { name: 'library' },
     { name: 'number' },
     { name: 'pick' },
     { name: 'shuffle' },
