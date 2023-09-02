@@ -1,4 +1,8 @@
-import { LENGTH, BooleanStats } from '@testyard/stats'
+import {
+  LENGTH,
+  BooleanStats
+} from '@testyard/stats'
+
 import grandom from '../src'
 
 describe('grandom', () => {
