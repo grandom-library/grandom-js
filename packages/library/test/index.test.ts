@@ -7,6 +7,12 @@ import grandom from '../src'
 
 describe('grandom', () => {
   describe('default Grandom instance', () => {
+    test('seed', () => {
+      grandom.seed = 12345
+
+      expect(grandom.seed).toBe(12345)
+    })
+
     describe('.boolean()', () => {
       test('basic usage', () => {
         expect(grandom.boolean()).toBeBoolean()
