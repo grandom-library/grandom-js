@@ -1,0 +1,33 @@
+{
+  "name": "grandom-umd",
+  "version": "0.0.0-development",
+  "description": "Various UMD builds of a great random number and data generator library.",
+  "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grandom-library/grandom-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grandom-library/grandom-js/issues"
+  },
+  "homepage": "https://github.com/grandom-library/grandom-js/tree/main/packages/weighted#readme",
+  "keywords": [
+    "random",
+    "seedable",
+    "generator",
+    "weighted",
+    "seed",
+    "rng",
+    "prng",
+    "srng",
+    "sprng",
+    "crypto",
+    "randomness",
+    "rand",
+    "seedrand",
+    "seedrandom",
+    "umd",
+    "grandom"
+  ]
+}
