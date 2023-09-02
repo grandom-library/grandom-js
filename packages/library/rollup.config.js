@@ -13,5 +13,5 @@ module.exports = [
     'grandom',
     'umd/index.ts',
     'dist-umd/min.js'
-  ),
+  )
 ]
