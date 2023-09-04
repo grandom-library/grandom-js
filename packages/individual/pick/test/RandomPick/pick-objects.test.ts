@@ -168,7 +168,7 @@ describe('RandomPick', () => {
 
           test('fallback with a custom value', () => {
             for (let i = 0; i < 10_000; i++) {
-              expect(random.pick({}, { default: false })).toBe(false)
+              expect(random.pick({}, { fallback: false })).toBe(false)
             }
           })
         })
