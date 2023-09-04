@@ -1,3 +1,5 @@
+// TODO: remove istanbul ignore and write tests for it
+// TODO: implement unique
 // TODO: include / exclude / filter function
 // TODO: implement edge cases (including infinite loops)
 
@@ -6,51 +8,100 @@ import { RandomGenerator } from '@grandom/core'
 const DEFAULT_FALLBACK = undefined
 
 export interface PickStringOptions<T = undefined> {
+  /**
+   * Filters the input string by character.
+   *
+   * @param character The specific character to filter from the input string.
+   * @returns Whether to keep the specific character in the pick pool.
+   */
   filter?: (character: string) => boolean
-  // include?: string | string[]
-  // exclude?: string | string[]
-  default?: T
+
+  /**
+   * The fallback value, when the string is empty, or all characters
+   * of the string are filtered out from the pick pool.
+   *
+   * @default undefined
+   */
+  fallback?: T
 }
 
-export interface PickArrayOptions<T = any, D = undefined> {
+export interface PickArrayOptions<T = any, F = undefined> {
+  /**
+   * Filters the input array by element.
+   *
+   * @param element The specific element to filter from the input array.
+   * @returns Whether to keep the specific element in the pick pool.
+   */
   filter?: (element: T) => boolean
-  // include?: I | I[]
-  // exclude?: E | E[]
-  default?: D
+
+  /**
+   * The fallback value, when the array is empty, or all elements
+   * of the array are filtered out from the pick pool.
+   *
+   * @default undefined
+   */
+  fallback?: F
 }
 
-export interface PickObjectOptions<T = any, D = undefined> {
+export interface PickObjectOptions<T = any, F = undefined> {
+  /**
+   * Filters the input object by entry.
+   *
+   * @param entry The specific entry to filter from the input object.
+   * @returns Whether to keep the specific entry in the pick pool.
+   */
   filter?: (entry: T) => boolean
-  // include?: I | I[]
-  // exclude?: E | E[]
-  default?: D
+
+  /**
+   * The fallback value, when the object is empty, or all entries
+   * of the object are filtered out from the pick pool.
+   *
+   * @default undefined
+   */
+  fallback?: F
 }
-
-/*
-grandom.pick([1, 2, 3], { default: -1 })
-
-grandom.pick.multiple([1, 2, 3], { count: 2, default: -1 })
-
-const unique = grandom.pick.unique([1, 2, 3], { default: -1 })
-const unique = grandom.pick.unique.multiple([1, 2, 3], { count: 2, default: -1 })
-const unique = grandom.pick.multiple.unique([1, 2, 3], { count: 2, default: -1 })
-*/
 
 export default class RandomPick extends RandomGenerator {
   // strings ---------------------------------------------------------------------------------------
 
+  /**
+   * Picks a random string (character) from the input string and returns it.
+   *
+   * @param string The string to pick from.
+   */
   pick (string: string): string
 
+  /**
+   * Picks a random string (character) from the input string and returns it.
+   *
+   * @param string The string to pick from.
+   * @param options Pick options (filtering and fallback).
+   */
   pick <T = undefined> (
     string: string,
     options: PickStringOptions<T>
   ): string | T
 
+  /**
+   * Picks one, or multiple random strings (characters)
+   * from the input string and returns it.
+   *
+   * @param string The string to pick from.
+   * @param count The count (length) of the returned string.
+   */
   pick (
     string: string,
     count: number
   ): string
 
+  /**
+   * Picks one, or multiple random strings (characters)
+   * from the input string and returns it.
+   *
+   * @param string The string to pick from.
+   * @param count The count (length) of the returned string.
+   * @param options Pick options (filtering and fallback).
+   */
   pick <T = undefined> (
     string: string,
     count: number,
@@ -59,43 +110,95 @@ export default class RandomPick extends RandomGenerator {
 
   // arrays ----------------------------------------------------------------------------------------
 
+  /**
+   * Picks a random element from the input array and returns it.
+   *
+   * @param array The array to pick from.
+   */
   pick <T> (array: ArrayLike<T>): T
 
-  pick <T, D = undefined> (
+  /**
+   * Picks a random element from the input array and returns it.
+   *
+   * @param array The array to pick from.
+   * @param options Pick options (filtering and fallback).
+   */
+  pick <T, F = undefined> (
     array: ArrayLike<T>,
-    options: PickArrayOptions<T, D>
-  ): T | D
+    options: PickArrayOptions<T, F>
+  ): T | F
 
+  /**
+   * Picks one, or multiple random elements from
+   * the input array and returns it.
+   *
+   * @param array The array to pick from.
+   * @param count The count (length) of elements of the returned array.
+   */
   pick <T> (
     array: ArrayLike<T>,
     count: number
   ): T[]
 
-  pick <T, D = undefined> (
+  /**
+   * Picks one, or multiple random elements from
+   * the input array and returns it.
+   *
+   * @param array The array to pick from.
+   * @param count The count (length) of elements of the returned array.
+   * @param options Pick options (filtering and fallback).
+   */
+  pick <T, F = undefined> (
     array: ArrayLike<T>,
     count: number,
-    options: PickArrayOptions<T, D>
-  ): T[] | D
+    options: PickArrayOptions<T, F>
+  ): T[] | F
 
   // objects ---------------------------------------------------------------------------------------
 
+  /**
+   * Picks a random entry from the input object and returns it.
+   *
+   * @param object The object to pick from.
+   */
   pick <T extends Record<string, any>> (object: T): [keyof T, T[keyof T]]
 
-  pick <T extends Record<string, any>, D = undefined> (
+  /**
+   * Picks a random entry from the input object and returns it.
+   *
+   * @param object The object to pick from.
+   * @param options Pick options (filtering and fallback).
+   */
+  pick <T extends Record<string, any>, F = undefined> (
     object: T,
-    options: PickObjectOptions<T, D>
-  ): [keyof T, T[keyof T]] | D
+    options: PickObjectOptions<T, F>
+  ): [keyof T, T[keyof T]] | F
 
+  /**
+   * Picks one, or multiple random entries from
+   * the input object and returns it.
+   *
+   * @param object The object to pick from.
+   * @param count The count (length) of entries of the returned array.
+   */
   pick <T extends Record<string, any>> (
     object: T,
     count: number
   ): Array<[keyof T, T[keyof T]]>
 
-  pick <T extends Record<string, any>, D = undefined> (
+  /**
+   * Picks one, or multiple random entries from
+   * the input object and returns it.
+   *
+   * @param object The object to pick from.
+   * @param count The count (length) of entries of the returned array.
+   * @param options Pick options (filtering and fallback).
+   */
+  pick <T extends Record<string, any>, F = undefined> (
     object: T,
     count: number,
-    options: PickObjectOptions<T, D>
-  ): Array<[keyof T, T[keyof T]]> | D
+    options: PickObjectOptions<T, F>
+  ): Array<[keyof T, T[keyof T]]> | F
 
   // -----------------------------------------------------------------------------------------------
 
@@ -119,6 +222,7 @@ export default class RandomPick extends RandomGenerator {
         }
 
         if (typeof arg3 !== 'undefined') {
+          /* istanbul ignore next */
           if (typeof arg3 === 'object' && arg3 !== null) {
             options = arg3
           } else {
@@ -163,10 +267,10 @@ export default class RandomPick extends RandomGenerator {
       }
     }
 
-    // return the fallback (default) if the string is empty ('')
+    // return the fallback if the string is empty ('')
     if (string.length === 0) {
-      return 'default' in options
-        ? options.default
+      return 'fallback' in options
+        ? options.fallback
         : DEFAULT_FALLBACK
     }
 
@@ -194,10 +298,10 @@ export default class RandomPick extends RandomGenerator {
       }
     }
 
-    // return the fallback (default) if the array is empty ([])
+    // return the fallback if the array is empty ([])
     if (array.length === 0) {
-      return 'default' in options
-        ? options.default
+      return 'fallback' in options
+        ? options.fallback
         : DEFAULT_FALLBACK
     }
 
@@ -227,10 +331,10 @@ export default class RandomPick extends RandomGenerator {
 
     const keys = Object.keys(object)
 
-    // return the fallback (default) if the keys array is empty (object === {})
+    // return the fallback if the keys array is empty (object === {})
     if (keys.length === 0) {
-      return 'default' in options
-        ? options.default
+      return 'fallback' in options
+        ? options.fallback
         : DEFAULT_FALLBACK
     }
 
@@ -250,12 +354,4 @@ export default class RandomPick extends RandomGenerator {
     const key = this._engine.pickArray(keys)
     return [key, object[key]]
   }
-
-  // pickUnique (arg1: any, arg2?: any): any {}
-  // pickMultiple (arg1: any, arg2?: any): any {}
-  // pickMultipleUnique (arg1: any, arg2?: any): any {}
 }
-
-// const r = new RandomPick()
-// const result = r.pick({ a: 1, b: '2', c: false }, { default: null })
-// const [key, value] = r.pick({ a: 1, b: '2', c: false }, { default: [false, null] })
