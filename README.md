@@ -36,12 +36,12 @@
 
 <!-- Badges - 3rd row -->
 <p align="center">
+  <!-- FOSSA check badge -->
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js.svg?type=small" alt="fossa-badge"></a>  
   <!-- License badge -->
   <a href="https://github.com/grandom-library/grandom-js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?logo=github" alt="license-badge"></a>
-  <!-- FOSSA check badge -->
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js.svg?type=small" alt="fossa-badge"></a>
   <!-- Contribution badge -->
-  <a href="https://github.com/grandom-library/grandom-js/blob/main/.github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome!-brightgreen.svg?logo=git&logoColor=white" alt="contribution-badge"></a>
+  <a href="https://github.com/grandom-library/grandom-js/blob/main/.github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome!-brightgreen.svg?logo=git&logoColor=white" alt="contribution-badge"></a>  
 </p>
 
 ---
@@ -262,14 +262,12 @@
 
 ## ©️ License
 
-This project is licensed under [MIT][url-license-doc] @ [Richard King](https://richrdkng.com)
+This project is licensed under **[MIT][url-license-doc] @ [Richard King](https://richrdkng.com)**
 
 <br/>
 
 <!-- FOSSA license scan -->
-<p align="center">
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js.svg?type=large" alt="fossa-table"></a>
-</p>
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgrandom-library%2Fgrandom-js?ref=badge_large)
 
 <!--- References =============================================================================== -->
 
