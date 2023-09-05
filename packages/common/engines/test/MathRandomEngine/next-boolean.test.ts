@@ -3,11 +3,11 @@ import {
   BooleanStats
 } from '@testyard/stats'
 
-import MT19937Engine from '../../src/mt19937'
+import BasicEngine from '../../src/MathRandomEngine'
 
-const engine = new MT19937Engine()
+const engine = new BasicEngine()
 
-describe('MT19937Engine', () => {
+describe('BasicEngine', () => {
   test('.nextBoolean()', () => {
     const { add, result } = new BooleanStats()
 

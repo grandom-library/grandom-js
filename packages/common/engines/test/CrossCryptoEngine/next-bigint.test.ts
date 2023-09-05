@@ -3,16 +3,17 @@ import {
   BigIntStats
 } from '@testyard/stats'
 
-import MT19937Engine from '../../src/mt19937'
+import CryptoEngine from '../../src/CrossCryptoEngine'
 
-const engine = new MT19937Engine()
+const HALF_LENGTH = LENGTH / 2
+const engine = new CryptoEngine()
 
-describe('MT19937Engine', () => {
+describe('CryptoEngine', () => {
   describe('.nextBigInt()', () => {
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new BigIntStats()
 
-      for (let i = 0; i < LENGTH; i++) {
+      for (let i = 0; i < HALF_LENGTH; i++) {
         add(engine.nextBigInt(0n, 10n, true, false))
       }
 
@@ -32,7 +33,7 @@ describe('MT19937Engine', () => {
     test('include minimum, include maximum - range [minimum, maximum]', () => {
       const { add, result } = new BigIntStats()
 
-      for (let i = 0; i < LENGTH; i++) {
+      for (let i = 0; i < HALF_LENGTH; i++) {
         add(engine.nextBigInt(0n, 10n, true, true))
       }
 
@@ -42,7 +43,7 @@ describe('MT19937Engine', () => {
       ])
 
       expect(result.lowestValue).toBeGreaterThanOrEqual(0.089)
-      expect(result.highestValue).toBeLessThanOrEqual(0.092)
+      expect(result.highestValue).toBeLessThanOrEqual(0.093)
       expect(result.averageValue).toBeWithin(0.089, 0.093)
 
       expect(result.of(0n)).toBeWithin(0.089, 0.093)
@@ -52,7 +53,7 @@ describe('MT19937Engine', () => {
     test('exclude minimum, include maximum - range (minimum, maximum]', () => {
       const { add, result } = new BigIntStats()
 
-      for (let i = 0; i < LENGTH; i++) {
+      for (let i = 0; i < HALF_LENGTH; i++) {
         add(engine.nextBigInt(0n, 10n, false, true))
       }
 
@@ -72,7 +73,7 @@ describe('MT19937Engine', () => {
     test('exclude minimum, exclude maximum - range (minimum, maximum)', () => {
       const { add, result } = new BigIntStats()
 
-      for (let i = 0; i < LENGTH; i++) {
+      for (let i = 0; i < HALF_LENGTH; i++) {
         add(engine.nextBigInt(0n, 10n, false, false))
       }
 

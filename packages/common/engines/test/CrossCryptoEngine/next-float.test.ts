@@ -3,7 +3,7 @@ import {
   FloatStats
 } from '@testyard/stats'
 
-import CryptoEngine from '../../src/crypto'
+import CryptoEngine from '../../src/CrossCryptoEngine'
 
 const HALF_LENGTH = LENGTH / 2
 const engine = new CryptoEngine()

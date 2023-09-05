@@ -1,8 +1,8 @@
 import { RandomEngine } from '@grandom/core'
 
-export default class BasicEngine extends RandomEngine {
+export default class MathRandomEngine extends RandomEngine {
   constructor () {
-    super('basic')
+    super('math-random')
   }
 
   _next (): number {

@@ -1,1 +1,1 @@
-export { default } from '../src/basic'
+export { default } from '../src/MathRandomEngine'

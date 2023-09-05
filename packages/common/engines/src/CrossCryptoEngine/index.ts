@@ -1,8 +1,8 @@
 import { RandomEngine } from '@grandom/core'
 
-export default class CryptoEngine extends RandomEngine {
+export default class CrossCryptoEngine extends RandomEngine {
   constructor () {
-    super('crypto')
+    super('cross-crypto')
 
     if (this._isBrowserEnvironment()) {
       this._next = this._initBrowserCrypto()

@@ -3,7 +3,7 @@ import {
   FloatStats
 } from '@testyard/stats'
 
-import MT19937Engine from '../../src/mt19937'
+import MT19937Engine from '../../src/MT19937Engine'
 
 const engine = new MT19937Engine()
 

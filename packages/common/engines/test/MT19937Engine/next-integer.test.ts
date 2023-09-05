@@ -3,17 +3,16 @@ import {
   IntegerStats
 } from '@testyard/stats'
 
-import CryptoEngine from '../../src/crypto'
+import MT19937Engine from '../../src/MT19937Engine'
 
-const HALF_LENGTH = LENGTH / 2
-const engine = new CryptoEngine()
+const engine = new MT19937Engine()
 
-describe('CryptoEngine', () => {
+describe('MT19937Engine', () => {
   describe('.nextInteger()', () => {
     test('include minimum, exclude maximum - range [minimum, maximum)', () => {
       const { add, result } = new IntegerStats()
 
-      for (let i = 0; i < HALF_LENGTH; i++) {
+      for (let i = 0; i < LENGTH; i++) {
         add(engine.nextInteger(0, 10, true, false))
       }
 
@@ -31,7 +30,7 @@ describe('CryptoEngine', () => {
     test('include minimum, include maximum - range [minimum, maximum]', () => {
       const { add, result } = new IntegerStats()
 
-      for (let i = 0; i < HALF_LENGTH; i++) {
+      for (let i = 0; i < LENGTH; i++) {
         add(engine.nextInteger(0, 10, true, true))
       }
 
@@ -49,7 +48,7 @@ describe('CryptoEngine', () => {
     test('exclude minimum, include maximum - range (minimum, maximum]', () => {
       const { add, result } = new IntegerStats()
 
-      for (let i = 0; i < HALF_LENGTH; i++) {
+      for (let i = 0; i < LENGTH; i++) {
         add(engine.nextInteger(0, 10, false, true))
       }
 
@@ -67,7 +66,7 @@ describe('CryptoEngine', () => {
     test('exclude minimum, exclude maximum - range (minimum, maximum)', () => {
       const { add, result } = new IntegerStats()
 
-      for (let i = 0; i < HALF_LENGTH; i++) {
+      for (let i = 0; i < LENGTH; i++) {
         add(engine.nextInteger(0, 10, false, false))
       }
 

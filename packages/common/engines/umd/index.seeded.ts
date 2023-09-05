@@ -1,1 +1,1 @@
-export { default } from '../src/mt19937'
+export { default } from '../src/MT19937Engine'

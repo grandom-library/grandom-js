@@ -1,5 +1,5 @@
 import crypto from 'node:crypto'
-import CryptoEngine from '../../src/crypto'
+import CryptoEngine from '../../src/CrossCryptoEngine'
 
 describe('CryptoEngine', () => {
   describe('environments', () => {

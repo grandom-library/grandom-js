@@ -1,3 +1,5 @@
+// TODO: implement seed types instead of any (e.g.: string, number, number[], string[], etc.)
+
 import { RandomEngine } from '@grandom/core'
 import MT19937 from '@grandom/mt19937'
 import fnv1a from '@grandom/fnv1a'

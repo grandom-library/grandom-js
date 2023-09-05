@@ -1,11 +1,13 @@
 import {
   BasicEngine,
   SeededEngine,
-  CryptoEngine
+  CryptoEngine,
+  DefaultEngine
 } from '../src'
 
 export default {
   BasicEngine,
   SeededEngine,
-  CryptoEngine
+  CryptoEngine,
+  DefaultEngine
 }

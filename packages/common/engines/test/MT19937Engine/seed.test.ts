@@ -1,4 +1,4 @@
-import MT19937Engine from '../../src/mt19937'
+import MT19937Engine from '../../src/MT19937Engine'
 
 describe('MT19937Engine', () => {
   describe('set/get seed', () => {

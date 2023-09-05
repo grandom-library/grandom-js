@@ -1,7 +1,7 @@
 {
   "name": "@grandom/engines-umd",
   "version": "0.0.0-development",
-  "description": "Various UMD builds of random number generator engines for the grandom library.",
+  "description": "Various UMD builds of RNG engines for the grandom library.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
   "repository": {
     "type": "git",

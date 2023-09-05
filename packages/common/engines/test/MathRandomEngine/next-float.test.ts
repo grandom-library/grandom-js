@@ -3,7 +3,7 @@ import {
   FloatStats
 } from '@testyard/stats'
 
-import BasicEngine from '../../src/basic'
+import BasicEngine from '../../src/MathRandomEngine'
 
 const engine = new BasicEngine()
 

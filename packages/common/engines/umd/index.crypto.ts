@@ -1,1 +1,1 @@
-export { default } from '../src/crypto'
+export { default } from '../src/CrossCryptoEngine'
