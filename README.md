@@ -1,11 +1,9 @@
 <!-- Logo -->
-<p align="center">
-  <a href="https://github.com/grandom-library/grandom-js">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-dark.svg">
-      <img alt="grandom-js monorepo logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-light.svg" width="800">
-    </picture>
-  </a>
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-repo-dark.svg">
+    <img alt="grandom-js monorepo logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-repo-light.svg" width="800">
+  </picture>  
 </p>
 
 <br />

@@ -1,6 +1,10 @@
-<h1 align="center">
-  @grandom/engines
-</h1>
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-engines-dark.svg">
+    <img alt="grandom-js engines package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-engines-light.svg" width="800">
+  </picture>  
+</p>
 
 <br />
 

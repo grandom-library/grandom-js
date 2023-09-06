@@ -1,4 +1,18 @@
-# grandom-umd
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-library-dark.svg">
+    <img alt="grandom-js library package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-library-light.svg" width="600">
+  </picture>  
+</p>
+
+<h1 align="center">
+  UMD package
+  <br />
+  <br />
+</h1>
+
+<br />
 
 <!-- Badges - 1st row -->
 <p align="center">

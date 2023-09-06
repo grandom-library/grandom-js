@@ -1,6 +1,10 @@
-<h1 align="center">
-  @grandom/number
-</h1>
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-number-dark.svg">
+    <img alt="grandom-js number package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-number-light.svg" width="800">
+  </picture>  
+</p>
 
 <br />
 

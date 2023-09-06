@@ -1,4 +1,18 @@
-# @grandom/shuffle-umd
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-shuffle-dark.svg">
+    <img alt="grandom-js shuffle package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-shuffle-light.svg" width="600">
+  </picture>  
+</p>
+
+<h1 align="center">
+  UMD package
+  <br />
+  <br />
+</h1>
+
+<br />
 
 <!-- Badges - 1st row -->
 <p align="center">
@@ -50,7 +64,7 @@
 ## 📦 Installation
 
 ```
-npm i @grandom/shuffle
+npm i @grandom/shuffle-umd
 ```
 
 ## ⭐ Related

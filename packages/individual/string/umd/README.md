@@ -1,4 +1,18 @@
-# @grandom/string-umd
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-string-dark.svg">
+    <img alt="grandom-js string package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-string-light.svg" width="600">
+  </picture>  
+</p>
+
+<h1 align="center">
+  UMD package
+  <br />
+  <br />
+</h1>
+
+<br />
 
 <!-- Badges - 1st row -->
 <p align="center">
@@ -50,7 +64,7 @@
 ## 📦 Installation
 
 ```
-npm i @grandom/string
+npm i @grandom/string-umd
 ```
 
 ## ⭐ Related

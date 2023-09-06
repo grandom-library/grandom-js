@@ -1,5 +1,15 @@
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-engines-dark.svg">
+    <img alt="grandom-js engines package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-engines-light.svg" width="600">
+  </picture>  
+</p>
+
 <h1 align="center">
-  @grandom/engines-umd
+  UMD package
+  <br />
+  <br />
 </h1>
 
 <br />
@@ -41,7 +51,7 @@
 ## 📦 Installation
 
 ```
-npm i @grandom/engines
+npm i @grandom/engines-umd
 ```
 
 ## ⭐ Related

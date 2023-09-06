@@ -1,9 +1,9 @@
 <!-- Logo -->
 <p align="center">  
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/boolean/media/logo-dark.svg">
-    <img alt="@grandom/boolean logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/packages/boolean/media/logo-light.svg" width="800">
-  </picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-boolean-dark.svg">
+    <img alt="grandom-js boolean package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-boolean-light.svg" width="800">
+  </picture>  
 </p>
 
 <br />

@@ -1,8 +1,10 @@
-<h1 align="center">
-  grandom
-</h1>
-
-<br />
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-library-dark.svg">
+    <img alt="grandom-js library package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-library-light.svg" width="800">
+  </picture>  
+</p>
 
 <!-- Badges - 1st row -->
 <p align="center">

@@ -1,7 +1,10 @@
-<h1 align="center">
-  @grandom/pick
-</h1>
-
+<!-- Logo -->
+<p align="center">  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-pick-dark.svg">
+    <img alt="grandom-js pick package logo" src="https://raw.githubusercontent.com/grandom-library/grandom-js/main/media/logo-pick-light.svg" width="800">
+  </picture>  
+</p>
 <br />
 
 <!-- Badges - 1st row -->
