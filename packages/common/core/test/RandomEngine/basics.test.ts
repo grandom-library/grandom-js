@@ -33,7 +33,6 @@ describe('RandomEngine', () => {
 
   describe('errors', () => {
     describe('invalid constructor arguments', () => {
-
       test('invalid constructor argument (no argument passed)', () => {
         // @ts-expect-error
         expect(() => new RandomEngine()).toThrowWithMessage(
