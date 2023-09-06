@@ -1,3 +1,15 @@
+# [@grandom/pick-v1.4.0](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.6...@grandom/pick-v1.4.0) (2023-09-06)
+
+
+### Bug Fixes
+
+* **pick:** remove unnecessary UMD-only code ([6b6cf11](https://github.com/grandom-library/grandom-js/commit/6b6cf11058f4ed49e8c25bee5ae79067fe5a9364))
+
+
+### Features
+
+* **pick:** add count capability for more, than 1 picks ([13113fc](https://github.com/grandom-library/grandom-js/commit/13113fc15f10641d8b55ddfc0267ae93a9a9209d))
+
 # [@grandom/pick-v1.3.6](https://github.com/grandom-library/grandom-js/compare/@grandom/pick-v1.3.5...@grandom/pick-v1.3.6) (2023-08-27)
 
 
