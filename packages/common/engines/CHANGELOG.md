@@ -1,3 +1,20 @@
+# [@grandom/engines-v4.0.0](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.1.3...@grandom/engines-v4.0.0) (2023-09-06)
+
+
+### Bug Fixes
+
+* **engines:** fix test on Node.js v16 ([177f5f8](https://github.com/grandom-library/grandom-js/commit/177f5f827f5fc21e84ea159aae2f5db63c3ba8c6))
+
+
+### Features
+
+* **engines:** add MT19937 as the DefaultEngine ([0c742f0](https://github.com/grandom-library/grandom-js/commit/0c742f0da91de42199493f8ca95aa08a36b345e4))
+
+
+### BREAKING CHANGES
+
+* **engines:** complete refactor with a DefaultEngine
+
 # [@grandom/engines-v3.1.3](https://github.com/grandom-library/grandom-js/compare/@grandom/engines-v3.1.2...@grandom/engines-v3.1.3) (2023-08-27)
 
 
