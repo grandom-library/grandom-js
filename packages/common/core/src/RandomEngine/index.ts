@@ -74,20 +74,22 @@ export default class RandomEngine {
   private readonly _name: string
 
   constructor (name: string) {
+    /*
+      provide valid constructor argument checks
+      where TS types are not present or circumvented
+    */
     if (typeof name !== 'string') {
       throw new TypeError(
         'Name must be a non-empty, non-blank string, got: ' +
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         `${name} (typeof === '${typeof name}').`
       )
-    } else {
-      if (name.length < 1 || _BLANK_STRING_PATTERN.test(name) === true) {
-        throw new TypeError(
-          'Name must be a non-empty, non-blank string, got: ' +
-          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-          `"${name}" (length === ${name.length}).`
-        )
-      }
+    } else if (name.length < 1 || _BLANK_STRING_PATTERN.test(name)) {
+      throw new TypeError(
+        'Name must be a non-empty, non-blank string, got: ' +
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+        `"${name}" (length === ${name.length}).`
+      )
     }
 
     this._name = name
