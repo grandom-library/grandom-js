@@ -14,7 +14,7 @@ describe('CryptoEngine', () => {
         crypto: {
           getRandomValues: (buffer: any) => {
             _getRandomValuesCalled++
-            return crypto.getRandomValues(buffer)
+            return crypto.webcrypto.getRandomValues(buffer)
           }
         }
       }
