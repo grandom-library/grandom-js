@@ -3,6 +3,10 @@
   "version": "0.0.0-development",
   "description": "Various UMD builds of RNG engines for the grandom library.",
   "author": "Richard King <richrdkng@gmail.com> (www.richrdkng.com)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grandom-library/grandom-js.git"
