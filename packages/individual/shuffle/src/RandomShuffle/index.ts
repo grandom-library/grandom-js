@@ -18,14 +18,12 @@ export default class RandomShuffle extends RandomGenerator {
     const objectShuffle = new RandomObjectShuffle(engine)
 
     const shuffle = (arg1: any, arg2?: any, arg3?: any): any => {
-      if (typeof arg1 !== 'undefined') {
-        if (stringShuffle.canBeParsed(arg1)) {
-          return stringShuffle.parse(arg1, arg2, arg3)
-        } else if (arrayShuffle.canBeParsed(arg1)) {
-          return arrayShuffle.parse(arg1, arg2, arg3)
-        } else if (objectShuffle.canBeParsed(arg1)) {
-          return objectShuffle.parse(arg1, arg2, arg3)
-        }
+      if (stringShuffle.canBeParsed(arg1)) {
+        return stringShuffle.parse(arg1, arg2, arg3)
+      } else if (arrayShuffle.canBeParsed(arg1)) {
+        return arrayShuffle.parse(arg1, arg2, arg3)
+      } else if (objectShuffle.canBeParsed(arg1)) {
+        return objectShuffle.parse(arg1, arg2, arg3)
       }
 
       throw new TypeError(
