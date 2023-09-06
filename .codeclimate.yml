@@ -42,15 +42,15 @@ checks:
     config:
       threshold: 10
 
-  similar-code:
-    enabled: true
-    config:
-      threshold: 50
-
   identical-code:
     enabled: true
     config:
-      threshold: 25
+      threshold: 65
+
+  similar-code:
+    enabled: true
+    config:
+      threshold: 85
 
 exclude_patterns:
   - "**/umd/*.ts"
