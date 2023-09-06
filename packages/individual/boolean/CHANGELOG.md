@@ -1,3 +1,11 @@
+# [@grandom/boolean-v1.4.7](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.6...@grandom/boolean-v1.4.7) (2023-09-06)
+
+
+### Bug Fixes
+
+* **boolean:** fix UMD export name typo ([a147e28](https://github.com/grandom-library/grandom-js/commit/a147e28309d69447836a1b8e8aef460002628ead))
+* **boolean:** remove unnecessary UMD-only code in src ([e52f2ec](https://github.com/grandom-library/grandom-js/commit/e52f2ecf64c168dcf7d46b834c7093cae7f09d44))
+
 # [@grandom/boolean-v1.4.6](https://github.com/grandom-library/grandom-js/compare/@grandom/boolean-v1.4.5...@grandom/boolean-v1.4.6) (2023-08-27)
 
 
