@@ -10,7 +10,7 @@ The media assets for this project is licensed under the [Creative Commons Attrib
 
 ### ✒️ Attribution Information
 
-- Media Asset Designed By: [Richard King][url-author]
+- Media Assets Designed By: [Richard King][url-author]
 - License: [CC BY 4.0][url-cc-license]
 - Original Media Repository: [grandom-js][url-repo]
 
@@ -20,10 +20,10 @@ When using the media assets, make sure to include the above attribution informat
 
 In the root [`media`][url-folder] folder of this repository, you will find the following asset files:
 
-- `logo-dark.svg`: SVG of the dark version of the logo.
-- `logo-light.svg`: SVG of the light version of the logo.
-- `logo-package.ai`: Adobe Illustrator source file of the light and dark versions of the logo for packages.
-- `logo.ai`: Adobe Illustrator source file of the light and dark versions of the logo.
+- `logo-package-template.ai`: Adobe Illustrator template file for each logos of the packages.
+- `logo-*.ai`: Adobe Illustrator source files of the light and dark versions of the logos.
+- `logo-*-dark.svg`: SVGs of the dark versions of the logos.
+- `logo-*-light.svg`: SVGs of the light versions of the logos.
 
 Feel free to use these files in accordance with the license terms.
 
@@ -35,7 +35,7 @@ Feel free to use these files in accordance with the license terms.
 
 ## ©️ License
 
-This project is licensed under [MIT][url-license-doc] @ [Richard King][url-author].
+This project is licensed under **[MIT][url-license-doc] @ [Richard King][url-author]**
 
 <!--- References =============================================================================== -->
 
