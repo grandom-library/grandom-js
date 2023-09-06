@@ -1,3 +1,10 @@
+# [@grandom/weighted-v1.0.5](https://github.com/grandom-library/grandom-js/compare/@grandom/weighted-v1.0.4...@grandom/weighted-v1.0.5) (2023-09-06)
+
+
+### Bug Fixes
+
+* **weighted:** remove unnecessary UMD-only code ([ea90b5f](https://github.com/grandom-library/grandom-js/commit/ea90b5f87b4876a659909097955cc13e8d0a68ba))
+
 # [@grandom/weighted-v1.0.4](https://github.com/grandom-library/grandom-js/compare/@grandom/weighted-v1.0.3...@grandom/weighted-v1.0.4) (2023-08-27)
 
 
