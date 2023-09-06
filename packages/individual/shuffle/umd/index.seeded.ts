@@ -3,7 +3,7 @@ import RandomShuffle from '../src/RandomShuffle'
 
 const engine = new SeededEngine()
 const random = new RandomShuffle(engine)
-const shuffle = random.shuffle.bind(random)
+const shuffle = random.shuffle
 
 // make internals accessible in UMD
 Object.defineProperties(shuffle, {

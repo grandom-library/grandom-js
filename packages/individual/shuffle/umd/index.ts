@@ -4,7 +4,7 @@ import CryptoEngine from '@grandom/engines/crypto'
 import RandomShuffle from '../src/RandomShuffle'
 
 const random = new RandomShuffle(new BasicEngine())
-const shuffle = random.shuffle.bind(random)
+const shuffle = random.shuffle
 
 // make internals accessible in UMD
 Object.defineProperties(shuffle, {

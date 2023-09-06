@@ -1,7 +1,6 @@
-import BasicEngine from '@grandom/engines/basic'
+import SeededEngine from '@grandom/engines/mt19937'
 import RandomShuffle from './RandomShuffle'
 
-const random = new RandomShuffle(new BasicEngine())
-const shuffle = random.shuffle.bind(random)
+const random = new RandomShuffle(new SeededEngine())
 
-export default shuffle
+export default random.shuffle
