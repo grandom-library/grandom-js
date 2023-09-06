@@ -1,3 +1,10 @@
+# [@grandom/number-v1.4.8](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.7...@grandom/number-v1.4.8) (2023-09-06)
+
+
+### Bug Fixes
+
+* **number:** remove unnecessary UMD-only code in src ([74a5190](https://github.com/grandom-library/grandom-js/commit/74a5190f192cd638ed77f4d74befd1ad9a22f8b1))
+
 # [@grandom/number-v1.4.7](https://github.com/grandom-library/grandom-js/compare/@grandom/number-v1.4.6...@grandom/number-v1.4.7) (2023-08-27)
 
 

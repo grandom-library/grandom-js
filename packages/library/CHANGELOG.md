@@ -1,3 +1,10 @@
+# [grandom-v1.5.0](https://github.com/grandom-library/grandom-js/compare/grandom-v1.4.1...grandom-v1.5.0) (2023-09-06)
+
+
+### Features
+
+* **library:** add SeededGrandom seedable random generator class ([17263f2](https://github.com/grandom-library/grandom-js/commit/17263f21e750363a8ca8b932100baa431a40420a))
+
 # [grandom-v1.4.1](https://github.com/grandom-library/grandom-js/compare/grandom-v1.4.0...grandom-v1.4.1) (2023-08-24)
 
 

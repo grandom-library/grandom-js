@@ -1,3 +1,15 @@
+# [@grandom/shuffle-v1.1.0](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.4...@grandom/shuffle-v1.1.0) (2023-09-06)
+
+
+### Bug Fixes
+
+* **shuffle:** remove unnecessary UMD-only code ([0247124](https://github.com/grandom-library/grandom-js/commit/02471243359e1c75832ed2518b1e9a28af427e0c))
+
+
+### Features
+
+* **shuffle:** add string, array, and object shuffle capabaility ([3260059](https://github.com/grandom-library/grandom-js/commit/32600590c53e33c337fa15709adca589a33d3ce2))
+
 # [@grandom/shuffle-v1.0.4](https://github.com/grandom-library/grandom-js/compare/@grandom/shuffle-v1.0.3...@grandom/shuffle-v1.0.4) (2023-08-27)
 
 
