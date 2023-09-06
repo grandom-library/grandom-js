@@ -8,7 +8,18 @@ export default class RandomGenerator {
   protected _engine: RandomEngine
 
   constructor (engine: RandomEngine) {
-    // TODO: arg check
+    /*
+      provide a valid constructor argument check,
+      where TS types are not present or circumvented
+    */
+    if (!(engine instanceof RandomEngine)) {
+      throw new TypeError(
+        'Engine must be an instance of RandomEngine, got: ' +
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+        `${engine} (typeof === '${typeof engine}').`
+      )
+    }
+
     this._engine = engine
   }
 
