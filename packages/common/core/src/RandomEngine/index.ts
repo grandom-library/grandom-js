@@ -75,7 +75,7 @@ export default class RandomEngine {
 
   constructor (name: string) {
     /*
-      provide valid constructor argument checks
+      provide valid constructor argument checks,
       where TS types are not present or circumvented
     */
     if (typeof name !== 'string') {
