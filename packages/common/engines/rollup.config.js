@@ -2,7 +2,9 @@ const config = require('../../../shared/rollup.config')
 const pkg = require('./package.json')
 
 module.exports = [
-  config.getCommonJSConfig(),
+  config.getCommonJSConfig([
+    ...config.glob(['src/**/*.ts'])
+  ]),
 
   // UMD full build with every engine in it ------------------------------------
   config.getUMDConfig(

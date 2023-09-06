@@ -1,8 +1,9 @@
-
 // common engine shorthands
-export { default as BasicEngine } from './MathRandomEngine'
-export { default as SeededEngine } from './MT19937Engine'
-export { default as CryptoEngine } from './CrossCryptoEngine'
+export {
+  BasicEngine,
+  SeededEngine,
+  CryptoEngine
+} from './Common'
 
 // the default engine is a seedable engine
-export { default as DefaultEngine } from './MT19937Engine'
+export { SeededEngine as DefaultEngine } from './Common'

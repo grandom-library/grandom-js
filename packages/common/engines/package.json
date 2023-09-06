@@ -84,8 +84,8 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@grandom/core": "^3.0.2",
-    "@grandom/fnv1a": "^1.0.2",
-    "@grandom/mt19937": "^1.0.1"
+    "@grandom/core": "^3.0.4",
+    "@grandom/fnv1a": "^1.0.3",
+    "@grandom/mt19937": "^1.0.3"
   }
 }

@@ -1,1 +1,1 @@
-export { default } from '../src/MT19937Engine'
+export { default } from '../src/Common/SeededEngine'
