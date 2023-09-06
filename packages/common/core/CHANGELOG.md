@@ -1,3 +1,11 @@
+# [@grandom/core-v3.0.4](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.3...@grandom/core-v3.0.4) (2023-09-06)
+
+
+### Bug Fixes
+
+* **core:** add valid RandomEngine constructor argument checks ([f4c4bfb](https://github.com/grandom-library/grandom-js/commit/f4c4bfbd2e8f4b3335b6d007eda7ce084e3743d5))
+* **core:** add valid RandomGenerator constructor argument check ([1ef5f0f](https://github.com/grandom-library/grandom-js/commit/1ef5f0f03ca98c00ffa11dca796dc10a2042e2f0))
+
 # [@grandom/core-v3.0.3](https://github.com/grandom-library/grandom-js/compare/@grandom/core-v3.0.2...@grandom/core-v3.0.3) (2023-08-27)
 
 
