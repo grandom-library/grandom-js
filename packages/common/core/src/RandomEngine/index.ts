@@ -1,3 +1,5 @@
+const _BLANK_STRING_PATTERN = /^\s+$/
+
 /**
  * Core random generator engine class to use to build
  * custom random generator engines.
@@ -72,7 +74,22 @@ export default class RandomEngine {
   private readonly _name: string
 
   constructor (name: string) {
-    // TODO: arg check
+    if (typeof name !== 'string') {
+      throw new TypeError(
+        'Name must be a non-empty, non-blank string, got: ' +
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+        `${name} (typeof === '${typeof name}').`
+      )
+    } else {
+      if (name.length < 1 || _BLANK_STRING_PATTERN.test(name) === true) {
+        throw new TypeError(
+          'Name must be a non-empty, non-blank string, got: ' +
+          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+          `"${name}" (length === ${name.length}).`
+        )
+      }
+    }
+
     this._name = name
   }
 

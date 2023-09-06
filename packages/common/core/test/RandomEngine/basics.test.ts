@@ -32,9 +32,42 @@ describe('RandomEngine', () => {
   })
 
   describe('errors', () => {
-    const engine = new RandomEngine('test')
+    describe('invalid constructor arguments', () => {
+
+      test('invalid constructor argument (no argument passed)', () => {
+        // @ts-expect-error
+        expect(() => new RandomEngine()).toThrowWithMessage(
+          TypeError,
+          'Name must be a non-empty, non-blank string, got: undefined (typeof === \'undefined\').'
+        )
+      })
+
+      test('invalid constructor argument (wrong type)', () => {
+        // @ts-expect-error
+        expect(() => new RandomEngine(null)).toThrowWithMessage(
+          TypeError,
+          'Name must be a non-empty, non-blank string, got: null (typeof === \'object\').'
+        )
+      })
+
+      test('invalid constructor argument (empty string)', () => {
+        expect(() => new RandomEngine('')).toThrowWithMessage(
+          TypeError,
+          'Name must be a non-empty, non-blank string, got: "" (length === 0).'
+        )
+      })
+
+      test('invalid constructor argument (blank string)', () => {
+        expect(() => new RandomEngine('   ')).toThrowWithMessage(
+          TypeError,
+          'Name must be a non-empty, non-blank string, got: "   " (length === 3).'
+        )
+      })
+    })
 
     test('_next must be implemented', () => {
+      const engine = new RandomEngine('test')
+
       expect(() => engine.nextBoolean()).toThrowWithMessage(
         Error,
         '_next() must be implemented.'
