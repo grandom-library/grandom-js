@@ -1,3 +1,10 @@
+# [@grandom/string-v1.2.7](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.6...@grandom/string-v1.2.7) (2023-09-06)
+
+
+### Bug Fixes
+
+* **string:** remove unnecessary UMD-only code ([6401f46](https://github.com/grandom-library/grandom-js/commit/6401f46c4b39cb313cda67830729cf43bfee310b))
+
 # [@grandom/string-v1.2.6](https://github.com/grandom-library/grandom-js/compare/@grandom/string-v1.2.5...@grandom/string-v1.2.6) (2023-08-27)
 
 
