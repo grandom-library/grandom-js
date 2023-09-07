@@ -19,6 +19,7 @@
   "scripts": {
     "init": "npm i && lerna exec -- npm i && lerna list -all",
     "init:clean": "npm run _clear && npm run init",
+    "check:deps": "bash scripts/check-deps.sh",
     "update:deps:grandom-only": "bash scripts/update-deps-grandom-only.sh",
     "//": "-------------------------------------------------------------------",
     "_clear": "bash scripts/clear.sh"
