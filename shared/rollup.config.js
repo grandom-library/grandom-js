@@ -3,6 +3,8 @@ const terser = require('@rollup/plugin-terser')
 const commonjs = require('@rollup/plugin-commonjs')
 const resolve = require('@rollup/plugin-node-resolve')
 const size = require('rollup-plugin-filesize')
+
+const glob = require('glob')
 const dedent = require('string-dedent')
 
 // -----------------------------------------------------------------------------
@@ -75,6 +77,7 @@ const getUMDConfig = (pkg, name, input, output) => {
 // -----------------------------------------------------------------------------
 
 module.exports = {
+  glob: (pattern) => glob.sync(pattern),
   getCommonJSConfig,
   getUMDConfig,
   getDefaultConfig: (pkg, name) => {
