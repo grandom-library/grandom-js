@@ -85,7 +85,7 @@
   },
   "dependencies": {
     "@grandom/core": "^3.0.4",
-    "@grandom/fnv1a": "^1.0.3",
+    "@grandom/fnv1a": "^1.0.4",
     "@grandom/mt19937": "^1.0.3"
   }
 }
