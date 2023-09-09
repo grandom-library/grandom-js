@@ -100,67 +100,47 @@ jobs:
         run: npm ci && npx lerna exec -- npm ci
 
       # common packages ------------------------------------------------------------------------------------------------
-      - name: core
+      - name: '@grandom/core'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/core -- npm run prep &&
-          npx lerna exec --scope @grandom/core -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/core
 
-      - name: engines
+      - name: '@grandom/engines'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/engines -- npm run prep &&
-          npx lerna exec --scope @grandom/engines -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/engines
 
       # individual packages --------------------------------------------------------------------------------------------
-      - name: bigint
+      - name: '@grandom/bigint'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/bigint -- npm run prep &&
-          npx lerna exec --scope @grandom/bigint -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/bigint
 
-      - name: boolean
+      - name: '@grandom/boolean'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/boolean -- npm run prep &&
-          npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/boolean
 
-      - name: number
+      - name: '@grandom/number'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/number -- npm run prep &&
-          npx lerna exec --scope @grandom/number -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/number
 
-      - name: pick
+      - name: '@grandom/pick'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/pick -- npm run prep &&
-          npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/pick
 
-      - name: shuffle
+      - name: '@grandom/shuffle'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/shuffle -- npm run prep &&
-          npx lerna exec --scope @grandom/shuffle -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/shuffle
 
-      - name: string
+      - name: '@grandom/string'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/string -- npm run prep &&
-          npx lerna exec --scope @grandom/string -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/string
 
-      - name: weighted
+      - name: '@grandom/weighted'
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope @grandom/weighted -- npm run prep &&
-          npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh @grandom/weighted
 
       # library package ------------------------------------------------------------------------------------------------
       - name: grandom
         if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope grandom -- npm run prep &&
-          npx lerna exec --scope grandom -- npx --no-install semantic-release -e semantic-release-monorepo
+        run: bash scripts/release.sh grandom
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
