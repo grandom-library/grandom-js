@@ -94,62 +94,70 @@ jobs:
         with:
           node-version: '16'
           cache: 'npm'
-          cache-dependency-path: |
-            package-lock.json
-            packages/*/package-lock.json
+          cache-dependency-path: '**/package-lock.json'
 
       - name: init
         run: npm ci && npx lerna exec -- npm ci
 
       # common packages ------------------------------------------------------------------------------------------------
       - name: core
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/core -- npm run prep &&
           npx lerna exec --scope @grandom/core -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: engines
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/engines -- npm run prep &&
           npx lerna exec --scope @grandom/engines -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # individual packages --------------------------------------------------------------------------------------------
       - name: bigint
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/bigint -- npm run prep &&
           npx lerna exec --scope @grandom/bigint -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: boolean
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/boolean -- npm run prep &&
           npx lerna exec --scope @grandom/boolean -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: number
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/number -- npm run prep &&
           npx lerna exec --scope @grandom/number -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: pick
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/pick -- npm run prep &&
           npx lerna exec --scope @grandom/pick -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: shuffle
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/shuffle -- npm run prep &&
           npx lerna exec --scope @grandom/shuffle -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: string
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/string -- npm run prep &&
           npx lerna exec --scope @grandom/string -- npx --no-install semantic-release -e semantic-release-monorepo
 
       - name: weighted
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope @grandom/weighted -- npm run prep &&
           npx lerna exec --scope @grandom/weighted -- npx --no-install semantic-release -e semantic-release-monorepo
 
       # library package ------------------------------------------------------------------------------------------------
       - name: grandom
+        if: ${{ !cancelled() }}
         run: >
           npx lerna exec --scope grandom -- npm run prep &&
           npx lerna exec --scope grandom -- npx --no-install semantic-release -e semantic-release-monorepo
