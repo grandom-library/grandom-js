@@ -7,8 +7,9 @@ updates:
     schedule:
       interval: "weekly"
       day: "sunday"
-      time: "02:00"
+      time: "03:00"
       timezone: "UTC"
+    target-branch: "deps"
     commit-message:
       prefix: "ci(deps)"
 
@@ -16,8 +17,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "02:00"
+      time: "03:00"
       timezone: "UTC"
+    target-branch: "deps"
     versioning-strategy: increase
     commit-message:
       prefix: "perf(deps)"
